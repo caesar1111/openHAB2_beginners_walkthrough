@@ -1422,8 +1422,8 @@ ul
 style='position:absolute;left:445px;top:-141px;width:324px;height:300px'><img
 width=324 height=300
 src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image001.png"
-alt="2nd Draft"></span></span><span lang=EN-GB>openHAB2 Raspberry beginner’s walkthrough
-– (Using Raspberry Pi 3 with openHAB2 and Z-Wave, WiFi LED, Samsung TV and
+alt="2nd Draft"></span></span><span lang=EN-GB>openHAB2 Raspberry beginnerÂ’s walkthrough
+Â– (Using Raspberry Pi 3 with openHAB2 and Z-Wave, WiFi LED, Samsung TV and
 YahooWeather bindings for a home automation project)</span></p>
 
 </div>
@@ -1468,7 +1468,7 @@ none'> </span><span
 style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
 
 <p class=MsoToc3><a href="#_Toc485150874"><span lang=EN-GB>Additional hardware
-for optional setup of the controller with 7” Raspberry display:</span><span
+for optional setup of the controller with 7Â” Raspberry display:</span><span
 style='color:windowtext;display:none;text-decoration:none'> </span><span
 style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
 
@@ -1532,7 +1532,7 @@ setup:</span><span style='color:windowtext;display:none;text-decoration:none'> <
 style='color:windowtext;display:none;text-decoration:none'>16</span></a></p>
 
 <p class=MsoToc2><a href="#_Toc485150888"><span lang=EN-GB>Optional:
-Installation of 7” Raspberry display and display case:</span><span
+Installation of 7Â” Raspberry display and display case:</span><span
 style='color:windowtext;display:none;text-decoration:none'> </span><span
 style='color:windowtext;display:none;text-decoration:none'>17</span></a></p>
 
@@ -1547,7 +1547,7 @@ text-decoration:none'>. </span><span
 style='color:windowtext;display:none;text-decoration:none'>21</span></a></p>
 
 <p class=MsoToc2><a href="#_Toc485150891"><span lang=EN-GB>Starting up
-Raspberry or the first time – Raspbian PIXEL desktop</span><span
+Raspberry or the first time Â– Raspbian PIXEL desktop</span><span
 style='color:windowtext;display:none;text-decoration:none'>. </span><span
 style='color:windowtext;display:none;text-decoration:none'>21</span></a></p>
 
@@ -1951,7 +1951,7 @@ clear=all style='page-break-before:always'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>USB Keyboard basic Microsoft qwertz German layout</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB>Display HDMI connection to 24” computer display</span></p>
+  normal'><span lang=EN-GB>Display HDMI connection to 24Â” computer display</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Case no name incl. ventilation</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
@@ -1973,7 +1973,7 @@ clear=all style='page-break-before:always'>
   normal'><span lang=EN-GB>Bluetooth Keyboard Rapoo Bluetooth Keyboard qwertz
   German layout</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB>Display 7” Raspberry display</span></p>
+  normal'><span lang=EN-GB>Display 7Â” Raspberry display</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Case premium case for Raspberry Pi 7&quot;
   Touch-Display (the closed version)</span></p>
@@ -2024,12 +2024,12 @@ clear=all style='page-break-before:always'>
   <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
   margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
   normal'><span lang=EN-GB>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=EN-GB>Section “Shopping list”</span></p>
+  </span></span><span lang=EN-GB>Section Â“Shopping listÂ”</span></p>
   <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
   margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
   normal'><span lang=EN-GB>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><span lang=EN-GB>Section “Adding local things connected via
-  network (IP)”</span></p>
+  </span></span><span lang=EN-GB>Section Â“Adding local things connected via
+  network (IP)Â”</span></p>
   <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
   margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
   normal'><span lang=EN-GB>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -2075,13 +2075,13 @@ to go through the things step by step, so you should be able to get everything
 done, even without exactly having to go into all the details. That is one of
 the reasons I am also using the graphical GUI PIXEL for Raspbian since I thing
 it makes it easier for the beginners to get started (and you might want to use
-PIXEL anyway when you are using the Raspberry 7” display as interface for your
+PIXEL anyway when you are using the Raspberry 7Â” display as interface for your
 home automation controller)</span></p>
 
 <p class=MsoNormal><span lang=EN-GB>This tutorial is also based on <b>having a Windows
 PC</b> to support the setup process. You might be able to completely do it
 without the support of an extra PC, if you can get a MicroSD card with a
-pre-installed Raspbian OS and use the display options (the Raspberry 7” display
+pre-installed Raspbian OS and use the display options (the Raspberry 7Â” display
 or HDMI Display) for the Raspberry.</span></p>
 
 <p class=MsoNormal><b><span lang=EN-GB style='color:red'>DISCLAIMER:</span></b></p>
@@ -2111,7 +2111,7 @@ online documentation is still for the openHAB version and will <b>not</b> be
 applicable for openHAB2!</span></p>
 
 <p class=MsoNormal><span lang=EN-GB>So the best thing is always to go to the
-official webpage of openHAB2 and start from there, and only if you really can’t
+official webpage of openHAB2 and start from there, and only if you really canÂ’t
 find the information or the link there, go to google and search for other
 solutions. I was always using the search setting (last year) so it was more
 likely to the results considering openHAB2 and not openHAB.<br clear=all
@@ -2158,7 +2158,7 @@ also containing parts for this optional setup:</span></p>
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB> </span><img width=103 height=103 id="Picture 7"
+  normal'><span lang=EN-GB>Â </span><img width=103 height=103 id="Picture 7"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image003.jpg"
   alt="Product Details"></p>
   </td>
@@ -2258,7 +2258,7 @@ also containing parts for this optional setup:</span></p>
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Raspberry case (optional, will <b>not</b> be needed
-  if you are going for the 7” Raspberry display setup)</span></p>
+  if you are going for the 7Â” Raspberry display setup)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>&nbsp;</span></p>
   </td>
@@ -2276,7 +2276,7 @@ also containing parts for this optional setup:</span></p>
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Display with HDMI input ( optional, will <b>not</b>
-  be needed if you are going for the 7” Raspberry display setup)</span></p>
+  be needed if you are going for the 7Â” Raspberry display setup)</span></p>
   </td>
   <td width=326 valign=top style='width:244.45pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -2291,7 +2291,7 @@ also containing parts for this optional setup:</span></p>
 <p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
 
 <h3><a name="_Toc485150874"><span lang=EN-GB>Additional hardware for optional
-setup of the controller with 7” Raspberry display:</span></a></h3>
+setup of the controller with 7Â” Raspberry display:</span></a></h3>
 
 <p class=MsoNormal><span lang=EN-GB>(I found it very useful to have one
 permanent GUI interface mounted on your controller, you can also use this
@@ -2329,7 +2329,7 @@ touchscreen interface directly to interact with your home automation):</span></p
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img width=149 height=108 id="Picture 5"
-  src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image012.jpg"> <img
+  src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image012.jpg">Â <img
   width=132 height=132 id="Picture 4"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image013.jpg"></p>
   </td>
@@ -2351,11 +2351,11 @@ touchscreen interface directly to interact with your home automation):</span></p
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB> </span><img width=98 height=98 id="Picture 14"
+  normal'><span lang=EN-GB>Â </span><img width=98 height=98 id="Picture 14"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image014.jpg"
-  alt="Product Details"> <img width=82 height=122 id="Picture 15"
+  alt="Product Details">Â <img width=82 height=122 id="Picture 15"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image015.jpg"
-  alt="Product Details"> <img width=106 height=106 id="Picture 16"
+  alt="Product Details">Â <img width=106 height=106 id="Picture 16"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image016.jpg"
   alt="Product Details"></p>
   </td>
@@ -2464,7 +2464,7 @@ always make sure to use the hardware which is allowed in your country!</span></p
   normal'><i><span lang=EN-GB>NOT REALLY an Alternative</span></i><span
   lang=EN-GB>: RaZberry2 Z-Wave Plus Daughter Card for Raspberry Pi Home
   Automation <i>(not plug and play compatible with optional setup of the
-  controller with 7” Raspberry display!)</i></span></p>
+  controller with 7Â” Raspberry display!)</i></span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Pros:</span></p>
   <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
@@ -2595,7 +2595,7 @@ e.g. in the US)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img width=87 height=87 id="Picture 25"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image025.jpg"
-  alt="Z-Wave NodOn Smart Plug, Schalt- und Messsteckdose, Schuko, 1 Stück, NODEMSP3101"></p>
+  alt="Z-Wave NodOn Smart Plug, Schalt- und Messsteckdose, Schuko, 1 StÃ¼ck, NODEMSP3101"></p>
   </td>
  </tr>
 </table>
@@ -2728,7 +2728,7 @@ later in this tutorial since we will need it for the WiFi LED controller)</span>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=138 height=137 id="Picture 214"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image029.jpg"
-  alt="(3,98 €/m) 5m LED Stripe 12V dimmbar - 24W 1200lm - SMD 300 x 3528 60SMD/m - IP20 selbstklebend - 8mm - warmweiß (3000 K)"></p>
+  alt="(3,98 Â€/m) 5m LED Stripe 12V dimmbar - 24W 1200lm - SMD 300 x 3528 60SMD/m - IP20 selbstklebend - 8mm - warmweiÃŸ (3000 K)"></p>
   </td>
  </tr>
  <tr>
@@ -2796,8 +2796,8 @@ adaptions on the tutorial e.g. mounting the Raspberry file system to PC)</span><
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>The latest <b>Raspbian</b> (Raspberry OS) image</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB>You have to download the “Raspbian Jessie with PIXEL
-  - Image with PIXEL desktop based on Debian Jessie” since this tutorial is
+  normal'><span lang=EN-GB>You have to download the Â“Raspbian Jessie with PIXEL
+  - Image with PIXEL desktop based on Debian JessieÂ” since this tutorial is
   using PIXEL</span></p>
   </td>
   <td width=326 valign=top style='width:244.45pt;border:solid windowtext 1.0pt;
@@ -2945,13 +2945,13 @@ interfaces and GPIO pins:</span></a></h2>
 
 <p class=MsoNormal><img border=0 width=642 height=406 id="Picture 40"
 src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image032.jpg"
-alt="Bildergebnis für raspberry pi 3"></p>
+alt="Bildergebnis fÃ¼r raspberry pi 3"></p>
 
 <h3><a name="_Toc485150884"><span lang=EN-GB>Raspberry GPIO pin Overview:</span></a></h3>
 
 <p class=MsoNormal><img border=0 width=642 height=383 id="Picture 41"
 src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image033.png"
-alt="Bildergebnis für raspberry pi 3 gpio"></p>
+alt="Bildergebnis fÃ¼r raspberry pi 3 gpio"></p>
 
 <span lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri","sans-serif"'><br
 clear=all style='page-break-before:always'>
@@ -3060,7 +3060,7 @@ clear=all style='page-break-before:always'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=169 height=96 id="Picture 36"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image037.jpg"
-  alt="Bildergebnis für raspberry pi 3"><img border=0 width=83 height=83
+  alt="Bildergebnis fÃ¼r raspberry pi 3"><img border=0 width=83 height=83
   id="Picture 38"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image038.jpg"
   alt="Product Details"><img border=0 width=93 height=61 id="Picture 39"
@@ -3083,7 +3083,7 @@ clear=all style='page-break-before:always'>
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image003.jpg"
   alt="Product Details"><img border=0 width=133 height=92 id="Picture 35"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image040.jpg"
-  alt="Bildergebnis für raspberry pi 3"></p>
+  alt="Bildergebnis fÃ¼r raspberry pi 3"></p>
   </td>
  </tr>
  <tr>
@@ -3091,7 +3091,7 @@ clear=all style='page-break-before:always'>
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Connect Raspberry with display using HDMI (
-  optional, will <b>not</b> be needed if you are going for the 7” Raspberry
+  optional, will <b>not</b> be needed if you are going for the 7Â” Raspberry
   display setup)</span></p>
   </td>
   <td width=326 valign=top style='width:244.45pt;border-top:none;border-left:
@@ -3100,7 +3100,7 @@ clear=all style='page-break-before:always'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=124 height=72 id="Picture 43"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image041.jpg"
-  alt="Bildergebnis für raspberry pi 3"><img border=0 width=77 height=77
+  alt="Bildergebnis fÃ¼r raspberry pi 3"><img border=0 width=77 height=77
   id="Picture 44"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image042.jpg"
   alt="Product Details"><img border=0 width=92 height=75 id="Picture 45"
@@ -3122,7 +3122,7 @@ clear=all style='page-break-before:always'>
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image008.jpg"
   alt="Product Details"><img border=0 width=133 height=92 id="Picture 49"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image044.jpg"
-  alt="Bildergebnis für raspberry pi 3"></p>
+  alt="Bildergebnis fÃ¼r raspberry pi 3"></p>
   </td>
  </tr>
  <tr>
@@ -3144,7 +3144,7 @@ clear=all style='page-break-before:always'>
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image045.jpg"
   alt="Product Details"><img border=0 width=133 height=92 id="Picture 46"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image046.jpg"
-  alt="Bildergebnis für raspberry pi 3"></p>
+  alt="Bildergebnis fÃ¼r raspberry pi 3"></p>
   </td>
  </tr>
 </table>
@@ -3158,7 +3158,7 @@ clear=all style='page-break-before:always'>
 <p class=MsoNormal><b><span lang=EN-GB style='font-size:14.0pt;line-height:
 115%;font-family:"Calibri Light","sans-serif"'>&nbsp;</span></b></p>
 
-<h2><a name="_Toc485150888"><span lang=EN-GB>Optional: Installation of 7” Raspberry
+<h2><a name="_Toc485150888"><span lang=EN-GB>Optional: Installation of 7Â” Raspberry
 display and display case:</span></a></h2>
 
 <p class=MsoNormal><span lang=EN-GB>The full tutorial will be found on:</span></p>
@@ -3178,7 +3178,7 @@ color:windowtext;text-decoration:none'>https://www.youtube.com/watch?v=tK-w-wDvR
 had an issue with plugging in the power supply to the micro USB power input on
 the circuit board of the display (like shown in the video). The Raspberry was
 still showing me the low power symbol (lightening symbol on the upper right
-corner) SOLUTION:  I had to plug in the power supply to the micro USB power
+corner) SOLUTION:Â  I had to plug in the power supply to the micro USB power
 input on the Raspberry itself. The display is now powered via the jumper
 cables. The standard display case is also allowing for both micro USB power
 inputs to be used.</span></p>
@@ -3310,7 +3310,7 @@ configuration of Raspbian)</span></p>
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Assembly of the standard display. (Make sure you
-  have inserted the MicroSD card since you won’t have access to the slot as
+  have inserted the MicroSD card since you wonÂ’t have access to the slot as
   soon as you mounted the case!)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Just pull the back plate off the case, insert the
@@ -3336,7 +3336,7 @@ clear=all style='page-break-before:always'>
 <h1><a name="_Toc485150890"><span lang=EN-GB>Chapter 4: Raspbian basic configuration</span></a></h1>
 
 <h2><a name="_Toc485150891"><span lang=EN-GB>Starting up Raspberry or the first
-time – Raspbian PIXEL desktop</span></a></h2>
+time Â– Raspbian PIXEL desktop</span></a></h2>
 
 <p class=MsoNormal><span lang=EN-GB>Since this tutorial is focussing on using
 the PIXEL GUI here are a few basic tips</span></p>
@@ -3374,14 +3374,14 @@ height=230
 src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image060.png"
 alt="Web browser"></span><img border=0 width=597 height=315 id="Picture 61"
 src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image061.jpg"
-alt="Ähnliches Foto"></p>
+alt="Ã„hnliches Foto"></p>
 
 <p class=MsoNormal><b><span lang=EN-GB>&nbsp;</span></b></p>
 
 <p class=MsoNormal><b><span lang=EN-GB>NOTE: </span></b><span lang=EN-GB>If you
-are working with the 7” Raspberry display setup you might need to flip/rotate
-the display orientation. Just check the section” Optional: Change display
-orientation” later in this chapter</span></p>
+are working with the 7Â” Raspberry display setup you might need to flip/rotate
+the display orientation. Just check the sectionÂ” Optional: Change display
+orientationÂ” later in this chapter</span></p>
 
 <b><span lang=EN-GB style='font-size:11.0pt;line-height:115%;font-family:"Calibri","sans-serif"'><br
 clear=all style='page-break-before:always'>
@@ -3612,7 +3612,7 @@ are matching.</span></p>
 <p class=MsoNormal><b><span lang=EN-GB>NOTE:</span></b><span lang=EN-GB> Do not
 change the password before you have changed the keyboard layout since you might
 put in a different password than you expect (e.g. US qwerty vs. German qwertz
-results in “Raspberrz” instead of “Raspberry”)</span></p>
+results in Â“RaspberrzÂ” instead of Â“RaspberryÂ”)</span></p>
 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none'>
@@ -3749,7 +3749,7 @@ results in “Raspberrz” instead of “Raspberry”)</span></p>
 <h3><a name="_Toc485150896"><span lang=EN-GB>Optional: Change display
 orientation</span></a></h3>
 
-<p class=MsoNormal><span lang=EN-GB>If you are working with the 7” Raspberry
+<p class=MsoNormal><span lang=EN-GB>If you are working with the 7Â” Raspberry
 display setup you might need to flip/rotate the display orientation for
 specific cases</span></p>
 
@@ -3766,7 +3766,7 @@ specific cases</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=31 height=26 id="Picture 126"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image069.jpg"
-  alt="Ähnliches Foto"><img border=0 width=167 height=24 id="Picture 127"
+  alt="Ã„hnliches Foto"><img border=0 width=167 height=24 id="Picture 127"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image070.jpg"></p>
   </td>
  </tr>
@@ -3804,11 +3804,11 @@ specific cases</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Optional: You can choose from different angles</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB>    0 degrees rotation</span></p>
+  normal'><span lang=EN-GB>Â Â Â  0 degrees rotation</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>or</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB>  90 degrees rotation</span></p>
+  normal'><span lang=EN-GB>Â  90 degrees rotation</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>or</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
@@ -3896,7 +3896,7 @@ clear=all style='page-break-before:always'>
 <h3><a name="_Toc485150897"><span lang=EN-GB>Changing Password:</span></a></h3>
 
 <p class=MsoNormal><span lang=EN-GB>This is important to secure your standard Raspberry
-user “pi” before you connect the Raspberry to the network.</span></p>
+user Â“piÂ” before you connect the Raspberry to the network.</span></p>
 
 <p class=MsoNormal><b><span lang=EN-GB>NOTE:</span></b><span lang=EN-GB> Make
 sure you have changed the keyboard layout to your requirements before change
@@ -3942,7 +3942,7 @@ the password.</span></p>
   <td width=326 valign=top style='width:244.45pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB>Enter initial (for standard user “pi” it is “Raspberry”
+  normal'><span lang=EN-GB>Enter initial (for standard user Â“piÂ” it is Â“RaspberryÂ”
   and your new password</span></p>
   </td>
   <td width=326 valign=top style='width:244.45pt;border-top:none;border-left:
@@ -4019,7 +4019,7 @@ the PC (SSH) and to the Z-Wave stick (Serial)</span></p>
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'>SSH:    Enable</p>
+  normal'>SSH:Â Â Â  Enable</p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'>Serial: Enable</p>
   </td>
@@ -4103,7 +4103,7 @@ of the Raspberry in the terminal</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=45 height=39 id="Picture 78"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image075.jpg"
-  alt="Ähnliches Foto"></p>
+  alt="Ã„hnliches Foto"></p>
   </td>
  </tr>
  <tr>
@@ -4165,7 +4165,7 @@ configuration.</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=45 height=39 id="Picture 80"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image075.jpg"
-  alt="Ähnliches Foto"></p>
+  alt="Ã„hnliches Foto"></p>
   </td>
  </tr>
  <tr style='height:56.6pt'>
@@ -4225,7 +4225,7 @@ time, it is done automatically and the Raspberry will restart automatically):</s
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=31 height=26 id="Picture 114"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image076.jpg"
-  alt="Ähnliches Foto"><img border=0 width=167 height=24 id="Picture 115"
+  alt="Ã„hnliches Foto"><img border=0 width=167 height=24 id="Picture 115"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image077.jpg"></p>
   </td>
  </tr>
@@ -4353,7 +4353,7 @@ to a application</span></a><span lang=EN-GB> </span></h3>
 first create a *.desktop file</span></p>
 
 <p class=MsoNormal><b><span lang=EN-GB>NOTE:</span></b><span lang=EN-GB> This
-example is creating the desktop icon for the user “pi”</span></p>
+example is creating the desktop icon for the user Â“piÂ”</span></p>
 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none'>
@@ -4368,7 +4368,7 @@ example is creating the desktop icon for the user “pi”</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=31 height=26 id="Picture 122"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image078.jpg"
-  alt="Ähnliches Foto"><img border=0 width=167 height=24 id="Picture 123"
+  alt="Ã„hnliches Foto"><img border=0 width=167 height=24 id="Picture 123"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image079.jpg"></p>
   </td>
  </tr>
@@ -4376,7 +4376,7 @@ example is creating the desktop icon for the user “pi”</span></p>
   <td width=326 valign=top style='width:244.45pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB>Go to the directory desktop for your “pi” user</span></p>
+  normal'><span lang=EN-GB>Go to the directory desktop for your Â“piÂ” user</span></p>
   </td>
   <td width=326 valign=top style='width:244.45pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -4464,13 +4464,13 @@ clear=all style='page-break-before:always'>
 
 <h3><a name="_Toc485150905"><span lang=EN-GB>Enabling root user:</span></a></h3>
 
-<p class=MsoNormal><span lang=EN-GB>Since by default the “root” disabled it
-can’t be used. You might want to enable it for certain purposes like e.g.
+<p class=MsoNormal><span lang=EN-GB>Since by default the Â“rootÂ” disabled it
+canÂ’t be used. You might want to enable it for certain purposes like e.g.
 enabling the root user for samba file server to get full access to the
 directories from a PC (see chapter setup samba server) </span></p>
 
 <p class=MsoNormal><b><span lang=EN-GB>NOTE:</span></b><span lang=EN-GB> There
-is a reason for the “root” being disabled! Enabling the user is allowing full
+is a reason for the Â“rootÂ” being disabled! Enabling the user is allowing full
 access to the Raspbian and therefore creating a security risk. Please always
 consider whether you really want to enable this user!</span></p>
 
@@ -4487,7 +4487,7 @@ consider whether you really want to enable this user!</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=31 height=26 id="Picture 109"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image076.jpg"
-  alt="Ähnliches Foto"><img border=0 width=167 height=24 id="Picture 79"
+  alt="Ã„hnliches Foto"><img border=0 width=167 height=24 id="Picture 79"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image080.jpg"></p>
   </td>
  </tr>
@@ -4512,7 +4512,7 @@ consider whether you really want to enable this user!</span></p>
   <td width=326 valign=top style='width:244.45pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB>Just enter twice the new password for the “root”
+  normal'><span lang=EN-GB>Just enter twice the new password for the Â“rootÂ”
   user</span></p>
   </td>
   <td width=326 valign=top style='width:244.45pt;border-top:none;border-left:
@@ -4532,7 +4532,7 @@ consider whether you really want to enable this user!</span></p>
 root user:</span></a></h3>
 
 <p class=MsoNormal><b><span lang=EN-GB>NOTE:</span></b><span lang=EN-GB> There
-is a reason for the “root” not being enabled for SSH! Enabling the user for SSH
+is a reason for the Â“rootÂ” not being enabled for SSH! Enabling the user for SSH
 is allowing full remote access to the Raspbian and therefore creating a
 significant security risk. Please always consider whether you really want to
 enable this user for SSH!</span></p>
@@ -4550,7 +4550,7 @@ enable this user for SSH!</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=31 height=26 id="Picture 110"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image078.jpg"
-  alt="Ähnliches Foto"><img border=0 width=167 height=24 id="Picture 82"
+  alt="Ã„hnliches Foto"><img border=0 width=167 height=24 id="Picture 82"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image081.jpg"></p>
   </td>
  </tr>
@@ -4645,7 +4645,7 @@ clear=all style='page-break-before:always'>
 <h2><a name="_Toc485150907"><span lang=EN-GB>Optional: Raspbian PIXEL
 screensaver (xscreensaver)</span></a></h2>
 
-<p class=MsoNormal><span lang=EN-GB>If you are working with the 7” Raspberry
+<p class=MsoNormal><span lang=EN-GB>If you are working with the 7Â” Raspberry
 display setup you might want to use a screensaver as well.</span></p>
 
 <h3><a name="_Toc485150908"><span lang=EN-GB>Installation of xscreensaver:</span></a></h3>
@@ -4663,7 +4663,7 @@ display setup you might want to use a screensaver as well.</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=31 height=26 id="Picture 111"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image076.jpg"
-  alt="Ähnliches Foto"><img border=0 width=167 height=24 id="Picture 94"
+  alt="Ã„hnliches Foto"><img border=0 width=167 height=24 id="Picture 94"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image080.jpg"></p>
   </td>
  </tr>
@@ -4768,7 +4768,7 @@ completely.</span></p>
   normal'><span lang=EN-US>&lt;check&gt; </span><span lang=EN-GB>Quick
   Power-off in Blank Only Mode</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB> (Display Power Management)</span></p>
+  normal'><span lang=EN-GB>Â (Display Power Management)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>NOTE: This is just a sample switching off the screen
   after 10 minutes </span></p>
@@ -4822,7 +4822,7 @@ server on Raspbian boot</span></a></h2>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=31 height=26 id="Picture 116"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image076.jpg"
-  alt="Ähnliches Foto"><img border=0 width=167 height=24 id="Picture 117"
+  alt="Ã„hnliches Foto"><img border=0 width=167 height=24 id="Picture 117"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image080.jpg"></p>
   </td>
  </tr>
@@ -4863,7 +4863,7 @@ server on Raspbian boot</span></a></h2>
   normal'><span lang=EN-GB>Optional parameters:</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>--kiosk (for full screen mode. NOTE: to exit full
-  screen mode you have to press “Alt+F4” on the keyboard of the Raspberry, so
+  screen mode you have to press Â“Alt+F4Â” on the keyboard of the Raspberry, so
   you have to have a keyboard installed to exit this mode!)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>--incognito (for incognito mode of the browser)</span></p>
@@ -5047,7 +5047,7 @@ your windows system using, KiTTY or PuTTY:</span></a></h2>
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Enter Hostname (pi@ in front of the IP is giving the
-  user you want to use for connecting, in this case the standard user “pi”),
+  user you want to use for connecting, in this case the standard user Â“piÂ”),
   Port and Connection type</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Select Open to launch the terminal</span></p>
@@ -5108,7 +5108,7 @@ your windows system using, KiTTY or PuTTY:</span></a></h2>
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Now a terminal window is opening on our PC asking
-  you to enter the “pi” user password</span></p>
+  you to enter the Â“piÂ” user password</span></p>
   </td>
   <td width=337 valign=top style='width:252.75pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -5164,9 +5164,9 @@ file system from your windows system using WinSCP:</span></a></h2>
 
 <p class=MsoNormal><b><span lang=EN-GB>NOTE: </span></b><span lang=EN-GB>The
 connection can only access the rights of the Raspberry user. So the standard
-user “pi” will not have the writing rights for multiple directories. </span><span
+user Â“piÂ” will not have the writing rights for multiple directories. </span><span
 lang=EN-GB style='font-size:10.0pt;line-height:115%'>For full access you have
-to use the user “root” (user needs to be enabled since it is disabled in
+to use the user Â“rootÂ” (user needs to be enabled since it is disabled in
 standard setup, procedure shown later in the tutorial), but enabling this user
 for SSH access is opening up a significant security risk, so it is recommended
 to use as Raspberry based Samba server for full access to specific directories
@@ -5204,7 +5204,7 @@ to use as Raspberry based Samba server for full access to specific directories
   normal'><span lang=EN-GB>Enter User name: pi (standard user with limited
   access to the file system)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB>Enter Password for “pi”</span></p>
+  normal'><span lang=EN-GB>Enter Password for Â“piÂ”</span></p>
   </td>
   <td width=326 valign=top style='width:244.45pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -5242,7 +5242,7 @@ to use as Raspberry based Samba server for full access to specific directories
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>WinSCP is launched showing the windows directory on
-  the left side and the “pi” user home directory of the Raspberry on the right
+  the left side and the Â“piÂ” user home directory of the Raspberry on the right
   side of the window</span></p>
   </td>
   <td width=326 valign=top style='width:244.45pt;border-top:none;border-left:
@@ -5291,7 +5291,7 @@ color:windowtext;text-decoration:none'>http://docs.openhab.org/installation/linu
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=31 height=26 id="Picture 112"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image076.jpg"
-  alt="Ähnliches Foto"><img border=0 width=167 height=24 id="Picture 91"
+  alt="Ã„hnliches Foto"><img border=0 width=167 height=24 id="Picture 91"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image080.jpg"></p>
   </td>
  </tr>
@@ -5374,7 +5374,7 @@ color:windowtext;text-decoration:none'>http://docs.openhab.org/installation/linu
   normal'><span lang=EN-US># WINS Support - Tells the NMBD component of Samba
   to enable its WINS Server</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US>#   wins support = no</span></p>
+  normal'><span lang=EN-US>#Â Â  wins support = no</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-US>wins support = yes</span></p>
   </td>
@@ -5545,7 +5545,7 @@ this section if you only want to use samba for openHAB2</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Create a special user<i> </i></span><i><span
   lang=EN-US>sambausr</span></i><i><span lang=EN-US> </span></i><span
-  lang=EN-GB> for the samba server so you not have to use the root or pi user
+  lang=EN-GB>Â for the samba server so you not have to use the root or pi user
   to allow access to the directories on the Raspberry</span></p>
   </td>
   <td width=326 valign=top style='width:244.45pt;border:solid windowtext 1.0pt;
@@ -5588,15 +5588,15 @@ this section if you only want to use samba for openHAB2</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-US>Enter the new value, or press ENTER for the default</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US>        Full Name []:</span></p>
+  normal'><span lang=EN-US>Â Â Â Â Â Â Â  Full Name []:</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US>        Room Number []:</span></p>
+  normal'><span lang=EN-US>Â Â Â Â Â Â Â  Room Number []:</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US>        Work Phone []:</span></p>
+  normal'><span lang=EN-US>Â Â Â Â Â Â Â  Work Phone []:</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US>        Home Phone []:</span></p>
+  normal'><span lang=EN-US>Â Â Â Â Â Â Â  Home Phone []:</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US>        Other []:</span></p>
+  normal'><span lang=EN-US>Â Â Â Â Â Â Â  Other []:</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-US>Is the information correct? </span>[Y/n] y</p>
   </td>
@@ -5643,7 +5643,7 @@ of allowing the </span><i><span lang=EN-US>sambausr</span></i><span lang=EN-US>
 specific folders by applying the </span><span lang=EN-US>chown</span><span
 lang=EN-GB> command, you might consider enable the root user and use the root
 user to connect to the Raspberry from the file system (see chapter Optional Raspberry
-settings and configuration). But be aware that enabling the “root” user is
+settings and configuration). But be aware that enabling the Â“rootÂ” user is
 creating a security risk!</span></p>
 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
@@ -5771,7 +5771,7 @@ openhab.org site installation for Linux: (</span><a
 href="http://docs.openhab.org/installation/linux.html#package-repository-installation"><span
 class=Heading9Char><span lang=EN-GB style='font-size:10.0pt;line-height:115%;
 color:windowtext;text-decoration:none'>http://docs.openhab.org/installation/linux.html#package-repository-installation</span></span></a><span
-lang=EN-GB>) For the Raspbian you have to go for the “Apt Based Systems” part
+lang=EN-GB>) For the Raspbian you have to go for the Â“Apt Based SystemsÂ” part
 of it.</span></p>
 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
@@ -5787,7 +5787,7 @@ of it.</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=31 height=26 id="Picture 113"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image076.jpg"
-  alt="Ähnliches Foto"><img border=0 width=167 height=24 id="Picture 92"
+  alt="Ã„hnliches Foto"><img border=0 width=167 height=24 id="Picture 92"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image098.jpg"></p>
   </td>
  </tr>
@@ -6025,7 +6025,7 @@ your Raspbian. </span></p>
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>The shares are configured to be not open for guests
-  nor to the public. Let’s activate the “openhab” user as a samba user</span></p>
+  nor to the public. LetÂ’s activate the Â“openhabÂ” user as a samba user</span></p>
   </td>
   <td width=337 valign=top style='width:252.75pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
@@ -6055,7 +6055,7 @@ your Raspbian. </span></p>
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Be aware, that creating and later using a specific
-  user will ensure that permissions are honoured. Make sure, the “openhab” user
+  user will ensure that permissions are honoured. Make sure, the Â“openhabÂ” user
   has ownership and/or write access to the openHAB2 configuration files. This
   can be accomplished by executing:</span></p>
   </td>
@@ -6180,7 +6180,7 @@ dialout an tty</span></a></h3>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=31 height=26 id="Picture 128"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image076.jpg"
-  alt="Ähnliches Foto"><img border=0 width=167 height=24 id="Picture 129"
+  alt="Ã„hnliches Foto"><img border=0 width=167 height=24 id="Picture 129"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image080.jpg"></p>
   </td>
  </tr>
@@ -6225,7 +6225,7 @@ dialout an tty</span></a></h3>
   normal'><span lang=EN-GB>Optional: Enter command</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>(f you are looking to enable sound privileges for
-  openHAB2, it will also be necessary to add openHAB2 to the “audio” group.)</span></p>
+  openHAB2, it will also be necessary to add openHAB2 to the Â“audioÂ” group.)</span></p>
   </td>
   <td width=326 valign=top style='width:244.45pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -6254,7 +6254,7 @@ to serial ports</span></a></h3>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=31 height=26 id="Picture 130"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image078.jpg"
-  alt="Ähnliches Foto"><img border=0 width=167 height=24 id="Picture 131"
+  alt="Ã„hnliches Foto"><img border=0 width=167 height=24 id="Picture 131"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image101.jpg"></p>
   </td>
  </tr>
@@ -6288,9 +6288,9 @@ to serial ports</span></a></h3>
   <td width=329 valign=top style='width:246.4pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB>Change the text from (nothing between the “”)</span></p>
+  normal'><span lang=EN-GB>Change the text from (nothing between the Â“Â”)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB>To (something between the “”)</span></p>
+  normal'><span lang=EN-GB>To (something between the Â“Â”)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>&nbsp;</span></p>
   </td>
@@ -6379,7 +6379,7 @@ color:windowtext;text-decoration:none'>http://docs.openhab.org/installation/desi
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Optional: Download the 32 bit version since there
-  are reports about the “stable” 64 bit version running not stable</span></p>
+  are reports about the Â“stableÂ” 64 bit version running not stable</span></p>
   </td>
   <td width=366 valign=top style='width:274.65pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -6440,7 +6440,7 @@ color:windowtext;text-decoration:none'>http://docs.openhab.org/installation/desi
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>&nbsp;</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB>Select “See all Java downloads”</span></p>
+  normal'><span lang=EN-GB>Select Â“See all Java downloadsÂ”</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>&nbsp;</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
@@ -6479,8 +6479,8 @@ color:windowtext;text-decoration:none'>http://docs.openhab.org/installation/desi
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Start the Java installer</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB>Select on the first screen “Change destination
-  folder”</span></p>
+  normal'><span lang=EN-GB>Select on the first screen Â“Change destination
+  folderÂ”</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>&nbsp;</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
@@ -6505,7 +6505,7 @@ color:windowtext;text-decoration:none'>http://docs.openhab.org/installation/desi
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>&nbsp;</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB>NOTE: This is now delivering you a “portable”
+  normal'><span lang=EN-GB>NOTE: This is now delivering you a Â“portableÂ”
   version of the Eclipse Smart Home Designer which just can be copied/moved to
   different locations or machines without the need of reinstalling.</span></p>
   </td>
@@ -6774,7 +6774,7 @@ referring to PAPER UI GUI I will try to stick to this GUI as long as possible. <
 
 <p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt'><span
 lang=EN-GB>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=EN-GB>HABmin GUI will be needed for some  Z-Wave
+</span></span><span lang=EN-GB>HABmin GUI will be needed for someÂ  Z-Wave
 installation</span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt'><span
@@ -6984,7 +6984,7 @@ your Raspberry is online if you use online sourced like YahooWeather</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>Additionally you will find the </span><span
   lang=EN-US>&lt;WiFi LED Binding&gt;,</span><span lang=EN-GB> which we
-  manually installed in “Chapter 6: Installation of openHAB2 on Raspberry”
+  manually installed in Â“Chapter 6: Installation of openHAB2 on RaspberryÂ”
   since this is a snapshot Binding which we managed manually</span></p>
   </td>
   <td width=326 valign=top style='width:244.45pt;border-top:none;border-left:
@@ -7739,8 +7739,8 @@ color:windowtext;text-decoration:none'>https://github.com/openhab/org.openhab.ui
   normal'><span lang=EN-GB>Just select the &lt;Add&gt; button to include this
   device as a thing for openHAB2</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB>NOTE: some devices may come up as <b>“unknown
-  device”</b>. You can still add the device and “cure” the information later.</span></p>
+  normal'><span lang=EN-GB>NOTE: some devices may come up as <b>Â“unknown
+  deviceÂ”</b>. You can still add the device and Â“cureÂ” the information later.</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>The normal reason for this is that the device was
   not able to finish the communication with HABmin during the inclusion process</span></p>
@@ -7752,8 +7752,8 @@ color:windowtext;text-decoration:none'>https://github.com/openhab/org.openhab.ui
   device is recognized as a proper thing in HABmin</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-GB>ATTENTION: Using the <b>Aeotec by Aeon Labs Z-Stick
-  Gen5</b> almost every battery powered item will come up as <b>“unknown
-  device” </b>since in the timespan you include the battery device to the stick
+  Gen5</b> almost every battery powered item will come up as <b>Â“unknown
+  deviceÂ” </b>since in the timespan you include the battery device to the stick
   and you do the HABmin inclusion after you plugged the stick back in will be
   to long an most of the devices will go back to sleep. You might prevent this
   by manually waking up the device again just seconds before you start the
@@ -7830,7 +7830,7 @@ physically added to a system and which can potentially provide many
 functionalities at once. It is important to note that things do not have to be
 devices, but they can also represent a web service or any other manageable
 source of information and functionality. Things provide their functionality
-through a set of Channels. Channels are “passive” and can be regarded as a
+through a set of Channels. Channels are Â“passiveÂ” and can be regarded as a
 declaration of a Thing, what it can offer. It is up to the individual setup,
 which of the Channels are actively used through Items (see below).</span></p>
 
@@ -7840,7 +7840,7 @@ logic. Items have a state and they can receive commands.</span></p>
 
 <p class=MsoNormal><span lang=EN-US>The glue between Things and Items are
 Links. Links are associations between exactly one Thing Channel and one Item.
-If a Channel is linked to an Item, it is “enabled”, which means that the
+If a Channel is linked to an Item, it is Â“enabledÂ”, which means that the
 functionality that the Item represents is handled through the given Channel.
 Channels can be linked to multiple Items and Items can be linked to multiple
 Channels.</span></p>
@@ -7961,7 +7961,7 @@ project</span></a></h3>
   normal'><span lang=EN-US>The next window coming up will allow you to select
   already existing items or:</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US>In our case &lt;+Create new item…&gt;</span></p>
+  normal'><span lang=EN-US>In our case &lt;+Create new itemÂ…&gt;</span></p>
   </td>
   <td width=326 valign=top style='width:244.45pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -8472,7 +8472,7 @@ have the choice of 4 different user interfaces which can be selected </span></p>
 
 <h2><a name="_Toc485150950"><span lang=EN-US>BASIC UI dashboard</span></a></h2>
 
-<p class=MsoNormal><span lang=EN-US>Since this is a beginner’s tutorial where I
+<p class=MsoNormal><span lang=EN-US>Since this is a beginnerÂ’s tutorial where I
 am trying to get things done using as less textual coding as possible, I will
 not go into the details of creating a dashboard for the BASIC UI since it
 requires the file based approach. </span></p>
@@ -8623,8 +8623,8 @@ color:windowtext;text-decoration:none'>http://docs.openhab.org/addons/uis/HABPAN
 
 <h2><a name="_Toc485150953"><span lang=EN-US>HABMIN dashboard</span></a></h2>
 
-<p class=MsoNormal><span lang=EN-US>And once again, since this is a beginner’s
-tutorial I can’t go into all the possibilities of how to create a dashboard in
+<p class=MsoNormal><span lang=EN-US>And once again, since this is a beginnerÂ’s
+tutorial I canÂ’t go into all the possibilities of how to create a dashboard in
 openHAB2. So I will not go into creating a dashboard in HABMIN. But be aware
 the HABMIN is providing a powerful graphical way of creating dashboards you
 might want to have a look at.</span></p>
@@ -8646,7 +8646,7 @@ clear=all style='page-break-before:always'>
 
 <h1><a name="_Toc485150954"><span lang=EN-US>Chapter 12: Creating rules</span></a></h1>
 
-<p class=MsoNormal><span lang=EN-US>Since rules can’t be configured using the
+<p class=MsoNormal><span lang=EN-US>Since rules canÂ’t be configured using the
 PAPER UI (stable version) you now have to go to the text files for now. For this
 part we will now use the </span><span lang=EN-GB>Eclipse Smart Home Designer
 since it creates at least some syntax highlighting.</span></p>
@@ -8844,7 +8844,7 @@ community will find the time to create a kind of an openHAB2 compendium to make
 it easier the non-experts to do rules.</span></p>
 
 <p class=MsoNormal><span lang=EN-US>REMAKR: Yes, I know there are plenty of
-online documentation sites available, but the problem for me was the “plenty”
+online documentation sites available, but the problem for me was the Â“plentyÂ”
 part of it since I always had to go through plenty different websites to finally
 get the syntax right and make the rule do, what I wanted it to do.</span></p>
 
@@ -8901,7 +8901,7 @@ Smart Plug ON/OFF</span></p>
   font-family:"Courier New";color:#7F0055'>when</span></b></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      </span><b><span lang=EN-US
+  font-family:"Courier New";color:black'>Â Â Â Â Â  </span><b><span lang=EN-US
   style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>Item</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'>
   ZWaveNode9ZW0884ButtonKeyfobGen5_SceneNumber </span><b><span lang=EN-US
@@ -8916,7 +8916,7 @@ Smart Plug ON/OFF</span></p>
   left) pressed short</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      </span><b><span lang=EN-US
+  font-family:"Courier New";color:black'>Â Â Â Â Â  </span><b><span lang=EN-US
   style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>if</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> (<u>ZWaveNode9ZW0884ButtonKeyfobGen5_SceneNumber</u>.state
   == </span><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -8928,19 +8928,19 @@ Smart Plug ON/OFF</span></p>
   DoubbleSwitch01_Relais1 and SchuKo01</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>sendCommand</i> (<u>DoubbleSwitch01_Relais1</u>,
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>sendCommand</i> (<u>DoubbleSwitch01_Relais1</u>,
   </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#0000C0'>ON</span></i><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:black'>)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>sendCommand</i> (<u>SchuKo01</u>,
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>sendCommand</i> (<u>SchuKo01</u>,
   </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#0000C0'>ON</span></i><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:black'>)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      }</span></p>
+  font-family:"Courier New";color:black'>Â Â Â Â Â  }</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New"'>&nbsp;</span></p>
@@ -8950,7 +8950,7 @@ Smart Plug ON/OFF</span></p>
   left) pressed long</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      </span><b><span lang=EN-US
+  font-family:"Courier New";color:black'>Â Â Â Â Â  </span><b><span lang=EN-US
   style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>if</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> (<u>ZWaveNode9ZW0884ButtonKeyfobGen5_SceneNumber</u>.state
   == </span><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -8962,19 +8962,19 @@ Smart Plug ON/OFF</span></p>
   DoubbleSwitch01_Relais1 and SchuKo01</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>sendCommand</i> (<u>DoubbleSwitch01_Relais1</u>,
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>sendCommand</i> (<u>DoubbleSwitch01_Relais1</u>,
   </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#0000C0'>OFF</span></i><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:black'>)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>sendCommand</i> (<u>SchuKo01</u>,
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>sendCommand</i> (<u>SchuKo01</u>,
   </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#0000C0'>OFF</span></i><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:black'>)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      }</span></p>
+  font-family:"Courier New";color:black'>Â Â Â Â Â  }</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New"'>&nbsp;</span></p>
@@ -8984,7 +8984,7 @@ Smart Plug ON/OFF</span></p>
   left) pressed short</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      </span><b><span lang=EN-US
+  font-family:"Courier New";color:black'>Â Â Â Â Â  </span><b><span lang=EN-US
   style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>if</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> (<u>ZWaveNode9ZW0884ButtonKeyfobGen5_SceneNumber</u>.state
   == </span><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -8993,22 +8993,22 @@ Smart Plug ON/OFF</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:#3F7F5F'>//Switching ON the items
-  YamahaReceiverRXV581_Power and DUMMYITEM_SamsungTV_Power    </span></p>
+  YamahaReceiverRXV581_Power and DUMMYITEM_SamsungTV_PowerÂ Â Â  </span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>sendCommand</i> (<u>YamahaReceiverRXV581_Power</u>,
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>sendCommand</i> (<u>YamahaReceiverRXV581_Power</u>,
   </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#0000C0'>ON</span></i><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:black'>)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>sendCommand</i> (<u>DUMMYITEM_SamsungTV_Power</u>,
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>sendCommand</i> (<u>DUMMYITEM_SamsungTV_Power</u>,
   </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#0000C0'>ON</span></i><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:black'>)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      }</span></p>
+  font-family:"Courier New";color:black'>Â Â Â Â Â  }</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New"'>&nbsp;</span></p>
@@ -9018,7 +9018,7 @@ Smart Plug ON/OFF</span></p>
   left) pressed long</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      </span><b><span lang=EN-US
+  font-family:"Courier New";color:black'>Â Â Â Â Â  </span><b><span lang=EN-US
   style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>if</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> (<u>ZWaveNode9ZW0884ButtonKeyfobGen5_SceneNumber</u>.state
   == </span><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -9027,22 +9027,22 @@ Smart Plug ON/OFF</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:#3F7F5F'>//Switching OFF the items
-  YamahaReceiverRXV581_Power and DUMMYITEM_SamsungTV_Power    </span></p>
+  YamahaReceiverRXV581_Power and DUMMYITEM_SamsungTV_PowerÂ Â Â  </span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>sendCommand</i> (<u>YamahaReceiverRXV581_Power</u>,
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>sendCommand</i> (<u>YamahaReceiverRXV581_Power</u>,
   </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#0000C0'>OFF</span></i><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:black'>)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>sendCommand</i> (<u>DUMMYITEM_SamsungTV_Power</u>,
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>sendCommand</i> (<u>DUMMYITEM_SamsungTV_Power</u>,
   </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#0000C0'>OFF</span></i><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>)        </span></p>
+  font-family:"Courier New";color:black'>)Â Â Â Â Â Â Â  </span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      }</span></p>
+  font-family:"Courier New";color:black'>Â Â Â Â Â  }</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New"'>&nbsp;</span></p>
@@ -9052,7 +9052,7 @@ Smart Plug ON/OFF</span></p>
   left) pressed short</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      </span><b><span lang=EN-US
+  font-family:"Courier New";color:black'>Â Â Â Â Â  </span><b><span lang=EN-US
   style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>if</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> (<u>ZWaveNode9ZW0884ButtonKeyfobGen5_SceneNumber</u>.state
   == </span><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -9064,13 +9064,13 @@ Smart Plug ON/OFF</span></p>
   HFLPB100ZJ200_Power</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>sendCommand</i> (<u>HFLPB100ZJ200_Power</u>,
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>sendCommand</i> (<u>HFLPB100ZJ200_Power</u>,
   </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#0000C0'>ON</span></i><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>)    </span></p>
+  font-family:"Courier New";color:black'>)Â Â Â  </span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      }</span></p>
+  font-family:"Courier New";color:black'>Â Â Â Â Â  }</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New"'>&nbsp;</span></p>
@@ -9080,7 +9080,7 @@ Smart Plug ON/OFF</span></p>
   left) pressed long</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      </span><b><span lang=EN-US
+  font-family:"Courier New";color:black'>Â Â Â Â Â  </span><b><span lang=EN-US
   style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>if</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> (<u>ZWaveNode9ZW0884ButtonKeyfobGen5_SceneNumber</u>.state
   == </span><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -9092,13 +9092,13 @@ Smart Plug ON/OFF</span></p>
   HFLPB100ZJ200_Power</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>sendCommand</i> (<u>HFLPB100ZJ200_Power</u>,
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>sendCommand</i> (<u>HFLPB100ZJ200_Power</u>,
   </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#0000C0'>OFF</span></i><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>)   </span></p>
+  font-family:"Courier New";color:black'>)Â Â  </span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      }</span></p>
+  font-family:"Courier New";color:black'>Â Â Â Â Â  }</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New"'>&nbsp;</span></p>
@@ -9111,7 +9111,7 @@ Smart Plug ON/OFF</span></p>
   left) pressed short</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      </span><b><span lang=EN-US
+  font-family:"Courier New";color:black'>Â Â Â Â Â  </span><b><span lang=EN-US
   style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>if</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> (<u>ZWaveNode9ZW0884ButtonKeyfobGen5_SceneNumber</u>.state
   == </span><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -9123,14 +9123,14 @@ Smart Plug ON/OFF</span></p>
   influence the dimming of the WHITE</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:#3F7F5F'>//          so if you want to set
+  font-family:"Courier New";color:#3F7F5F'>//Â Â Â Â Â Â Â Â Â  so if you want to set
   both values at the same time, always</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:#3F7F5F'>//          set color first and than</span></p>
+  font-family:"Courier New";color:#3F7F5F'>//Â Â Â Â Â Â Â Â Â  set color first and than</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:#3F7F5F'>//      set the dimming of WHITE</span></p>
+  font-family:"Courier New";color:#3F7F5F'>//Â Â Â Â Â  set the dimming of WHITE</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New"'>&nbsp;</span></p>
@@ -9149,35 +9149,35 @@ Smart Plug ON/OFF</span></p>
   just go to e.g. http://www.rapidtables.com/convert/color/rgb-to-hsl.htm</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>sendCommand</i> (<u>HFLPB100ZJ200_Color</u>,(</span><b><span
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>sendCommand</i> (<u>HFLPB100ZJ200_Color</u>,(</span><b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>new</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'>
   HSBType(</span><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#2A00FF'>&quot;0,100,50&quot;</span><span lang=EN-US style='font-size:
-  10.0pt;font-family:"Courier New";color:black'>)))   </span></p>
+  10.0pt;font-family:"Courier New";color:black'>)))Â Â  </span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:#3F7F5F'>//Dimming the item
   HFLPB100ZJ200_White to 50%</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>sendCommand</i> (<u>HFLPB100ZJ200_White</u>,
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>sendCommand</i> (<u>HFLPB100ZJ200_White</u>,
   </span><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#7D7D7D'>50</span><span lang=EN-US style='font-size:10.0pt;font-family:
   "Courier New";color:black'>)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      }</span></p>
+  font-family:"Courier New";color:black'>Â Â Â Â Â  }</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      </span></p>
+  font-family:"Courier New";color:black'>Â Â Â Â Â  </span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:#3F7F5F'>//Scene number 8 - Button 4 (up
   left) pressed long</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      </span><b><span lang=EN-US
+  font-family:"Courier New";color:black'>Â Â Â Â Â  </span><b><span lang=EN-US
   style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>if</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> (<u>ZWaveNode9ZW0884ButtonKeyfobGen5_SceneNumber</u>.state
   == </span><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -9189,14 +9189,14 @@ Smart Plug ON/OFF</span></p>
   influence the dimming of the WHITE</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:#3F7F5F'>//          so if you want to set
+  font-family:"Courier New";color:#3F7F5F'>//Â Â Â Â Â Â Â Â Â  so if you want to set
   both values at the same time, always</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:#3F7F5F'>//          set color first and than</span></p>
+  font-family:"Courier New";color:#3F7F5F'>//Â Â Â Â Â Â Â Â Â  set color first and than</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:#3F7F5F'>//      set the dimming of WHITE</span></p>
+  font-family:"Courier New";color:#3F7F5F'>//Â Â Â Â Â  set the dimming of WHITE</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New"'>&nbsp;</span></p>
@@ -9215,7 +9215,7 @@ Smart Plug ON/OFF</span></p>
   just go to e.g. http://www.rapidtables.com/convert/color/rgb-to-hsl.htm</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>sendCommand</i> (<u>HFLPB100ZJ200_Color</u>,(</span><b><span
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>sendCommand</i> (<u>HFLPB100ZJ200_Color</u>,(</span><b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>new</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'>
   HSBType(</span><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -9223,23 +9223,23 @@ Smart Plug ON/OFF</span></p>
   style='font-size:10.0pt;font-family:"Courier New";color:black'>)))</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  </span><span
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#3F7F5F'>//Dimming
   the item HFLPB100ZJ200_White to 100%</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  </span><i><span
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span><i><span
   style='font-size:10.0pt;font-family:"Courier New";color:black'>sendCommand</span></i><span
   style='font-size:10.0pt;font-family:"Courier New";color:black'> (<u>HFLPB100ZJ200_White</u>,
   </span><span style='font-size:10.0pt;font-family:"Courier New";color:#7D7D7D'>100</span><span
   style='font-size:10.0pt;font-family:"Courier New";color:black'>)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
-  color:black'>      }</span></p>
+  color:black'>Â Â Â Â Â  }</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><b><span style='font-size:10.0pt;font-family:"Courier New";
   color:#7F0055'>end</span></b><span style='font-size:10.0pt;font-family:"Courier New";
-  color:black'>   </span></p>
+  color:black'>Â Â  </span></p>
   </td>
  </tr>
  <tr>
@@ -9498,7 +9498,7 @@ posting the value of the variable inside the rule</span></p>
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=114 height=100 id="Picture 206"
-  src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image183.jpg"> </p>
+  src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image183.jpg">Â </p>
   </td>
  </tr>
  <tr>
@@ -9564,7 +9564,7 @@ posting the value of the variable inside the rule</span></p>
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=84 height=96 id="Picture 211"
-  src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image187.jpg"> <img
+  src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image187.jpg">Â <img
   border=0 width=92 height=97 id="Picture 210"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image188.jpg"></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
@@ -9811,7 +9811,7 @@ fitness but surely is disturbing while developing your rule</span></p>
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=114 height=100 id="Picture 224"
-  src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image183.jpg"> </p>
+  src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image183.jpg">Â </p>
   </td>
  </tr>
  <tr>
@@ -9878,7 +9878,7 @@ fitness but surely is disturbing while developing your rule</span></p>
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=113 height=141 id="Picture 239"
-  src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image196.jpg"> <img
+  src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image196.jpg">Â <img
   border=0 width=114 height=137 id="Picture 240"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image197.jpg"></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
@@ -9905,7 +9905,7 @@ fitness but surely is disturbing while developing your rule</span></p>
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><img border=0 width=113 height=120 id="Picture 241"
-  src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image198.jpg"> <img
+  src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image198.jpg">Â <img
   border=0 width=115 height=120 id="Picture 242"
   src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image199.jpg"></p>
   </td>
@@ -9939,8 +9939,8 @@ only allows to triggering the switch if there reading is consistently (10
 times) above or below the trigger value.</span></p>
 
 <p class=MsoNormal><span lang=EN-US>NOTE: Make sure you have create the item Counter_Item
-since it’s used in the rule (see: part “Creating an item the see the value of a
-variable of a rule online” in this chapter). </span></p>
+since itÂ’s used in the rule (see: part Â“Creating an item the see the value of a
+variable of a rule onlineÂ” in this chapter). </span></p>
 
 <p class=MsoNormal><span lang=EN-US>REMARK: This was done as some kind of
 coding and configuring HABPANEL exercise. You might get the same result in just
@@ -9951,14 +9951,14 @@ trigger value.</span></p>
 <p class=MsoNormal><span lang=EN-US>You can also use this Counter_Item to
 display some tendency whether your light is about to switch ON/OFF depending on
 the value of the Counter_Item on your dashboard. So if you play a little with
-the “knob” widget in HABPANEL it might look like this:</span></p>
+the Â“knobÂ” widget in HABPANEL it might look like this:</span></p>
 
 <p class=MsoNormal><img border=0 width=115 height=113 id="Picture 243"
-src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image200.jpg"> <img
+src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image200.jpg">Â <img
 border=0 width=115 height=113 id="Picture 244"
-src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image201.jpg"> <img
+src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image201.jpg">Â <img
 border=0 width=115 height=113 id="Picture 245"
-src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image202.jpg"> <img
+src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image202.jpg">Â <img
 border=0 width=114 height=113 id="Picture 246"
 src="openHAB2_Raspberry_beginner-s_walkthrough_-_2nd%20_DRAFT_files/image203.jpg"></p>
 
@@ -10024,7 +10024,7 @@ of your existing rule file or create a new file in the same folder</span></p>
   the value is checked </span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      </span><b><span lang=EN-US
+  font-family:"Courier New";color:black'>Â Â Â Â Â  </span><b><span lang=EN-US
   style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>Time</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> </span><b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>cron</span></b><span
@@ -10058,7 +10058,7 @@ of your existing rule file or create a new file in the same folder</span></p>
   trigger value when <u>ligth</u> is <u>swiched</u> ON/OFF</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      </span><b><span lang=EN-US
+  font-family:"Courier New";color:black'>Â Â Â Â Â  </span><b><span lang=EN-US
   style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>if</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> (<u>MultiSens_Helligkeit</u>.state
   &lt;= </span><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -10066,7 +10066,7 @@ of your existing rule file or create a new file in the same folder</span></p>
   "Courier New";color:black'>) {</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>            </span><b><span
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â  </span><b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>if</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> (</span><i><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#0000C0'>loop_counter</span></i><span
@@ -10076,7 +10076,7 @@ of your existing rule file or create a new file in the same folder</span></p>
   "Courier New";color:black'>) {</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  </span><i><span
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span><i><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#0000C0'>loop_counter</span></i><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> = </span><i><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#0000C0'>loop_counter</span></i><span
@@ -10084,21 +10084,21 @@ of your existing rule file or create a new file in the same folder</span></p>
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#7D7D7D'>1</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>postUpdate</i>(<u>Counter_Item</u>,
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>postUpdate</i>(<u>Counter_Item</u>,
   </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#0000C0'>loop_counter</span></i><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:black'>)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>            }</span></p>
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â  }</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>            </span><b><span
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â  </span><b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>else</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> {</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  </span><b><span
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span><b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>if</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> (<u>DoubbleSwitch01_Relais1</u>.state
   == </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -10106,23 +10106,23 @@ of your existing rule file or create a new file in the same folder</span></p>
   font-family:"Courier New";color:black'>)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>sendCommand</i> (<u>DoubbleSwitch01_Relais1</u>,
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>sendCommand</i> (<u>DoubbleSwitch01_Relais1</u>,
   </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#0000C0'>ON</span></i><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:black'>)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>            }</span></p>
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â  }</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      }</span></p>
+  font-family:"Courier New";color:black'>Â Â Â Â Â  }</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>      </span><b><span lang=EN-US
+  font-family:"Courier New";color:black'>Â Â Â Â Â  </span><b><span lang=EN-US
   style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>else</span></b></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>            </span><b><span
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â  </span><b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>if</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> (</span><i><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#0000C0'>loop_counter</span></i><span
@@ -10132,7 +10132,7 @@ of your existing rule file or create a new file in the same folder</span></p>
   "Courier New";color:black'>) {</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  </span><i><span
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span><i><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#0000C0'>loop_counter</span></i><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> =</span><i><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#0000C0'>loop_counter</span></i><span
@@ -10140,21 +10140,21 @@ of your existing rule file or create a new file in the same folder</span></p>
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#7D7D7D'>1</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>postUpdate</i>(<u>Counter_Item</u>,
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â  Â Â Â Â Â  <i>postUpdate</i>(<u>Counter_Item</u>,
   </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#0000C0'>loop_counter</span></i><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:black'>)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>            }</span></p>
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â  }</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>            </span><b><span
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â  </span><b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>else</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> {</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  </span><b><span
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span><b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:#7F0055'>if</span></b><span
   lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:black'> (<u>DoubbleSwitch01_Relais1</u>.state
   == </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -10162,29 +10162,29 @@ of your existing rule file or create a new file in the same folder</span></p>
   font-family:"Courier New";color:black'>)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>                  <i>sendCommand</i> (<u>DoubbleSwitch01_Relais1</u>,
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  <i>sendCommand</i> (<u>DoubbleSwitch01_Relais1</u>,
   </span><i><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
   color:#0000C0'>OFF</span></i><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:black'>)</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>            }</span></p>
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â  }</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>            }</span></p>
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â  }</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><b><span lang=EN-US style='font-size:10.0pt;
   font-family:"Courier New";color:#7F0055'>else</span></b><span lang=EN-US
   style='font-size:10.0pt;font-family:"Courier New";color:black'> {</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;
-  font-family:"Courier New";color:black'>            </span><i><span
+  font-family:"Courier New";color:black'>Â Â Â Â Â Â Â Â Â Â Â  </span><i><span
   style='font-size:10.0pt;font-family:"Courier New";color:#0000C0'>loop_counter</span></i><span
   style='font-size:10.0pt;font-family:"Courier New";color:black'> = </span><span
   style='font-size:10.0pt;font-family:"Courier New";color:#7D7D7D'>0</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
-  color:black'>            }</span></p>
+  color:black'>Â Â Â Â Â Â Â Â Â Â Â  }</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><b><span style='font-size:10.0pt;font-family:"Courier New";
   color:#7F0055'>end</span></b></p>
