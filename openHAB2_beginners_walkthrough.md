@@ -1,7 +1,5 @@
-||
-|--------|
+
 | layout |
-|--------|
 | tutorial-beginner |
 
 
