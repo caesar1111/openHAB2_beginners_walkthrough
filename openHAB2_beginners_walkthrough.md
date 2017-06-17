@@ -4,14 +4,16 @@ layout: tutorial-beginner
 
 {% include base.html %}
 
+---
+Markdown Syntax compilation test for Jekyll
+---
 
-
+Markdown syntax examples start from here:
 
 ---
 General header
 ---
 
-Markdown snytax:
 
 Github specific syntax
 ```
@@ -19,7 +21,8 @@ Fenced Code
 ```
 
 ```bash
-Fenced code highlighted
+Fenced code bash highlighting
+
 ```
 
 ~~Strikethrogh~~
@@ -27,7 +30,7 @@ Fenced code highlighted
 - [ ] Tasklist
 - [ ] Tasklist
 
-Gruber's Markdown syntax:
+
 # Header 1
 ## Header 2
 ### Header 3
@@ -67,9 +70,8 @@ Sentence Break before
 _ _ _
 Sentence Break before
 
+<!--This is a comment-->
 
-
-PHP Extras Markdown
 
 | column     | column     | column     |
 |:---|:---:|---:|
@@ -77,12 +79,9 @@ PHP Extras Markdown
 |left       |centered   |right|
 |  -  |     -    | - |
 
-The TOC is using the Headlines to create a TOC
 
 
-<!--This is a comment-->
 
----
 
 |text|picture|
 |---|---|
