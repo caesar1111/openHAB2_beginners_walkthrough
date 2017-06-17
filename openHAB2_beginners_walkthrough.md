@@ -2,6 +2,14 @@
 layout: tutorial-beginner
 ---
 
+{% include base.html %}
+
+
+
+---
+General header
+---
+
 Markdown snytax:
 
 Github specific syntax
@@ -26,7 +34,7 @@ Gruber's Markdown syntax:
 ##### Header 5
 ###### Header 6
 
-**Strong**
+**Strong-Bold**
 
 *Emphasize*
 
@@ -37,7 +45,8 @@ Gruber's Markdown syntax:
 [link](https://community.openhab.org/)
 
 > Blockquote
-> Blockquote
+>> Blockquote
+>>> Blockquote
 
 1. Ordered List
 2. Ordered List
@@ -61,17 +70,20 @@ Sentence Break before
 
 PHP Extras Markdown
 
-| column     | column     |
-|------------|------------|
+| column     | column     | column     |
+|:---|:---:|---:|
 |            |            |
-|:left       |right:      |
-|:centered:  |-           |
+|left       |centered   |right|
+|  -  |     -    | - |
 
 The TOC is using the Headlines to create a TOC
 
 [TOC]
 
 
-
 <!--This is a comment-->
+
+-------------------
+
+
 
