@@ -1,8 +1,9 @@
 ---
-layout| tutorial-beginner
+layout: tutorial-beginner
 ---
 
 {% include base.html %}
+
 
 
 
@@ -78,12 +79,13 @@ PHP Extras Markdown
 
 The TOC is using the Headlines to create a TOC
 
-[TOC]
-
 
 <!--This is a comment-->
 
--------------------
+---
 
+|text|picture|
+|---|---|
+|blabla|![image](https://community.openhab.org/uploads/default/original/1X/ada4f9ed6657f88f1e3e8e99f44343666f6ccc17.png)|
 
 
