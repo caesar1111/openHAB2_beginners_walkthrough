@@ -1,5 +1,5 @@
 ---
-layout: tutorial-beginner
+layout| tutorial-beginner
 ---
 
 {% include base.html %}
