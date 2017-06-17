@@ -60,14 +60,18 @@ Sentence Break before
 
 
 PHP Extras Markdown
+
 | column     | column     |
 |------------|------------|
 |            |            |
 |:left       |right:      |
-|:centered:  |            |
+|:centered:  |-           |
 
 The TOC is using the Headlines to create a TOC
+
 [TOC]
+
+
 
 <!--This is a comment-->
 
