@@ -99,7 +99,7 @@ My tutorial is using a MS-Windows windows machine for the PC part (You should be
 
 ### Windows Download list:
 
-|Description|Image|
+|Description|URL|
 |---|---|
 |The latest **Raspbian** (Raspberry OS) image. You have to download the “Raspbian Jessie with PIXEL - Image with PIXEL desktop based on Debian Jessie” since this tutorial is using PIXEL|https://www.Raspberrypi.org/downloads/Raspbian/|
 |**Etcher** (to write the Raspbian image to the SD-Card)|https://etcher.io/|
