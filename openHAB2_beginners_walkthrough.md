@@ -51,7 +51,7 @@ As mentioned before, I am basing this tutorial on the graphical GUI of Raspbian 
 
 |Description|Image|
 |---|---|
-|Raspberry Pi 7" Touch-Display|![image](\images\raspberrydisplay.jpg)|
+|Raspberry Pi 7" Touch-Display|![image](/images/raspberrydisplay.jpg)|
 |Premium case for Raspberry Pi 7" Touch-Display (closed version) often sold in bundle with Touch-Display, should be available in black, white and transparent. This is a very good case if you want to place the controller on a table or counter since it is protecting the Raspberry from the back.|![image](\images\raspberrydisplaycase.jpg)|
 |*Alternative:* Cases for Raspberry Pi 7" Touch-Display. You will find a wide range of other cases. The open versions might give you a better access to the Pi GPIO pins or for changing SD card. Please consider: since you can rotate the image of the GUI on the display you can also choose to switch from landscape to portrait orientation.|![image](\images\alternativeraspberrydisplaycase.jpg)|
 |Bluetooth keyboard (optional, since the optional on screen touch keyboard for Raspbian PIXEL was not working without errors, I decided to go for a Bluetooth keyboard which makes the typing much easier)|![image](\images\bluetoothkeyboard.jpg)|
