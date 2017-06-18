@@ -96,7 +96,9 @@ You can find an overview on http://docs.openhab.org/addons/bindings.html
 ##Software list:
 
 My tutorial is using a MS-Windows windows machine for the PC part (You should be able to get it done with Mac or Linux PCs as well, but you have to go online to look up the differences and do some adaptions on the tutorial e.g. mounting the Raspberry file system to PC)
+
 ###Windows Download list:
+
 |Description|Image|
 |---|---|
 |The latest **Raspbian** (Raspberry OS) image. You have to download the “Raspbian Jessie with PIXEL - Image with PIXEL desktop based on Debian Jessie” since this tutorial is using PIXEL|https://www.Raspberrypi.org/downloads/Raspbian/|
