@@ -84,6 +84,7 @@ http://www.cd-jackson.com/index.php/zwave/zwave-device-database/zwave-device-lis
 **LAN devices (cable or WiFi)**
 A lot of things you are using at home are already connected to your LAN and can be integrated into your openHAB2 home automation project if the right binding is available for that device.
 You can find an overview on http://docs.openhab.org/addons/bindings.html
+
 **NOTE:** Be aware that not all the bindings to include devices are already included in the stable version of openHAB2 and may require a manual installation of a so called snapshot version of the binding (how to install snapshot bindings is explained later in this tutorial since we will need it for the WiFi LED controller)
 
 |Description|Image|
@@ -122,7 +123,7 @@ How to download software will be explained in the tutorial, but as a reference y
 ### Raspberry input Overview:
 ![image](images/raspberrypi3interfaces.jpg)
 
-###R aspberry GPIO pin Overview:
+### Raspberry GPIO pin Overview:
 ![image](images/raspberrypi3gpio.jpg)
 
 ### Preparing MicroSD card - writing Raspbian image to MicroSD card (PC required):
@@ -144,12 +145,17 @@ How to download software will be explained in the tutorial, but as a reference y
 
 ### Optional: Installation of 7” Raspberry display and display case:
 The full tutorial will be found on:
+
 https://www.element14.com/community/docs/DOC-78156/l/Raspberry-pi-7-touchscreen-display
 and a clip on YouTube:
+
 https://www.youtube.com/watch?v=tK-w-wDvRTg
+
 *Remark:* I had an issue with plugging in the power supply to the micro USB power input on the circuit board of the display (like shown in the video). The Raspberry was still showing me the low power symbol (lightening symbol on the upper right corner) SOLUTION:  I had to plug in the power supply to the micro USB power input on the Raspberry itself. The display is now powered via the jumper cables. The standard display case is also allowing for both micro USB power inputs to be used.
+
 **NOTE:** If the image on the display is having the wrong orientation, you can rotate the image by changing the configuration of Raspbian (see tutorial section Initial configuration of Raspbian)
 #### Display installation pictures:
+
 |Description|Image|
 |---|---|
 |Step 1|![image](images/displaysetup1.jpg)|
@@ -170,9 +176,11 @@ Since this tutorial is focussing on using the PIXEL GUI here are a few basic tip
 ![image](images/pixelstartup.jpg)
 ### PIXEL basic desktop (including the programs used in this tutorial) not unlike other PC OS desktops:
 ![image](images/pixeldesktop.jpg)
+
 **NOTE:** If you are working with the 7” Raspberry display setup you might need to flip/rotate the display orientation. Just check the section” Optional: Change display orientation” later in this chapter
 ### Working with the Terminal:
 ![image](images/terminal.jpg)
+
 **NOTE:** As soon as you have connected the Raspberry to the network you might find it easier to open the Terminal remotely using PuTTY. This also allows you to directly paste command lines from this tutorial into the Terminal. (Right click in PuTTY terminal is pasting the content of the clipboard into the terminal)
 #### Basic terminal commands and functions:
 The full list can be found on:
@@ -192,12 +200,14 @@ https://www.Raspberrypi.org/documentation/linux/usage/commands.md
 |`sudo nano *filename*`|Is stating a basic editor with write access in the terminal to open or create a simple text or configuration file with root user rights. Closing the editor is done by ctrl+x and then choosing whether you want to save your changes or not|
 
 ## Initial configuration of Raspbian
-The following steps make sure, that basic Raspbian configuration is done. 
+The following steps make sure, that basic Raspbian configuration is done.
+
 **NOTE:** There may be many tutorials in how to set-up and configure Raspbian and going into more details about user rights and other Raspbian features. This tutorial is showing the way which worked for my project aiming to run openHAB2 on the Raspberry.
 Since this tutorial is using the PIXEL GUI I always refer to the PIXEL way of configuring and only go back to the terminal way (text only) if it is required.
 
 ### Localisation:
 The 1.st thing you want to do is changing the localisation settings to make sure your keyboard layout and WiFi settings are matching.
+
 **NOTE:** Do not change the password before you have changed the keyboard layout since you might put in a different password than you expect (e.g. US qwerty vs. German qwertz results in “Raspberrz” instead of “Raspberry”)
 
 |Description|Image|
@@ -208,6 +218,7 @@ The 1.st thing you want to do is changing the localisation settings to make sure
 |Go to tab Localisation *>Localisation >>Set Keyboard >>>Country >>>Variant*|![image](images/piconfig4.jpg)|
 |Go to tab Localisation *>Localisation >>Set WiFi Country >>>Country*|![image](images/piconfig5.jpg)|
 |Accept the reboot||
+
 ### *Optional:* Change display orientation
 If you are working with the 7” Raspberry display setup you might need to flip/rotate the display orientation for specific cases
 
@@ -227,6 +238,7 @@ If you are working with the 7” Raspberry display setup you might need to flip/
 |Reboot the Raspberry for the changes to take effect|`sudo reboot`|
 ### Changing Password:
 This is important to secure your standard Raspberry user “pi” before you connect the Raspberry to the network.
+
 **NOTE:** Make sure you have changed the keyboard layout to your requirements before change the password.
 
 |Description|Image/Command|
