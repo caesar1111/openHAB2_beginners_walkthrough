@@ -89,7 +89,7 @@ You can find an overview on http://docs.openhab.org/addons/bindings.html
 
 |Description|Image|
 |---|---|
-|WiFi XCSOURCE Magic UFO-WiFi LED-Controller Type LD382 (other brand names might work as well, but you have to make sure it is Type LD382, LD382A or LD686)*REMARK:* I was using a WiFi controller on purpose since: It is only about half the price of a Z-Wave WiFi controller. You can control the device as well via smart phone (like light to music feature of the app)But some things you have to be aware of using WiFi LED instead of Z-Wave LED: You have to have a WiFi network to which your Raspberry and your WiFi LED controller is connected. You have to manually install a beta / snapshot version of openHAB2 or manually install the WiFi LED Binding on top of the package based installation of openHAB2 (see tutorial).|![image](images/ledwifi.jpg)|
+|WiFi XCSOURCE Magic UFO-WiFi LED-Controller Type LD382 (other brand names might work as well, but you have to make sure it is Type LD382, LD382A or LD686) *REMARK:* I was using a WiFi controller on purpose since: It is only about half the price of a Z-Wave WiFi controller. You can control the device as well via smart phone (like light to music feature of the app)But some things you have to be aware of using WiFi LED instead of Z-Wave LED: You have to have a WiFi network to which your Raspberry and your WiFi LED controller is connected. You have to manually install a beta / snapshot version of openHAB2 or manually install the WiFi LED Binding on top of the package based installation of openHAB2 (see tutorial).|![image](images/ledwifi.jpg)|
 |RGB LED stripe incl. power supply 12V DC bundle. While you can buy the stripe and the power supply bundle separately, most of the times the bundle will come at the same price or even cheaper. The included power supply plug should directly fit into the power inlet socket of the WiFi controller. *REMARK:* It also allows you to attach the stripe without soldering since you can just cut the cable of the RGB bundle controller and use it to connect the LED stripe to the WiFi controller.|![image](images/rgbledstripe.jpg)|
 |*Optional:* White LED stripe. Since the WiFi LED-Controller is allowing you to at additionally control plain colour LED stripe (or in case of controller type LD686 even two) you might want to get an additional strip in e.g. plain white to create ab clear white illumination. *NOTE:* You might be fine with just the stripe if you already got the power supply with the RGB stripe|![image](images/whiteledstripe.jpg)|
 |*Optional(in my case it was already there and I just included it into my project):* Yamaha Receiver RX-V581|![image](images/rx-v581.jpg)|
@@ -147,6 +147,7 @@ How to download software will be explained in the tutorial, but as a reference y
 The full tutorial will be found on:
 
 https://www.element14.com/community/docs/DOC-78156/l/Raspberry-pi-7-touchscreen-display
+
 and a clip on YouTube:
 
 https://www.youtube.com/watch?v=tK-w-wDvRTg
@@ -184,6 +185,7 @@ Since this tutorial is focussing on using the PIXEL GUI here are a few basic tip
 **NOTE:** As soon as you have connected the Raspberry to the network you might find it easier to open the Terminal remotely using PuTTY. This also allows you to directly paste command lines from this tutorial into the Terminal. (Right click in PuTTY terminal is pasting the content of the clipboard into the terminal)
 #### Basic terminal commands and functions:
 The full list can be found on:
+
 https://www.Raspberrypi.org/documentation/linux/usage/commands.md
 
 |Command|Description|
@@ -206,7 +208,7 @@ The following steps make sure, that basic Raspbian configuration is done.
 Since this tutorial is using the PIXEL GUI I always refer to the PIXEL way of configuring and only go back to the terminal way (text only) if it is required.
 
 ### Localisation:
-The 1.st thing you want to do is changing the localisation settings to make sure your keyboard layout and WiFi settings are matching.
+The first thing you want to do is changing the localisation settings to make sure your keyboard layout and WiFi settings are matching.
 
 **NOTE:** Do not change the password before you have changed the keyboard layout since you might put in a different password than you expect (e.g. US qwerty vs. German qwertz results in “Raspberrz” instead of “Raspberry”)
 
@@ -264,13 +266,14 @@ Either by plugging in a Ethernet cable or by connecting to a WiFi network:
 |Enter WiFi password|*`yourwifipassword`*|
 
 ### Check the IP address of the Raspberry:
-To do so you have to check the IP address of the Raspberry in the terminal
+To do so you have to check the IP address of the Raspberry in the terminal:
 
 |Description|Image/Command|
 |---|---|
 |Open Terminal|![image](images/openterminal.jpg)|
 |use the command|`ifconfig`|
 |Result: the terminal shows you the ip configuration and the IP addresses for the different connections|Ethernet cable: [eth0] *`xxx.xxx.xxx.xxx`* or WiFi: [wlan0] *`xxx.xxx.xxx.xxx`*|
+
 **NOTE:** You might want to set your IP address of the Raspberry to static, if you get problems with the lease time setting of your gateway (IP address is changing whenever you reconnect to the network)
 
 ### Update / Upgrade Raspbian:
