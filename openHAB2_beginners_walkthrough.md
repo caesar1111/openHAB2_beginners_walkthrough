@@ -51,7 +51,7 @@ As mentioned before, I am basing this tutorial on the graphical GUI of Raspbian 
 
 |Description|Image|
 |---|---|
-|Raspberry Pi 7" Touch-Display|![image](/images/raspberrydisplay.jpg)|
+|Raspberry Pi 7" Touch-Display|![image](images/raspberrydisplay.jpg)|
 |Premium case for Raspberry Pi 7" Touch-Display (closed version) often sold in bundle with Touch-Display, should be available in black, white and transparent. This is a very good case if you want to place the controller on a table or counter since it is protecting the Raspberry from the back.|![image](images/raspberrydisplaycase.jpg)|
 |*Alternative:* Cases for Raspberry Pi 7" Touch-Display. You will find a wide range of other cases. The open versions might give you a better access to the Pi GPIO pins or for changing SD card. Please consider: since you can rotate the image of the GUI on the display you can also choose to switch from landscape to portrait orientation.|![image](images/alternativeraspberrydisplaycase.jpg)|
 |Bluetooth keyboard (optional, since the optional on screen touch keyboard for Raspbian PIXEL was not working without errors, I decided to go for a Bluetooth keyboard which makes the typing much easier)|![image](images/bluetoothkeyboard.jpg)|
@@ -131,23 +131,150 @@ How to download software will be explained in the tutorial, but as a reference y
 |Extract *.zip file to receive *.img file|![image](images/writeimage.jpg)|
 |Use Etcher to write image to a MicroSD card: 1. select image 2. select drive with MicroSD card plugged in to 3. start flashing|![image](images/writeimage2.jpg)|
 
+### Connecting the hardware to the Raspberry
+#### Basic hardware setup:
+|Description|Image|
+|---|---|
+|Connect keyboard and mouse to the USB ports|![image](images/usbconnect.jpg)|
+|Insert the MicroSD card (pins facing the circuit board)|![image](images/microsdcardconnect.jpg)|
+|Connect Raspberry with display using HDMI (Obsolete, if you going for the 7” Raspberry display setup)|![image](images/externaldisplayconnect.jpg)|
+|Connect the Raspberry with Ethernet cable to your gateway (optional)|![image](images/lanconnect.jpg)|
+|Connect the power supply to the micro USB power input **Make sure that you have everything plugged in and the Raspberry is clear of any metal items since this step is already powering up your Raspberry.**|![image](images/powersupplyconnect.jpg)|
+
+### Optional: Installation of 7” Raspberry display and display case:
+The full tutorial will be found on:
+https://www.element14.com/community/docs/DOC-78156/l/Raspberry-pi-7-touchscreen-display
+and a clip on YouTube:
+https://www.youtube.com/watch?v=tK-w-wDvRTg
+*Remark:* I had an issue with plugging in the power supply to the micro USB power input on the circuit board of the display (like shown in the video). The Raspberry was still showing me the low power symbol (lightening symbol on the upper right corner) SOLUTION:  I had to plug in the power supply to the micro USB power input on the Raspberry itself. The display is now powered via the jumper cables. The standard display case is also allowing for both micro USB power inputs to be used.
+**NOTE:** If the image on the display is having the wrong orientation, you can rotate the image by changing the configuration of Raspbian (see tutorial section Initial configuration of Raspbian)
+#### Display installation pictures:
+|Description|Image|
+|---|---|
+|Step 1|![image](images/displaysetup1.jpg)|
+|Step 2|![image](images/displaysetup2.jpg)|
+|Step 3|![image](images/displaysetup3.jpg)|
+|Step 4|![image](images/displaysetup4.jpg)|
+|Step 5|![image](images/displaysetup5.jpg)|
+|Step 6|![image](images/displaysetup6.jpg)|
+|Step 7|![image](images/displaysetup7.jpg)|
+|Step 8|Assembly of the standard display. (Make sure you have inserted the MicroSD card since you won’t have access to the slot as soon as you mounted the case!)Just pull the back plate off the case, insert the display including the mounted Raspberry (make sure that the path cables and the display cables are not crushed between case and board), tighten it with the 4 screws and put the back plate into place. Here is a good clip on YouTube: https://www.youtube.com/watch?v=wpSxibZOmoo|
+
+---
+
+# Chapter 4: Raspbian basic configuration
+## Starting up Raspberry or the first time – Raspbian PIXEL desktop
+Since this tutorial is focussing on using the PIXEL GUI here are a few basic tips.
+### Raspberry start-up screen:
+![image](images/pixelstartup.jpg)
+### PIXEL basic desktop (including the programs used in this tutorial) not unlike other PC OS desktops:
+![image](images/pixeldesktop.jpg)
+**NOTE:** If you are working with the 7” Raspberry display setup you might need to flip/rotate the display orientation. Just check the section” Optional: Change display orientation” later in this chapter
+### Working with the Terminal:
+![image](images/terminal.jpg)
+**NOTE:** As soon as you have connected the Raspberry to the network you might find it easier to open the Terminal remotely using PuTTY. This also allows you to directly paste command lines from this tutorial into the Terminal. (Right click in PuTTY terminal is pasting the content of the clipboard into the terminal)
+#### Basic terminal commands and functions:
+The full list can be found on:
+https://www.Raspberrypi.org/documentation/linux/usage/commands.md
+
+|Command|Description|
+|---|---|
+|`help`|Is showing you basic commands|
+|`sudo *othercommand*`|is allowing you to run other commands as super user aka root user|
+|`ls -la`|Shows the files in a directory incl. additional information|
+|`cd`|Is changing the shell working directory. It can be used with attributes|
+|`cd`|No attribute => working directory is changed to user root directory.|
+|`cd ..`|Working directory is changed to directory one level above|
+|`cd *directory*`|Working directory is changed to the named directory inside the current directory|
+|`cd */directory/directory*`|Working directory is changed to the directory defined by the full path /directory/directory|
+|`nano *filename*`|Is stating a basic editor in the terminal to open or create a simple text or configuration file. Closing the editor is done by ctrl+x and then choosing whether you want to save your changes or not|
+|`sudo nano *filename*`|Is stating a basic editor with write access in the terminal to open or create a simple text or configuration file with root user rights. Closing the editor is done by ctrl+x and then choosing whether you want to save your changes or not|
+
+## Initial configuration of Raspbian
+The following steps make sure, that basic Raspbian configuration is done. 
+**NOTE:** There may be many tutorials in how to set-up and configure Raspbian and going into more details about user rights and other Raspbian features. This tutorial is showing the way which worked for my project aiming to run openHAB2 on the Raspberry.
+Since this tutorial is using the PIXEL GUI I always refer to the PIXEL way of configuring and only go back to the terminal way (text only) if it is required.
+
+### Localisation:
+The 1.st thing you want to do is changing the localisation settings to make sure your keyboard layout and WiFi settings are matching.
+**NOTE:** Do not change the password before you have changed the keyboard layout since you might put in a different password than you expect (e.g. US qwerty vs. German qwertz results in “Raspberrz” instead of “Raspberry”)
+
+|Description|Image|
+|---|---|
+|Open Raspberry Pi Configuration *>Application menu >>Preferences >>>Raspberry Pi configuration*|![image](images/piconfig1.jpg)|
+|Configure *>Localisation >>Set Locale >>>Language >>>Country*|![image](images/piconfig2.jpg)|
+|Go to tab Localisation *>Localisation >>Set Timezone >>>Area >>>Location*|![image](images/piconfig3.jpg)|
+|Go to tab Localisation *>Localisation >>Set Keyboard >>>Country >>>Variant*|![image](images/piconfig4.jpg)|
+|Go to tab Localisation *>Localisation >>Set WiFi Country >>>Country*|![image](images/piconfig5.jpg)|
+|Accept the reboot||
+### *Optional:* Change display orientation
+If you are working with the 7” Raspberry display setup you might need to flip/rotate the display orientation for specific cases
+
+|Description|Image/Command|
+|---|---|
+|Open Terminal|![image](images/openterminal.jpg)|
+|Open boot config.txt file in nano editor|`sudo nano /boot/config.txt`|
+|Add the line at the bottom of the file:(This will flip the display orientation)|`lcd_rotate=2`|
+|Optional: You can choose from different angles||
+|0 degrees rotation|`display_rotate=0`|
+|90 degrees rotation|`display_rotate=1`|
+|180 degrees rotation|`display_rotate=2`|
+|270 degrees rotation|`display_rotate=3`|
+|horizontal flip|`display_rotate=0x10000`|
+|vertical flip|`display_rotate=0x20000`|
+|Exit and save the file|[ctrl+x] > `y` > [Enter]|
+|Reboot the Raspberry for the changes to take effect|`sudo reboot`|
+### Changing Password:
+This is important to secure your standard Raspberry user “pi” before you connect the Raspberry to the network.
+**NOTE:** Make sure you have changed the keyboard layout to your requirements before change the password.
+
+|Description|Image/Command|
+|---|---|
+|Open Raspberry Pi Configuration *>Application menu >>Preferences >>>Raspberry Pi configuration*|![image](images/piconfig1.jpg)|
+|Change the password *>System >>Change Password*|![image](images/piconfig6.jpg)|
+|Enter initial (for standard user “pi” it is “*Raspberry*” and your *new password*|`Raspberry` > *`yourpassword`* > *`yourpassword`*|
+### Enabling interfaces:
+This is required for the communication to the PC (SSH) and to the Z-Wave stick (Serial)
+
+|Description|Image/Command|
+|---|---|
+|Open Terminal|![image](images/openterminal.jpg)|
+|Enable SSH (to access the Raspberry via Network) Enable Serial (to enable Serial Port for Z-Wave controllers) *>Interfaces >>SSH >> Serial*|![image](images/piconfig7.jpg) [SSH: Enable] & [Serial: Enable]|
+
+### Connect Raspberry to network: 
+Either by plugging in a Ethernet cable or by connecting to a WiFi network:
+
+|Description|Image/Command|
+|---|---|
+|Click on the network symbol|*3 lines and 2 red crosses if no connection is available*|
+|Select WiFi network|[yourwifi]|
+|Enter WiFi password|*`yourwifipassword`*|
+
+### Check the IP address of the Raspberry:
+To do so you have to check the IP address of the Raspberry in the terminal
+
+|Description|Image/Command|
+|---|---|
+|Open Terminal|![image](images/openterminal.jpg)|
+|use the command|`ifconfig`|
+|Result: the terminal shows you the ip configuration and the IP addresses for the different connections|Ethernet cable: [eth0] *`xxx.xxx.xxx.xxx`* or WiFi: [wlan0] *`xxx.xxx.xxx.xxx`*|
+**NOTE:** You might want to set your IP address of the Raspberry to static, if you get problems with the lease time setting of your gateway (IP address is changing whenever you reconnect to the network)
+
+### Update / Upgrade Raspbian:
+Raspbian is proving online updates so make sure that you have the latest installed before you go further in the configuration.
+
+|Description|Image/Command|
+|---|---|
+|Open Terminal|![image](images/openterminal.jpg)|
+|use the command (be aware that the upgrade function will take several minutes to complete if you run it for the first time)|`sudo apt-get update` & `sudo apt-get upgrade`|
+
 -
 -
--
--
--
--
+
+---
 
 
-
-
-
-
-
-
-
-
-Markdown syntax examples start from here:
+# Markdown syntax examples start from here:
 
 ---
 General header
