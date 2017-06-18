@@ -130,7 +130,7 @@ How to download software will be explained in the tutorial, but as a reference y
 |Description|Image|
 |---|---|
 |Download latest Raspbian Release (*.zip file) to a Windows folder|![image](images/raspbiandownload.jpg)|
-|Extract *.zip file to receive *.img file|![image](images/writeimage.jpg)|
+|Extract *latestimage*.zip file to receive *latestimage*.img file|![image](images/writeimage.jpg)|
 |Use Etcher to write image to a MicroSD card: 1. select image 2. select drive with MicroSD card plugged in to 3. start flashing|![image](images/writeimage2.jpg)|
 
 ### Connecting the hardware to the Raspberry
