@@ -247,7 +247,7 @@ This is important to secure your standard Raspberry user “pi” before you con
 |---|---|
 |Open Raspberry Pi Configuration *>Application menu >>Preferences >>>Raspberry Pi configuration*|![image](images/piconfig1.jpg)|
 |Change the password *>System >>Change Password*|![image](images/piconfig6.jpg)|
-|Enter initial (for standard user “pi” it is “*Raspberry*” and your *new password*|`Raspberry` > *`yourpassword`* > *`yourpassword`*|
+|Enter initial (for standard user “pi” it is “*Raspberry*” and your *new password*|`raspberry` > *`yourpassword`* > *`yourpassword`*|
 ### Enabling interfaces:
 This is required for the communication to the PC (SSH) and to the Z-Wave stick (Serial)
 
@@ -282,7 +282,7 @@ Raspbian is proving online updates so make sure that you have the latest install
 |Description|Image/Command|
 |---|---|
 |Open Terminal|![image](images/openterminal.jpg)|
-|use the command (be aware that the upgrade function will take several minutes to complete if you run it for the first time)|`sudo apt-get update` & `sudo apt-get upgrade`|
+|use the command (be aware that the upgrade function will take several minutes to complete if you run it for the first time) and confirm prompts with *Yes*|`sudo apt-get update` & `sudo apt-get upgrade`>`y`|
 
 -
 -
