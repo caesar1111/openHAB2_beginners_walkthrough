@@ -17,12 +17,12 @@ If you, on the other hand, are willing to spend a few hrs/days in learning how t
 This tutorial is targeting beginners like me to get a step by step guideline to get all the things installed. Since I am no coding expert and have no experience in Raspberry and Raspbian I am trying to go through the things step by step, so you should be able to get everything done, even without exactly having to go into all the details. That is one of the reasons I am also using the graphical GUI PIXEL for Raspbian since I thing it makes it easier for the beginners to get started (and you might want to use PIXEL anyway when you are using the Raspberry 7” display as interface for your home automation controller)
 This tutorial is also based on **having a Windows PC** to support the setup process. You might be able to completely do it without the support of an extra PC, if you can get a MicroSD card with a pre-installed Raspbian OS and use the display options (the Raspberry 7” display or HDMI Display) for the Raspberry.
 
-*=> **DISCLAIMER:
-This tutorial might contain some typos, errors or ways of setting up, which can be done in a better way. I am just reflecting my process of starting from scratch and slowly working my way through hundreds of online tutorials, manuals, forum threads etc. and on the way, highlighting the issues I had in getting things working. There will be no guarantee that the given instructions are working for your project as well.** *
+***DISCLAIMER:
+This tutorial might contain some typos, errors or ways of setting up, which can be done in a better way. I am just reflecting my process of starting from scratch and slowly working my way through hundreds of online tutorials, manuals, forum threads etc. and on the way, highlighting the issues I had in getting things working. There will be no guarantee that the given instructions are working for your project as well.***
 
 Anyway I hope this tutorial will help some beginners to enjoy home automation with openHAB2.
 
-##A few words about the 2 in openHAB2:
+## A few words about the 2 in openHAB2:
 The 2 in openHAB2 is important! The tutorial is based on the openHAB2 and will not go into all the details of the old version.
 You just have to be aware, that a lot of online documentation is still for the openHAB version and will not be applicable for openHAB2!
 So the best thing is always to go to the official webpage of openHAB2 and start from there, and only if you really can’t find the information or the link there, go to google and search for other solutions. I was always using the search setting (last year) so it was more likely to the results considering openHAB2 and not openHAB.
@@ -93,11 +93,11 @@ You can find an overview on http://docs.openhab.org/addons/bindings.html
 |*Optional(in my case it was already there and I just included it into my project):* Yamaha Receiver RX-V581|![image](images/rx-v581.jpg)|
 |*Optional(in my case it was already there and I just included it into my project):* **Samsung TV Details MISSING** *NOTE:* Even when the binding is not officially supporting your TV you might be lucky|![image](images/samsungtv.jpg)|
 
-##Software list:
+## Software list:
 
 My tutorial is using a MS-Windows windows machine for the PC part (You should be able to get it done with Mac or Linux PCs as well, but you have to go online to look up the differences and do some adaptions on the tutorial e.g. mounting the Raspberry file system to PC)
 
-###Windows Download list:
+### Windows Download list:
 
 |Description|Image|
 |---|---|
@@ -108,7 +108,7 @@ My tutorial is using a MS-Windows windows machine for the PC part (You should be
 |**PuTTY** or **KiTTY** portable to access the Raspberry console from your PC|http://www.putty.org/ or https://portableapps.com/apps/internet/kitty-portable|
 |**WinSCP** portable to access Raspberry file System directly from your PC (might become obsolete if you use a SAMBA server on your Raspberry, see tutorial)|https://winscp.net/eng/download.php|
 
-###Raspberry downloads:
+### Raspberry downloads:
 How to download software will be explained in the tutorial, but as a reference you will use:
 - **openHAB2** Package repository based installation or manual installation (be aware that the file locations on the Raspberry will be different based on which kind of installation you choose)
 - **Samba** server(for access of Raspberry files from Windows machine; needed for Eclipse Smart HomeDesigner)
@@ -116,15 +116,15 @@ How to download software will be explained in the tutorial, but as a reference y
 
 ---
 
-#Chapter 3: Raspberry hardware and Raspbian OS installation
-##General information about Raspberry interfaces and GPIO pins:
-###Raspberry input Overview:
+# Chapter 3: Raspberry hardware and Raspbian OS installation
+## General information about Raspberry interfaces and GPIO pins:
+### Raspberry input Overview:
 ![image](images/raspberrypi3interfaces.jpg)
 
-###Raspberry GPIO pin Overview:
+###R aspberry GPIO pin Overview:
 ![image](images/raspberrypi3gpio.jpg)
 
-###Preparing MicroSD card - writing Raspbian image to MicroSD card (PC required):
+### Preparing MicroSD card - writing Raspbian image to MicroSD card (PC required):
 |Description|Image|
 |---|---|
 |Download latest Raspbian Release (*.zip file) to a Windows folder|![image](images/raspbiandownload.jpg)|
