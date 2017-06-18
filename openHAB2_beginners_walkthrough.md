@@ -247,7 +247,7 @@ This is important to secure your standard Raspberry user “pi” before you con
 |---|---|
 |Open Raspberry Pi Configuration *>Application menu >>Preferences >>>Raspberry Pi configuration*|![image](images/piconfig1.jpg)|
 |Change the password *>System >>Change Password*|![image](images/piconfig6.jpg)|
-|Enter initial (for standard user “pi” it is “*Raspberry*” and your *new password*|`raspberry` > *`yourpassword`* > *`yourpassword`*|
+|Enter initial (for standard user “pi” it is “*raspberry*” and your *new password*|`raspberry` > *`yourpassword`* > *`yourpassword`*|
 ### Enabling interfaces:
 This is required for the communication to the PC (SSH) and to the Z-Wave stick (Serial)
 
