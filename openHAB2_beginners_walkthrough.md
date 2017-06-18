@@ -77,6 +77,7 @@ Since I am doing a German based home automation project you may find that some Z
 |Aeotec Multi-Sensor 6 ZW100-C - Z-Wave Plus|![image](images/z-wave_plus_aeotec_multi-sensor_6_zw100-c.jpg)|
 |Z-Wave Aeon Labs ZW088 Z-Wave Key Fob, Gen5|![image](images/z-wave_keyfob_zw088_by_aeotec.jpg)|
 |Z-Wave NodOn Smart Plug (not available e.g. in the US)|![image](images/z-wave_smartplug_by_nodon.jpg)|
+
 **NOTE:** If you want to by other Z-Wave devices always make your they are listed in the Z-Wave device list of the openHAB2 Z-Wave binding to make sure they are supported correctly in the context of openHAB2:
 http://www.cd-jackson.com/index.php/zwave/zwave-device-database/zwave-device-list
 
