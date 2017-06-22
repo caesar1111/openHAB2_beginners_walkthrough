@@ -284,6 +284,131 @@ Raspbian is proving online updates so make sure that you have the latest install
 |Open Terminal|![image](images/openterminal.jpg)|
 |use the command (be aware that the upgrade function will take several minutes to complete if you run it for the first time) and confirm prompts with *Yes*|`sudo apt-get update` & `sudo apt-get upgrade`>`y`|
 
+##Optional Raspberry settings and configuration:
+
+The following settings and configuration is just for additional information and might not be needed to setup openHAB2. Some of the settings and configuration might still be useful.
+
+### Check partition size on MicroSD card:
+Make sure Raspbian is using the full capacity of the MicroSD card (normally while starting up Raspbian for the first time, it is done automatically and the Raspberry will restart automatically):
+
+|Description|Image/Command|
+|---|---|
+|Open Terminal|![image](images/openterminal.jpg)|
+|use the command|`sudo fdisk -l`|
+|Result: the terminal shows you the partition size of the two partitions on the MicroSD card summing up to the total capacity|
+|If the capacity is not completely used (e.g. you were using not a plain Raspbian image) you have to expand the partitions manually in the terminal configuration ||
+|Start terminal configuration with command|`sudo raspi-config`|
+|Select Option (Be aware that the option numbers might change in newer Raspbian releases)|7 Advanced Options|
+|Select Option|A1 Expand Filesystem Prompt will tell you that the file system has been increased|
+|Now select to exit the configuration|[Finish]|
+|Allow reboot|[Yes]|
+
+### Create a Desktop icon and link it to a application 
+To be able to create a Icon you have to first create a *yourdesktopfile*.desktop file
+**NOTE**: This example is creating the desktop icon for the user “pi”
+
+|Description|Image/Command|
+|---|---|
+|Open Terminal|![image](images/openterminal.jpg)|
+|Go to the directory desktop for your “pi” user|`cd /home/pi/Desktop`|
+|Create a specific desktop file using nano editor|`sudo nano yourdesktopfile.desktop`|
+|Enter parameters into the file accordingly|(see example file content below)|
+|Name:|*YourShortcutName*|
+|Comment:|*Your Shortcut Comment*|
+|Icon:|*YourIcon.png*|
+|Application for shortcut:|*YourShortcutApp*|
+#### Example file content:
+```bash
+[Desktop Entry]
+Name=YourShortcutName
+Comment=Your Shortcut Comment
+Icon=/usr/share/pixmaps/YourIcon.png
+Exec=/usr/bin/YourShortcutApp
+Type=Application
+Encoding=UTF-8
+Terminal=false
+```
+
+### Enabling root user:
+Since by default the “root” disabled it can’t be used. You might want to enable it for certain purposes like e.g. enabling the root user for samba file server to get full access to the directories from a PC (see chapter setup samba server) 
+**NOTE:** There is a reason for the “root” being disabled! Enabling the user is allowing full access to the Raspbian and therefore creating a security risk. Please always consider whether you really want to enable this user!
+
+|Description|Image/Command|
+|---|---|
+|Open Terminal|![image](images/openterminal.jpg)|
+|Since the user already exists you just have to set the password. **NOTE:** you can also use the command to change the password later on|`sudo passwd root`|
+|Just enter twice the new password for the “root” user|*`rootpassword`* *`rootpassword`* |
+
+### Enabling remote SSH access for root user:
+**NOTE:** There is a reason for the “root” not being enabled for SSH! Enabling the user for SSH is allowing full remote access to the Raspbian and therefore creating a significant security risk. Please always consider whether you really want to enable this user for SSH!
+
+|Description|Image/Command|
+|---|---|
+|Open Terminal|![image](images/openterminal.jpg)|
+|Open sshd.config file in nano editor|`sudo nano /etc/ssh/sshd_config`|
+|Find the section in the file|`# Authentication`|
+||`LoginGraceTime 120`|
+||`PermitRootLogin without-password`|
+||`StrictModes yes`|
+|Change the line|`PermitRootLogin yes`|
+|Reboot the Raspberry for the changes to take effect|`sudo reboot`|
+
+## Optional: Raspbian PIXEL screensaver (xscreensaver)
+If you are working with the 7” Raspberry display setup you might want to use a screensaver as well.
+Installation of xscreensaver:
+
+|Description|Image/Command|
+|---|---|
+|Open Terminal|![image](images/openterminal.jpg)|
+|Install xscreensaver and some additional screen saver themes|`sudo apt-get install xscreensaver xscreensaver-data-extra xscreensaver-gl-extra`|
+|Confirm installation|[Yes]|
+
+### Configuration of xscreensaver:
+I am showing an example configuration which is first switching on a screensaver and then turning off the display completely.
+
+|Description|Image/Command|
+|---|---|
+|Open Screensaver Preferences: >Application menu >>Preferences >>>Screensaver|![image](images/screensaver1.jpg)|
+|Configure [Display Modes] - NOTE: This is just a sample configuration selecting one screensaver after 5 minutes|![image](images/screensaver2.jpg)|
+|Mode|[Only One Screen Saver]|
+|Screensaver|[Barcode]|
+|Blank After|[5] minutes|
+|Cycle After|[0] minutes|
+|Configure [Advanced] - NOTE: This is just a sample switching off the screen after 10 minutes |![image](images/screensaver3.jpg)|
+|Power Management Enabled|[x]|
+|Standby After:|[10] minutes|
+|Suspend After:| [10] minutes|
+|Off After:| [10] minutes|
+|Quick Power-off in Blank Only Mode:|[x]|
+|Close the Screensaver Preferences - NOTE: There is no save button||
+
+## Optional: Start Chromium Web server on Raspbian boot
+
+### Configure the autostart file:
+
+|Description|Image/Command|
+|---|---|
+|Open Terminal|![image](images/openterminal.jpg)|
+|Open the autostart configuration file with nano editor|`sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart`|
+|Add the line at the end of the file |`@unclutter`|
+|Add the line at the end of the file - (`--noerrdialogs` to ignor error dialogs)|`@chromium-browser --noerrdialogs`|
+|Optional parameters (example command):|`@chromium-browser --noerrdialogs --kiosk --incognito http://yoururl.com`|
+|For full screen mode. NOTE: to exit full screen mode you have to press “Alt+F4” on the keyboard of the Raspberry, so you have to have a keyboard installed to exit this mode!|`--kiosk `|
+|For incognito mode of the browser|`--incognito`|
+|For selecting the URL directly in the configuration file. NOTE: selecting the URL via Chromium settings might be easier|`http://yoururl.com`|
+|Exit and save the file|[ctrl+x] > `y` > [Enter]|
+|Reboot the Raspberry for the changes to take effect|`sudo reboot`|
+
+### Select the start URL for Chromium web browser:
+**NOTE:** You can also select the URL in the autostart file, but using the browser functionality is giving you a simpler access (no terminal) and you can check the result without rebooting
+
+|Description|Image/Command|
+|---|---|
+|Open Chromium and go to the Settings(3 bullets icon)|![image](images/chromium1.jpg)|
+|Enable in the *On start-up* chapter the option *Open a specific page or set of pages* [x] and click on the link [Set pages] to enter the requested start URL||
+||
+
+
 -
 -
 
