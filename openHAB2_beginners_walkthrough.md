@@ -405,8 +405,104 @@ I am showing an example configuration which is first switching on a screensaver 
 |Description|Image/Command|
 |---|---|
 |Open Chromium and go to the Settings(3 bullets icon)|![image](images/chromium1.jpg)|
-|Enable in the *On start-up* chapter the option *Open a specific page or set of pages* [x] and click on the link [Set pages] to enter the requested start URL||
-||
+|Enable in the *On start-up* chapter the option *Open a specific page or set of pages* [x] and click on the link [Set pages] to enter the requested start URL|![image](images/chromium2.jpg)|
+|Enter the requested start URL `http://yoururl.com`, [OK] your URL - Now Chromium is allowing you to enter an additional URL which you can ignore|![image](images/chromium3.jpg)|
+|To check if it is working >Close Chromium browser >Open Chromium browser >>Result: `http://yoururl.com` should be loaded on startup ||
+|Optional: If you have completed your openHAB2 configuration and want to use HABPANEL as GUI you can just use the URL or even start specific pages in the HABPANEL GUI (just use the URL shown in the browser when you access the HABPANEL page) - NOTE: If you are linking to pages hosted on the same raspberry, most likely ou will receive an error message since yon startup the service has not started up. Just refresh the page after a few minutes. |![image](images/openhab2start.jpg)`http://xxx.xxx.xxx.xxx:8080/HABPANEL/index.html#/`|
+
+
+# Chapter 5: Setting up Raspbian for access via PC
+## Connect to the Raspberry terminal your windows system using, KiTTY or PuTTY:
+
+|Description|Image/Command|
+|---|---|
+|Open KiTTY or PuTTY on your PC|![image](images/putty1.jpg)|
+|Enter Hostname (pi@ in front of the IP is giving the user you want to use for connecting, in this case the standard user “pi”), Port and Connection type. Select Open to launch the terminal|![image](images/putty2.jpg)|
+|Optional: save the session|![image](images/putty3.jpg)|
+|On first connection an security alert is coming which you have to accept|![image](images/putty4.jpg)|
+|Now a terminal window is opening on our PC asking you to enter the “pi” user password|![image](images/putty5.jpg)|
+|The terminal window is now starting up in the user home directory|![image](images/putty6.jpg)|
+|You can now use the PC terminal window the same way you us the terminal on the Raspberry itself||
+
+## Optional: Connect to the Raspberry file system from your windows system using WinSCP:
+**NOTE:** The connection can only access the rights of the Raspberry user. So the standard user “pi” will not have the writing rights for multiple directories. For full access you have to use the user “root” (user needs to be enabled since it is disabled in standard setup, procedure shown later in the tutorial), but enabling this user for SSH access is opening up a significant security risk, so it is recommended to use as Raspberry based Samba server for full access to specific directories (shown later in the tutorial).
+
+|Description|Image/Command|
+|---|---|
+|Open WinSCP on your computer|![image](images/winscp1.jpg)|
+|Configure your session|![image](images/winscp2.jpg)|
+|Select|[New Site]|
+|Select File protocol|[SCP]|
+|Enter Host name|`xxx.xxx.xxx.xxx`|
+|Enter port|`22`|
+|Enter User name|`pi` (standard user with limited access to the file system)|
+|Enter Password for “pi”|`yourpassword`|
+|Optional: save the session|[Save]|
+|WinSCP is launched showing the windows directory on the left side and the “pi” user home directory of the Raspberry on the right side of the window|![image](images/winscp3.jpg)|
+
+## Optional: Generic setup of Samba server on Raspbian
+To have access to the Raspberry file system using the PC file explorer you have to install a Samba server on Raspbian. With the server installed you can map the selected folders (share) on your Raspberry as a network drive.
+**NOTE:** Skip this section *to the end of this chapter*, if you only want to use the Samba server for openHAB2 purpose. You will find an openHAB2 centric installation guide later in this document. 
+
+|Description|Image/Command|
+|---|---|
+|Open Terminal|![image](images/openterminal.jpg)|
+|Make sure Raspberry is updated (optional)|`sudo apt-get update`|
+|Download samba server to Raspbery|`sudo apt-get install samba samba-common-bin`|
+|Open the samba server configuration file in nano editor|`sudo nano /etc/samba/smb.conf`|
+|Go to the end of the file and add following lines|`[RaspberryPiDirectories]`|
+||`comment = Your full access to Raspberry Pi directories`|
+|NOTE: / is setting the share to the root directory. You can share dedicated directories by detailing the path (e.g. /etc/openhab2) |`path = /`|
+||`read only = no`|
+|Optional: Change the workgroup name if needed, otherwise uncomment and enable WINS support in the section|`# Windows Internet Name Serving Support Section`|
+||`# WINS Support - Tells the NMBD component of Samba to enable its WINS Server`|
+||`wins support = yes`|
+|Exit and save the file|[ctrl+x] > `y` > [Enter]|
+|Now you have to activate a user, e.g. “pi” as a Samba user|`sudo smbpasswd -a pi`
+|Now enter the password for the external access of the network share|`sharepwd` `sharepwd`|
+|NOTE: The access to the selected folders (share) on your Raspberry will be limited to the user rights of the Raspbian user you activated as a Samba user.||
+|Optional: Create a dedicated *sambausr*. This allows you to do a more precise rights management of the shared files on Raspbian. (Details how to manage access rights can be found online)||
+|First you have to create the user in Raspbian|`sudo adduser sambausr`|
+|Then you have to enter your password *sambausrpassword* and optional information you can just leave empty and finally save with `y`|Adding user sambausr' ...|
+||Adding new group sambausr' (1001) ...|
+||Adding new user sambausr' (1001) with group sambausr' ...|
+||Creating home directory /home/sambausr' ...|
+||Copying files from /etc/skel' ...|
+||Enter new UNIX password:`sambausrpassword`|
+||Retype new UNIX password:`sambausrpassword`|
+||passwd: password updated successfully|
+||Changing the user information for *sambausr*|
+||Enter the new value, or press ENTER for the default|
+||Full Name []:|
+||Room Number []:|
+||Work Phone []:|
+||Home Phone []:|
+||Other []:||
+||Is the information correct? [Y/n] `y`|
+|Then you have to activate the dedicated sambausr as a Samba user|`sudo smbpasswd -a sambausr`|
+|Now enter the password for the external access of the network share|`sambausrsharepwd``sambausrsharepwd`|
+|Mandatory:Check the syntax of the samba configuration file. Result: there should be no error message(red) in the prompt|`testparm`|
+|Now you have to restart the services to reload the config file|`sudo systemctl restart smbd.service` `sudo systemctl restart nmbd.service`|
+|Make sure that the services are running again without errors|`sudo systemctl status smbd.service` `sudo systemctl status nmbd.service`|
+
+
+|Command|Description|
+|---|---|
+|`sudo systemctl status smbd.service` `sudo systemctl status nmbd.service`|Check if all the services are running|
+|`sudo systemctl restart smbd.service` `sudo systemctl restart nmbd.service`|Restart the samba services|
+|`sudo systemctl stop smbd.service` `sudo systemctl stop nmbd.service`|Manually stop the samba services|
+|`sudo smbpasswd -a sambausr`|Create a new Samba user mapping|
+|`sudo smbpasswd -d sambausr`|Disable a Samba user|
+|`sudo smbpasswd -e sambausr`|Enable a Samba user|
+
+### Optional: Mapping Raspbian samba directories to Windows (IOS and Linux mapping process can be found online):
+
+|Description|Image/Command|
+|---|---|
+|One time map the Raspberry folder to a windows drive (in this case Z) enter in the CMD Prompt (just put CMD in the search of Windows 10 to open the command prompt)|`net use Z: \\xxx.xxx.xxx.xxx\RaspberryPiDirectories /user:sambausr sambausrpassword /persistent:no`|
+|Persistent map the Raspberry folder to a windows drive (in this case Z) enter in the CMD Prompt (just put CMD in the search of Windows 10 to open the command prompt)|`net use Z: \\xxx.xxx.xxx.xxx\RaspberryPiDirectories /user:sambausr sambausrpassword /persistent:yes`|
+|You can also create a simple .bat file for easy double clicking. Open the editor by just putting notepad in the search of Windows 10. Enter the line. Save as *yourmapping*.bat|`net use Z: \\xxx.xxx.xxx.xxx\RaspberryPiDirectories /user:sambausr sambausrpassword /persistent:no`|
+
 
 
 -
