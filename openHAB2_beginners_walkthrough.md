@@ -503,7 +503,105 @@ To have access to the Raspberry file system using the PC file explorer you have 
 |Persistent map the Raspberry folder to a windows drive (in this case Z) enter in the CMD Prompt (just put CMD in the search of Windows 10 to open the command prompt)|`net use Z: \\xxx.xxx.xxx.xxx\RaspberryPiDirectories /user:sambausr sambausrpassword /persistent:yes`|
 |You can also create a simple .bat file for easy double clicking. Open the editor by just putting notepad in the search of Windows 10. Enter the line. Save as *yourmapping*.bat|`net use Z: \\xxx.xxx.xxx.xxx\RaspberryPiDirectories /user:sambausr sambausrpassword /persistent:no`|
 
+# Chapter 6: Installation of openHAB2 on Raspberry
+This tutorial is only focussing on the package repository installation of the stable version and only on the add-ons for the listed hardware.
+All other installations are described on the openhab.org site installation for Linux: *http://docs.openhab.org/installation/linux.html#package-repository-installation* For the Raspbian you have to go for the “Apt Based Systems” part of it.
 
+
+First, add the openHAB2 bintray repository key to your package manager and allow Apt to use the HTTPS Protocol
+``` bash
+wget -qO - 'https://bintray.com/user/downloadSubjectPublicKey?username=openhab' | sudo apt-key add -
+```
+```bash
+sudo apt-get install apt-transport-https
+```
+I choose the stable Official (Stable) build.
+The stable builds contain the latest official release with tested features.
+```bash
+echo 'deb https://dl.bintray.com/openhab/apt-repo2 stable main' | sudo tee /etc/apt/sources.list.d/openhab2.list
+```
+Next, resynchronize the package index:
+```bash
+sudo apt-get update
+```
+Now install openHAB2 with the following command:
+```bash
+sudo apt-get install openhab2
+```
+*Optional but recommended:* When you choose to install an add-on, openHAB2 will download it from the internet on request. If you plan on disconnecting your machine from the internet, then you will want to also install the add-ons package.
+```bash
+sudo apt-get install openhab2-addons
+```
+Since we were installing the stable version, we have to manually add the binding WIFILED used for the WiFi LED controller manually to the system.
+First you have to change to the add-ons directory.
+Than you have to download the latest version of the binding directly from the online repository
+*Remark: Later, this binding will not be available in the PAPER UI GUI under the Add-ons/Bindings tab, but will show up in the configuration/bindings tab.*
+![image](images/ledwifi_install.jpg)
+```bash
+cd /usr/share/openhab2/addons
+sudo wget https://openhab.ci.cloudbees.com/job/openHAB2-Bundles/lastSuccessfulBuild/org.openhab.binding%24org.openhab.binding.wifiled/artifact/org.openhab.binding/org.openhab.binding.wifiled/2.1.0-SNAPSHOT/org.openhab.binding.wifiled-2.1.0-SNAPSHOT.jar
+```
+If everything went well, you can start openHAB2 and register it to be automatically executed at system startup:
+```bash
+sudo systemctl start openhab2.service
+sudo systemctl status openhab2.service
+
+sudo systemctl daemon-reload
+sudo systemctl enable openhab2.service
+```
+## Common openHAB2 service commands:
+
+|Command|Description|
+|---|---|
+|`sudo systemctl status openhab2.service`|Shows the status of openHAB2|
+|`sudo systemctl start openhab2.service`|Start the service of openHAB2|
+|`sudo systemctl stop openhab2.service`|Stops the service of openHAB2|
+|`sudo systemctl restart openhab2.service`|Restarts the service of openHAB2|
+|`sudo apt-get purge openhab2`|This commands uninstall openHAB2 from your Raspbian|
+|`sudo rm /etc/apt/sources.list.d/openhab2.list`|and delete the source list|
+
+## openHAB2 configuration for the samba server:
+This is required to grant the PC based Eclipse Smart Home Designer access to the requested configuration folder on your Raspbian.
+**NOTE:** This is for using samba for openHAB2 ONLY. If you already have set up a samba with a different user and a full access to raspberry, this might be obolete.
+
+|Description|Image/Command|
+|---|---|
+|Open Terminal|![image](images/openterminal.jpg)|
+|The shares are configured to be not open for guests nor to the public. Let’s activate the “openhab” user as a samba user|`sudo smbpasswd -a openhab`|
+|Enter the password *openhabpassword* which will be used to map the share on your PC|`New SMB password:`|
+||`Retype new SMB password:`|
+||`Added user openhab.`|
+|Be aware, that creating and later using a specific user will ensure that permissions are honoured. Make sure, the “openhab” user has ownership and/or write access to the openHAB2 configuration files. This can be accomplished by executing:|`sudo chown -hR openhab:openhab /etc/openhab2`|
+|Restart the samba service to allow the changes to be utilized|`sudo systemctl restart smbd.service`|
+|Map the Raspberry folder to a windows drive (in this case Z) enter in the CMD Prompt (just put CMD in the search of Windows 10 to open the command prompt)|`net use Z: \\xxx.xxx.xxx.xxx\RaspberryPiDirectories /user:openhab openhabpassword /persistent:no`|
+
+
+## openHAB2 Privileges for Common Peripherals
+An openHAB2 setup will often rely on hardware like a modem, transceiver or adapter to interface with home automation hardware. Examples are a Z-Wave, Enocean or RXFcom USB Stick or a Raspberry Pi add-on board connected to the serial port on its GPIOs. In order to allow openHAB2 to communicate with additional peripherals, it has to be added to corresponding Linux groups. The following example shows how to add Linux user openHAB2 to the often needed groups dialout and tty. Additional groups may be needed, depending on your hardware and software setup.
+
+### Adding openhab user to groupds dialout an tty
+
+|Description|Image/Command|
+|---|---|
+|Open Terminal|![image](images/openterminal.jpg)|
+|Enter command (This is adding the openhab user to the group dialout)|`sudo adduser openhab dialout`|
+|Enter command (This is adding the openhab user to the group tty)|`sudo adduser openhab tty`|
+|Optional: Enter command (If you are looking to enable sound privileges for openHAB2, it will also be necessary to add openHAB2 to the “audio” group.)|`sudo adduser openhab audio`|
+
+### Granting java environment access to serial ports
+
+|Description|Image/Command|
+|---|---|
+|Open Terminal|![image](images/openterminal.jpg)|
+|Change to directory|`sudo adduser openhab dialout`|
+|Open openhab2 file in nano editor|`sudo adduser openhab tty`|
+|Change the text from (nothing between the “”)|`EXTRA_JAVA_OPTS=""`|
+|To (something between the “”)|`EXTRA_JAVA_OPTS="-Dgnu.io.rxtx.SerialPorts=/dev/ttyUSB0:/dev/ttyS0:/dev/ttyS2:/dev/ttyACM0:/dev/ttyAMA0"`|
+|Exit and save the file|[ctrl+x] > `y` > [Enter]|
+|Reboot the Raspberry for the changes to take effect|`sudo reboot`|
+
+```bash
+```
 
 -
 -
