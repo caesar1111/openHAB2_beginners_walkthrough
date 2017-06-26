@@ -593,8 +593,8 @@ An openHAB2 setup will often rely on hardware like a modem, transceiver or adapt
 |Description|Image/Command|
 |---|---|
 |Open Terminal|![image](images/openterminal.jpg)|
-|Change to directory|`sudo adduser openhab dialout`|
-|Open openhab2 file in nano editor|`sudo adduser openhab tty`|
+|Change to directory|`cd /etc/default/`|
+|Open openhab2 file in nano editor|`sudo nano openhab2`|
 |Change the text from (nothing between the “”)|`EXTRA_JAVA_OPTS=""`|
 |To (something between the “”)|`EXTRA_JAVA_OPTS="-Dgnu.io.rxtx.SerialPorts=/dev/ttyUSB0:/dev/ttyS0:/dev/ttyS2:/dev/ttyACM0:/dev/ttyAMA0"`|
 |Exit and save the file|[ctrl+x] > `y` > [Enter]|
