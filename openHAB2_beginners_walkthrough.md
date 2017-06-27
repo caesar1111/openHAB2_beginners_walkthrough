@@ -608,7 +608,7 @@ The complete installation guide can be found on : *http://docs.openhab.org/insta
 ## Installation guide for windows (Eclipse Smart Home Designer and Java Runtime Environment):
 ### Download Smart Home Designer
 Download the Windows 64 bit version
-** http://eclipse.org/downloads/download.php?file=/smarthome/releases/0.8.0/eclipsesmarthome-incubation-0.8.0-designer-win64.zip **
+**http://eclipse.org/downloads/download.php?file=/smarthome/releases/0.8.0/eclipsesmarthome-incubation-0.8.0-designer-win64.zip**
 
 *Optional:* Download the 32 bit version since there are reports about the “stable” 64 bit version running not stable
 ** http://eclipse.org/downloads/download.php?file=/smarthome/releases/0.8.0/eclipsesmarthome-incubation-0.8.0-designer-win.zip **
