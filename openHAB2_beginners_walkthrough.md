@@ -154,20 +154,24 @@ and a clip on YouTube:
 
 **Remark:** I had an issue with plugging in the power supply to the micro USB power input on the circuit board of the display (like shown in the video). The Raspberry was still showing me the low power symbol (lightening symbol on the upper right corner) SOLUTION:  I had to plug in the power supply to the micro USB power input on the Raspberry itself. The display is now powered via the jumper cables. The standard display case is also allowing for both micro USB power inputs to be used.
 
-**NOTE:** If the image on the display is having the wrong orientation, you can rotate the image by changing the configuration of Raspbian (see tutorial section Initial configuration of Raspbian)
+**NOTE:** If the image on the display is having the wrong orientation, you can rotate the image by changing the configuration of Raspbian (see tutorial section Initial configuration of Raspbian > *Change display orientation*)
 
 #### Display installation pictures:
 
 Step 1:
+
 ![image](images/displaysetup1.jpg)
 
 Step 2:
+
 ![image](images/displaysetup2.jpg)
 
 Step 3:
+
 ![image](images/displaysetup3.jpg)
 
 Step 4:
+
 ![image](images/displaysetup4.jpg)
 
 Step 5:
@@ -178,6 +182,7 @@ Step 6:
 ![image](images/displaysetup6.jpg)
 
 Step 7:
+
 ![image](images/displaysetup7.jpg)
 
 Step 8: Assembly of the standard display. (Make sure you have inserted the MicroSD card since you won’t have access to the slot as soon as you mounted the case!)Just pull the back plate off the case, insert the display including the mounted Raspberry (make sure that the path cables and the display cables are not crushed between case and board), tighten it with the 4 screws and put the back plate into place. Here is a good clip on YouTube: **https://www.youtube.com/watch?v=wpSxibZOmoo**
@@ -188,19 +193,23 @@ Step 8: Assembly of the standard display. (Make sure you have inserted the Micro
 ## Starting up Raspberry or the first time – Raspbian PIXEL desktop
 Since this tutorial is focussing on using the PIXEL GUI here are a few basic tips.
 ### Raspberry start-up screen:
+
 ![image](images/pixelstartup.jpg)
+
 ### PIXEL basic desktop (including the programs used in this tutorial) not unlike other PC OS desktops:
+
 ![image](images/pixeldesktop.jpg)
 
 **NOTE:** If you are working with the 7” Raspberry display setup you might need to flip/rotate the display orientation. Just check the section” Optional: Change display orientation” later in this chapter
 ### Working with the Terminal:
+
 ![image](images/terminal.jpg)
 
 **NOTE:** As soon as you have connected the Raspberry to the network you might find it easier to open the Terminal remotely using PuTTY. This also allows you to directly paste command lines from this tutorial into the Terminal. (Right click in PuTTY terminal is pasting the content of the clipboard into the terminal)
 #### Basic terminal commands and functions:
 The full list can be found on:
 
-https://www.Raspberrypi.org/documentation/linux/usage/commands.md
+**https://www.Raspberrypi.org/documentation/linux/usage/commands.md**
 
 |Command|Description|
 |---|---|
@@ -235,23 +244,6 @@ The first thing you want to do is changing the localisation settings to make sur
 |Go to tab Localisation *>Localisation >>Set WiFi Country >>>Country*|![image](images/piconfig5.jpg)|
 |Accept the reboot||
 
-### *Optional:* Change display orientation
-If you are working with the 7” Raspberry display setup you might need to flip/rotate the display orientation for specific cases
-
-|Description|Image/Command|
-|---|---|
-|Open Terminal|![image](images/openterminal.jpg)|
-|Open boot config.txt file in nano editor|`sudo nano /boot/config.txt`|
-|Add the line at the bottom of the file:(This will flip the display orientation)|`lcd_rotate=2`|
-|Optional: You can choose from different angles||
-|0 degrees rotation|`display_rotate=0`|
-|90 degrees rotation|`display_rotate=1`|
-|180 degrees rotation|`display_rotate=2`|
-|270 degrees rotation|`display_rotate=3`|
-|horizontal flip|`display_rotate=0x10000`|
-|vertical flip|`display_rotate=0x20000`|
-|Exit and save the file|[ctrl+x] > `y` > [Enter]|
-|Reboot the Raspberry for the changes to take effect|`sudo reboot`|
 ### Changing Password:
 This is important to secure your standard Raspberry user “pi” before you connect the Raspberry to the network.
 
@@ -267,7 +259,7 @@ This is required for the communication to the PC (SSH) and to the Z-Wave stick (
 
 |Description|Image/Command|
 |---|---|
-|Open Terminal|![image](images/openterminal.jpg)|
+|Open Raspberry Pi Configuration *>Application menu >>Preferences >>>Raspberry Pi configuration*|![image](images/piconfig1.jpg)|
 |Enable SSH (to access the Raspberry via Network) Enable Serial (to enable Serial Port for Z-Wave controllers) *>Interfaces >>SSH >> Serial*|![image](images/piconfig7.jpg) [SSH: Enable] & [Serial: Enable]|
 
 ### Connect Raspberry to network: 
@@ -302,6 +294,24 @@ Raspbian is proving online updates so make sure that you have the latest install
 
 The following settings and configuration is just for additional information and might not be needed to setup openHAB2. Some of the settings and configuration might still be useful.
 
+### Change display orientation
+If you are working with the 7” Raspberry display setup you might need to flip/rotate the display orientation for specific cases
+
+|Description|Image/Command|
+|---|---|
+|Open Terminal|![image](images/openterminal.jpg)|
+|Open boot config.txt file in nano editor|`sudo nano /boot/config.txt`|
+|Add the line at the bottom of the file:(This will flip the display orientation)|`lcd_rotate=2`|
+|Optional: You can choose from different angles||
+|0 degrees rotation|`display_rotate=0`|
+|90 degrees rotation|`display_rotate=1`|
+|180 degrees rotation|`display_rotate=2`|
+|270 degrees rotation|`display_rotate=3`|
+|horizontal flip|`display_rotate=0x10000`|
+|vertical flip|`display_rotate=0x20000`|
+|Exit and save the file|[ctrl+x] > `y` > [Enter]|
+|Reboot the Raspberry for the changes to take effect|`sudo reboot`|
+
 ### Check partition size on MicroSD card:
 Make sure Raspbian is using the full capacity of the MicroSD card (normally while starting up Raspbian for the first time, it is done automatically and the Raspberry will restart automatically):
 
@@ -331,6 +341,7 @@ To be able to create a Icon you have to first create a *yourdesktopfile*.desktop
 |Comment:|*Your Shortcut Comment*|
 |Icon:|*YourIcon.png*|
 |Application for shortcut:|*YourShortcutApp*|
+
 #### Example file content:
 ```bash
 [Desktop Entry]
@@ -345,7 +356,7 @@ Terminal=false
 
 ### Enabling root user:
 Since by default the “root” disabled it can’t be used. You might want to enable it for certain purposes like e.g. enabling the root user for samba file server to get full access to the directories from a PC (see chapter setup samba server) 
-**NOTE:** There is a reason for the “root” being disabled! Enabling the user is allowing full access to the Raspbian and therefore creating a security risk. Please always consider whether you really want to enable this user!
+**NOTE:** There is a reason for the “root” being disabled! Enabling the user is allowing full access to the Raspbian and therefore creating a ***security risk***. Please always consider whether you really want to enable this user!
 
 |Description|Image/Command|
 |---|---|
@@ -549,15 +560,7 @@ sudo apt-get install openhab2
 ```bash
 sudo apt-get install openhab2-addons
 ```
-Since we were installing the stable version, we have to manually add the binding WIFILED used for the WiFi LED controller manually to the system.
-First you have to change to the add-ons directory.
-Than you have to download the latest version of the binding directly from the online repository
-*Remark: Later, this binding will not be available in the PAPER UI GUI under the Add-ons/Bindings tab, but will show up in the configuration/bindings tab.*
-![image](images/ledwifi_install.jpg)
-```bash
-cd /usr/share/openhab2/addons
-sudo wget https://openhab.ci.cloudbees.com/job/openHAB2-Bundles/lastSuccessfulBuild/org.openhab.binding%24org.openhab.binding.wifiled/artifact/org.openhab.binding/org.openhab.binding.wifiled/2.1.0-SNAPSHOT/org.openhab.binding.wifiled-2.1.0-SNAPSHOT.jar
-```
+
 If everything went well, you can start openHAB2 and register it to be automatically executed at system startup:
 ```bash
 sudo systemctl start openhab2.service
@@ -783,9 +786,39 @@ The install option should change to uninstall
 
 ![image](images/paperui3.jpg)
 
-**NOTE:** If you already have connected devices to the same LAN as the Raspberry, a message in the inbox will show up, telling you a new thing was found (e.g. Yamaha Receiver or WiFi LED) How to add this thing will be explained later.
+**NOTE:** If you already have connected devices to the same LAN as the Raspberry, a message in the inbox will show up, telling you a new thing was found (e.g. Yamaha Receiver) How to add this thing will be explained later.
 
-#### Check the installed bindings:
+### Install Bindings manually (snapshot bindings):
+**NOTE:** Since we have installed the stable version, we have to manually install the WiFi LED Binding for openHAB2.
+
+Open the terminal:
+
+![image](images/openterminal.jpg)
+
+Change to the openHAB2 add-ons directory:
+```bash
+cd /usr/share/openhab2/addons
+```
+Download the addon to the add-ons directory:
+```bash
+sudo wget https://openhab.ci.cloudbees.com/job/openHAB2-Bundles/lastSuccessfulBuild/org.openhab.binding%24org.openhab.binding.wifiled/artifact/org.openhab.binding/org.openhab.binding.wifiled/2.1.0-SNAPSHOT/org.openhab.binding.wifiled-2.1.0-SNAPSHOT.jar
+```
+Restart the openHAB2 service:
+```bash
+sudo systemctl restart openhab2.service
+```
+**NOTE:** The restart of the service can tanke several minuts. You will not be able to access the PaperUI GUI during the restart.
+
+Check the openHAB2 service status:
+```bash
+sudo systemctl start openhab2.service
+```
+
+**Remark:** This binding will not show up in the ***>[Add-ons]***  ***>>[BINDINGS]*** tab but will show in the  ***>[Configuration]***  ***>>[Bindings]*** 
+
+![image](images/ledwifi_install.jpg)
+
+### Check the installed bindings:
 
 Select ***>[Configuration]***  ***>>[Bindings]*** 
 
