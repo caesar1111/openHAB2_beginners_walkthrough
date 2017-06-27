@@ -5,7 +5,7 @@ layout: tutorial-beginner
 {% include base.html %}
 
 ---
-openHAB2 Raspberry beginner’s walkthrough – (Using Raspberry Pi 3 with openHAB2 and Z-Wave, WiFi LED, Samsung TV and YahooWeather bindings for a home automation project)
+openHAB2 Raspberry beginner’s walkthrough – Using Raspberry Pi 3 and openHAB2 to create a home automation controller for Z-Wave, WiFi LED, 433MHz plugs, Yahoo Weather and meteoblue.com weather widget 
 ---
 
 # Chapter 1: Before you start
@@ -679,18 +679,122 @@ Eclipse Smart Home Designer should now recognize the file structure inside the c
 # Chapter 8: Initializing openHAB2 (finally: first startup)
 To open the openHAB2 you have to access the web GUI with a browser on your PC or directly from your Raspberry, depending on your setup.
 The URL will be:
+
 **http://xxx.xxx.xxx.xxx:8080/start/index**
+
 Just replace the *xxx.xxx.xxx.xxx* with the IP of your Raspberry.
+First the GUI will ask you to select the initial setup configuration.
+This will install a standard set of GUIs in openHAB2.
+
+![image](images/openhab2firstlaunch1.jpg)
+
+After a few minutes of installation the standard openHAB2 start GUI will come up, showing you the icons for the pre-installed GUIs:
+***[BASIC UI]***, ***[PAPER UI]*** and ***[HABPANEL]***
+
+**NOTE:** Now you are ready for the configuration of your home automation project in openHAB2!
+
+# Chapter 10: General information about configuring openHAB2
+**NOTE:** Make sure to double check with the official website of openHAB2 since in the end this is where you will find the correct answers if something in this tutorial is not working:
+
+**http://www.openhab.org/**
+
+As a start you should read the beginners tutorial form beginning to end so you understand the basic concept of things, items, rules etc. and how they are mend to work together;
+
+**http://docs.openhab.org/introduction.html**
+
+## openHAB (no 2) vs. openHAB2
+One of the most important things I had to learn is that there is also an openHAB (no 2)! So here are a few things if found out to be considerable if you are using openHAB2:
+- Always make sure, that you are looking at the right version of openHAB when it comes down to documentation, since a lot of older online documentation is refereeing to the openHAB (no 2). When a few things might be done the same/similar way in openHAB2, other things have changed and will not work in openHAB2
+- You will also encounter two different ways of storing configuration in openHAB.
+-- In openHAB (no 2).configuration was stored in files only
+-- In openHAB2 you can still use the files, but also can use database storage for certain typs when you do the configuration with PAPER UI. This now might lead to some confusion since you will not be able to change e.g. items in PAPER UI which were configured using a text file. Also you would not have the correct syntax highlighting in the Eclipse Smart Home Designer is expecting file configuration only an items configured in PAPER UI will show up as errors.
+-- But be aware that some configuration in openHAB2 still has to be done via text file like e.g. rules. You might find already some progress in the snapshot release of openHAB2, but I decided to base this tutorial on the stable release with limited functionality in PAPER UI database
+- Regularly check the website of openHAB2 for news since a lot of new features are expected to be implemented.
+- Meanwhile be not afraid to go and sign up the openHAB community: **https://community.openhab.org** and ask your questions there. I got replies to my problems within days, sometimes even within hrs. There is also a designated area for beginners.
+
+# Chapter 11: Configuring openHAB2 using PAPER UI
+Since the online documentation is mostly referring to PAPER UI GUI I will try to stick to this GUI as long as possible. 
+- HABmin GUI will be needed for some  Z-Wave installation
+- HABPANEL GUI will be used to create the final user frontend for this project
+**NOTE:** Since you will be regularly starting and switching the GUIs I highly recommend creating quick links in your browser for each GUI
+
+## Installing Add-ons:
+Start PAPER UI
+```bash
+http://xxx.xxx.xxx.xxx:8080/paperui/index.html#/inbox/search
+```
+
+![image](images/paperui1.jpg)
+
+### Installing Bindings:
+
+Select ***>[Add-ons]***  ***>>[BINDINGS]*** 
+
+![image](images/paperui2.jpg)
+
+Install the Bindings:
+***[Exec Binding]***, ***[YahooWeather Binding]***, ***[YamahaReceiver Binding]*** and ***[Z-Wave Binding]***
+
+**Result:** The icons of the bindings should change to blue
+The install option should change to uninstall
+(sometimes you have to reload the page if the update is not coming up for a few minutes)
+
+![image](images/paperui3.jpg)
+
+**NOTE:** If you already have connected devices to the same LAN as the Raspberry, a message in the inbox will show up, telling you a new thing was found (e.g. Yamaha Receiver or WiFi LED) How to add this thing will be explained later.
+
+#### Check the installed bindings:
+
+Select ***>[Configuration]***  ***>>[Bindings]*** 
+
+**Result:** You should see now all the installed bindings.
+
+![image](images/paperui8.jpg)
+
+**NOTE:** You should also see the ***[WiFi LED Binding which]*** we installed before manually.
+
+### Installing User Interfaces:
+
+Select ***>[Add-ons]***  ***>>[USER INTERFACES]*** 
+
+![image](images/paperui4.jpg)
+
+Install the User Interface ***[HABmin]*** (Required for Z-Wave network administration)
+
+**Result:** ***[HABmin]*** GUI is installed.
+
+![image](images/paperui5.jpg)
+
+## General process of adding new things to the configuration
+**NOTE:** To be able to add new things to openHAB2 depends on whether they are connected to the LAN (if you use IP), whether they are included in the Z-Wave network of the Z-Wave controller or whether your Raspberry is online if you use online sources like YahooWeather
+
+Select ***>[Inbox]*** and click on the  ***>>[+]*** (the blue plus icon) to start adding things.
+
+![image](images/paperui6.jpg)
+
+**Result:** This will now show you all the installed Bindings which can be used to add things.
+
+![image](images/paperui7.jpg)
+
+Select ***[>]*** (arrow to right) next to the required binding and go through the bidining specific adding process for new things.
+
+### Adding local things connected via network (IP):
+
+**NOTE:** Make sure that the device is connected to the Raspberry network via IP.
+**Result:** The connected devices should come up automatically in the inbox.
 
 
+#### Adding Things using YamahaReceiver Binding:
 
+Select the Yamaha Receiver ***[checkmark]*** (the blue checkmark icon) in the inbox.
 
+![image](images/paperui9.jpg)
 
+**Result:** The YamahaReceiver Binding dialouge will open, allowing you to enter/edit the name.
 
+![image](images/paperui10.jpg)
 
-
-
-
+Confirm the adding by clicking on the ***[ADD AS THING]*** button
 
 ```bash
 
