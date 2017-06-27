@@ -14,7 +14,7 @@ Be aware that openHAB2 is an OPEN home automation solution which is strongly liv
 If you, on the other hand, are willing to spend a few hrs/days in learning how to do a little installation and coding yourself and have no problems with the service level of a Raspberry Pi 3 (it is not as failsafe as other controllers) you might find a perfect environment with openHAB2 for your low cost, very flexible and continuously improving home automation environment.
 
 ## Introduction:
-This tutorial is targeting beginners like me to get a step by step guideline to get all the things installed. Since I am no coding expert and have no experience in Raspberry and Raspbian I am trying to go through the things step by step, so you should be able to get everything done, even without exactly having to go into all the details. That is one of the reasons I am also using the graphical GUI PIXEL for Raspbian since I think it makes it easier for the beginners to get started (and you might want to use PIXEL anyway when you are using the Raspberry 7” display as interface for your home automation controller)
+This tutorial is targeting beginners like me to get a step by step guideline to get all the things installed. Since I am no coding expert and have no experience in Raspberry and Raspbian I am trying to go through the things step by step, so you should be able to get everything done, even without exactly having to go into all the details. That is one of the reasons I am also using the graphical GUI PIXEL for Raspbian since I thing it makes it easier for the beginners to get started (and you might want to use PIXEL anyway when you are using the Raspberry 7” display as interface for your home automation controller)
 This tutorial is also based on **having a Windows PC** to support the setup process. You might be able to completely do it without the support of an extra PC, if you can get a MicroSD card with a pre-installed Raspbian OS and use the display options (the Raspberry 7” display or HDMI Display) for the Raspberry.
 
 ***DISCLAIMER:
@@ -93,7 +93,7 @@ You can find an overview on
 
 |Description|Image|
 |---|---|
-|WiFi XCSOURCE Magic UFO-WiFi LED-Controller Type LD382 (other brand names might work as well, but you have to make sure it is Type LD382, LD382A or LD686) *REMARK:* I was using a WiFi controller on purpose since: It is only about half the price of a Z-Wave WiFi controller. You can control the device as well via smart phone (like light to music feature of the app). But some things you have to be aware of using WiFi LED instead of Z-Wave LED: You have to have a WiFi network to which your Raspberry and your WiFi LED controller is connected. You have to manually install a beta / snapshot version of openHAB2 or manually install the WiFi LED Binding on top of the package based installation of openHAB2 (see tutorial).|![image](images/ledwifi.jpg)|
+|WiFi XCSOURCE Magic UFO-WiFi LED-Controller Type LD382 (other brand names might work as well, but you have to make sure it is Type LD382, LD382A or LD686) *REMARK:* I was using a WiFi controller on purpose since: It is only about half the price of a Z-Wave WiFi controller. You can control the device as well via smart phone (like light to music feature of the app)But some things you have to be aware of using WiFi LED instead of Z-Wave LED: You have to have a WiFi network to which your Raspberry and your WiFi LED controller is connected. You have to manually install a beta / snapshot version of openHAB2 or manually install the WiFi LED Binding on top of the package based installation of openHAB2 (see tutorial).|![image](images/ledwifi.jpg)|
 |RGB LED stripe incl. power supply 12V DC bundle. While you can buy the stripe and the power supply bundle separately, most of the times the bundle will come at the same price or even cheaper. The included power supply plug should directly fit into the power inlet socket of the WiFi controller. *REMARK:* It also allows you to attach the stripe without soldering since you can just cut the cable of the RGB bundle controller and use it to connect the LED stripe to the WiFi controller.|![image](images/rgbledstripe.jpg)|
 |*Optional:* White LED stripe. Since the WiFi LED-Controller is allowing you to at additionally control plain colour LED stripe (or in case of controller type LD686 even two) you might want to get an additional strip in e.g. plain white to create ab clear white illumination. *NOTE:* You might be fine with just the stripe if you already got the power supply with the RGB stripe|![image](images/whiteledstripe.jpg)|
 |*Optional(in my case it was already there and I just included it into my project):* Yamaha Receiver RX-V581|![image](images/rx-v581.jpg)|
@@ -103,7 +103,7 @@ You can find an overview on
 
 |Description|Image|
 |---|---|
-|433MHz Transmitter / Receiver bundle|![image](images/433mhztransmitterreceiver.jpg)|
+|433MHz Transmitter / Receiver bundel|![image](images/433mhztransmitterreceiver.jpg)|
 |433MHz Antenna (purchase)|![image](images/433mhzantenna.jpg)|
 |*Optional:* 433MHz Antenna (DIY) 173 mm (6,81 in) wire (I used an insulated tie wire). Coil the antenna wire around a pen/chopstick|![image](images/433mhzantennadiy.jpg)|
 |Jumper cables (Female-Female)|![image](images/jumpercablefemalefemale.jpg)|
@@ -113,7 +113,7 @@ You can find an overview on
 
 ## Software list:
 
-**NOTE:** This list is just an overview. The details in how to download and install the software are included later in the document so **don't start downloading now**.
+**NOTE:** This list ist just an overview. The details in how to download and install the software are included later in the document so **dont start downloading now**.
 
 ### Windows Download list:
 
@@ -123,7 +123,7 @@ My tutorial is using a MS-Windows windows machine for the PC part (You should be
 |---|---|
 |The latest **Raspbian** (Raspberry OS) image. You have to download the “Raspbian Jessie with PIXEL - Image with PIXEL desktop based on Debian Jessie” since this tutorial is using PIXEL|**https://www.Raspberrypi.org/downloads/Raspbian/**|
 |**Etcher** (to write the Raspbian image to the SD-Card)|**https://etcher.io/**|
-|**Eclipse Smart HomeDesigner** (optional but strongly recommended for easy editing of OpenHAB2 configuration files; incl. syntax highlighting). You have to choose the right version for your PC|**https://www.openhab.org/downloads.html**|
+|**Eclipse Smart HomeDesigner** (optional but strongly recommended for easy editing of OpenHAB2 configuration files; incl. syntax highlighting) You have to choose the right version for your PC|**https://www.openhab.org/downloads.html**|
 |To use Eclipse Smart HomeDesigner you need **Java Runtime Environment JRE** (if not already installed on your PC)|**https://java.com/**|
 |**PuTTY** or **KiTTY** portable to access the Raspberry console from your PC|**http://www.putty.org/** or **https://portableapps.com/apps/internet/kitty-portable**|
 |**WinSCP** portable to access Raspberry file System directly from your PC (might become obsolete if you use a SAMBA server on your Raspberry, see tutorial)|**https://winscp.net/eng/download.php**|
@@ -131,7 +131,7 @@ My tutorial is using a MS-Windows windows machine for the PC part (You should be
 ### Raspberry downloads:
 How to download software will be explained in the tutorial, but as a reference you will use:
 - **openHAB2** Package repository based installation or manual installation (be aware that the file locations on the Raspberry will be different based on which kind of installation you choose)
-- **Samba** server (for access of Raspberry files from Windows machine; needed for Eclipse Smart HomeDesigner)
+- **Samba** server(for access of Raspberry files from Windows machine; needed for Eclipse Smart HomeDesigner)
 - **git-core** to get code from the git repository (needed for the 433MHz controller)
 - **wiringPi** to send commands using via GPIO (needed for the 433MHz controller)
 - **433Utils** to communicate with the 433MHZ controller (needed for the 433MHz controller)
@@ -179,7 +179,7 @@ How to download software will be explained in the tutorial, but as a reference y
 |DATA|11|GPIO 17|
 
 ##### 433MHz Receiver (permanently)
-**NOTE:** If you are running the 7” Raspberry display setup, you will not be able to connect the receiver permanently since the display is using the same power supply pins. You will have to build (solder) yourself a Y-patch cable to fit into the display cover (A breadbord might not fit into the case). But be aware that a temporarily installation of the receiver will work as well for this setup. See section *433MHz Receiver (temporarily)*.
+**NOTE:** If you are running the 7” Raspberry display setup, you will not be able to connect the receiver permanently since the display is using the same power supply pins. You will have to build (solder) yourself a Y- patchcable to fit into the display cover (A breadbord might not fit into the case). But be aware that a temporarily installation of the receiver will work as well for this setup. See section *433MHz Receiver (temporarily)*.
 
 |Receiver Pin|Raspberry pin number|Raspberry pin name|
 |---|---|---|
@@ -188,7 +188,7 @@ How to download software will be explained in the tutorial, but as a reference y
 |DATA|13|GPIO 27|
 
 ##### 433MHz Receiver (temporarily)
-**NOTE:** Sice we do need the receiver only in the setup process for reading the code of unknown 433MHz remote controls you might **not** need the receiver installed permanently.
+**NOTE:** Sice we do need the receiver only in the setup process for reading the code of unknown 433MHz remote controls you might **not** need the reciever installed permanently.
 
 If you have to read codes from a unknown 433MHz remote control you can temporarily use the power sockets of the transmitter. How to read the codes will be explained later in the section *Adding 433MHz things*. 
 
@@ -280,7 +280,7 @@ The full list can be found on:
 |`cd *directory*`|Working directory is changed to the named directory inside the current directory|
 |`cd */directory/directory*`|Working directory is changed to the directory defined by the full path /directory/directory|
 |`nano *filename*`|Is stating a basic editor in the terminal to open or create a simple text or configuration file. Closing the editor is done by Ctrl+x and then choosing whether you want to save your changes or not|
-|`sudo nano *filename*`|Is stating a basic editor with write access in the terminal to open or create a simple text or configuration file with root user rights. Closing the editor is done by [Ctrl+x] and then choosing whether you want to save your changes or not|
+|`sudo nano *filename*`|Is stating a basic editor with write access in the terminal to open or create a simple text or configuration file with root user rights. Closing the editor is done by Ctrl+x and then choosing whether you want to save your changes or not|
 
 ## Initial configuration of Raspbian
 The following steps make sure, that basic Raspbian configuration is done.
@@ -487,7 +487,7 @@ I am showing an example configuration which is first switching on a screensaver 
 
 |Description|Image/Command|
 |---|---|
-|Open Chromium and go to the Settings (3 bullets icon)|![image](images/chromium1.jpg)|
+|Open Chromium and go to the Settings(3 bullets icon)|![image](images/chromium1.jpg)|
 |Enable in the *On start-up* chapter the option *Open a specific page or set of pages* [x] and click on the link [Set pages] to enter the requested start URL|![image](images/chromium2.jpg)|
 |Enter the requested start URL `http://yoururl.com`, [OK] your URL - Now Chromium is allowing you to enter an additional URL which you can ignore|![image](images/chromium3.jpg)|
 |To check if it is working >Close Chromium browser >Open Chromium browser >>Result: `http://yoururl.com` should be loaded on startup ||
@@ -564,7 +564,7 @@ To have access to the Raspberry file system using the PC file explorer you have 
 ||Is the information correct? [Y/n] `y`|
 |Then you have to activate the dedicated sambausr as a Samba user|`sudo smbpasswd -a sambausr`|
 |Now enter the password for the external access of the network share|`sambausrsharepwd``sambausrsharepwd`|
-|Mandatory: Check the syntax of the samba configuration file. Result: there should be no error message (red) in the prompt|`testparm`|
+|Mandatory:Check the syntax of the samba configuration file. Result: there should be no error message(red) in the prompt|`testparm`|
 |Now you have to restart the services to reload the config file|`sudo systemctl restart smbd.service` `sudo systemctl restart nmbd.service`|
 |Make sure that the services are running again without errors|`sudo systemctl status smbd.service` `sudo systemctl status nmbd.service`|
 
@@ -640,7 +640,7 @@ sudo systemctl enable openhab2.service
 
 ## openHAB2 configuration for the samba server:
 This is required to grant the PC based Eclipse Smart Home Designer access to the requested configuration folder on your Raspbian.
-**NOTE:** This is for using samba for openHAB2 ONLY. If you already have set up a samba with a different user and a full access to raspberry, this might be obsolete.
+**NOTE:** This is for using samba for openHAB2 ONLY. If you already have set up a samba with a different user and a full access to raspberry, this might be obolete.
 
 The shares are configured to be not open for guests nor to the public. Let’s activate the “openhab” user as a samba user
 ```bash
@@ -710,7 +710,7 @@ sudo reboot
 # Chapter 7: Installation of Eclipse Smart Home Designer
 (Optional but strongly recommended for easy editing of openHAB2 configuration files; incl. syntax highlighting)
 
-The complete installation guide can be found on: *http://docs.openhab.org/installation/designer.html#setup*
+The complete installation guide can be found on : *http://docs.openhab.org/installation/designer.html#setup*
 
 ## Installation guide for windows (Eclipse Smart Home Designer and Java Runtime Environment):
 ### Download Smart Home Designer
@@ -732,7 +732,7 @@ Unzip the downloaded file to a destination of your choice
 
 ### Optional: Download the offline Java Runtime Environment.
 
-**NOTE:** If you do not have a java environment installed, you have to additionally install Java Runtime Environment to be able to run Eclipse Smart Home Designer. In this case we will install the Java files directly into the Eclipse Smart Home Designer folder which will create a “portable” version of the Eclipse Smart Home Designer. (The folder can be copied/moved to different locations or machines without the need of reinstalling).
+**NOTE:** If you do not have a jave envrionment installed, you have to additionally install Java Runtime Environment to be able to run Eclipse Smart Home Designer. In this case we will install the Java files directly into the Eclipse Smart Home Designer folder whick will create a “portable” version of the Eclipse Smart Home Designer. (The folder can be copied/moved to different locations or machines without the need of reinstalling).
 
 Go to the java homepage download section
 **https://java.com/en/download/**
@@ -753,7 +753,7 @@ Start the Java installer. Select on the first screen “Change destination folde
 
 ***[Change destination folder] & [Install]***
 
-Change the folder to \jre inside your Eclipse Smart Home Designer folder `yourpcdrive:\yourdestionation\eclipsesmarthome\jre` since this is the location the Eclipse Smart Home Designer is expecting the JRE.
+Change the folder to \jre inside your Eclipse Smart Home Designer folder yourpcdrive:\yourdestionation\eclipseSmart Homesince this is the loaction your Eclipse Smart Home Designer is expecting the JRE.
 
 ![image](images/java4.jpg)
 
@@ -817,7 +817,7 @@ One of the most important things I had to learn is that there is also an openHAB
 
 # Chapter 11: Configuring openHAB2 using PAPER UI
 Since the online documentation is mostly referring to PAPER UI GUI I will try to stick to this GUI as long as possible. 
-- HABmin GUI will be needed for Z-Wave network management
+- HABmin GUI will be needed for some  Z-Wave installation
 - HABPANEL GUI will be used to create the final user frontend for this project
 **NOTE:** Since you will be regularly starting and switching the GUIs I highly recommend creating quick links in your browser for each GUI
 
@@ -839,8 +839,8 @@ Install the Bindings:
 ***[Exec Binding]*** , ***[YahooWeather Binding]*** , ***[YamahaReceiver Binding]*** and ***[Z-Wave Binding]***
 
 **Result:** The icons of the bindings should change to blue
-The install option should change to uninstall. 
-(Sometimes you have to reload the page if the update is not coming up for a few minutes).
+The install option should change to uninstall
+(sometimes you have to reload the page if the update is not coming up for a few minutes)
 
 ![image](images/paperui3.jpg)
 
@@ -865,7 +865,7 @@ Restart the openHAB2 service:
 ```bash
 sudo systemctl restart openhab2.service
 ```
-**NOTE:** The restart of the service can take several minutes. You will not be able to access the PaperUI GUI during the restart.
+**NOTE:** The restart of the service can tanke several minuts. You will not be able to access the PaperUI GUI during the restart.
 
 Check the openHAB2 service status:
 ```bash
@@ -909,7 +909,7 @@ Select ***>[Inbox]*** and click on the  ***>>[+]*** (the blue plus icon) to star
 
 ![image](images/paperui7.jpg)
 
-Select ***[>]*** (arrow to right) next to the required binding and go through the binding specific adding process for new things.
+Select ***[>]*** (arrow to right) next to the required binding and go through the bidining specific adding process for new things.
 
 ### Checking the added things
 
@@ -931,7 +931,7 @@ Select ***>[Inbox]*** and click on the Yamaha Receiver ***[checkmark]*** (the bl
 
 ![image](images/paperui9.jpg)
 
-**Result:** The YamahaReceiver Binding dialogue will open, allowing you to enter/edit the name.
+**Result:** The YamahaReceiver Binding dialouge will open, allowing you to enter/edit the name.
 
 ![image](images/paperui10.jpg)
 
@@ -943,7 +943,7 @@ Select ***>[Inbox]*** and click on the WiFi LED ***[checkmark]*** (the blue chec
 
 ![image](images/paperui12.jpg)
 
-**Result:** The  WiFi LED Binding dialogue will open, allowing you to enter/edit the name.
+**Result:** The  WiFi LED Binding dialouge will open, allowing you to enter/edit the name.
 
 ![image](images/paperui13.jpg)
 
@@ -1042,21 +1042,21 @@ openhab ALL=NOPASSWD: /opt/433Utils/RPi_utils/send*
 ```
 Exit and save the file [Ctrl+x] > `y` > [Enter]
 
-#### Determining the device code and testing the setup
+#### Dertermining the device code and testing the setup
 
 The 433Utils tool is able to process two different kind of codes:
 - `send` comand is processing an unaltered code `systemCode unitCode command` which can directly taken from some 433MHz devices. The `command` will determin to switch the device ON `1` or OFF `0`
 - `codesend` comand is processing a single Ninja Blocks compatible `decimalcode` which can be sniffed using the 433MHz remote controll and the 433MHz receiver with the `sniff` command.
 
-##### Determining the `systemCode` and `unitCode` directly form the 433MHz devices
-Since I am running a German setup I only can use devices witch a German certification. I can confirm the *Brennenstuhl RCS 1000 N Comfort* or *Elro AB440S* will have the code setting with 10 bit dip switches like shown in the picture.
+##### Dertermining the `systemCode` and `unitCode` directly form the 433MHz devices
+Since I am running a German setup I only can use devieces witch a German certification. I can confirm the *Brennenstuhl RCS 1000 N Comfort* or *Elro AB440S* will have the code setting with 10 bit dip switches like shown in the picture.
 
 ![image](images/433mhzplug10bitdip.jpg)
 
 From this 10 bit dip switches you can directly read the unaltered code from the device.
 
-Dip switch **1-5** is defining the `systemCode`, the same code you will have to set at the 5 bit dip switch of the genuine 433MHz remote controller of the set.
-Dip switch **A-E** is defining the `unitCode`. **NOTE:** As specified in the genuine 433MHz remote controller manual, only one dip switch is allowed up to define the unit number. 
+Dip switch **1-5** is defining the `systemCode`, the same code you will have to set at the 5 bit dip switch of the genue 433MHz remote controller of the set.
+Dip switch **A-E** is defining the `unitCode`. **NOTE:** As specified in the genue 433MHz remote controller manual, only one dip switch is allowed up to define the unit number. 
 
 |bit|1|2|3|4|5|6|7|8|9|10|
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -1073,20 +1073,20 @@ Dip switch **A-E** is defining the `unitCode`. **NOTE:** As specified in the gen
 
 This represents the `systemCode` `10000` and the `unitCode` `1`
 
-**Remark:** You might be able to determine manually the `systemCode` and `unitCode` for non 10 bit dip devices following instructions on this sites (German only):
+**Remark:** You might be able to determin manuall the `systemCode` and `unitCode` for non 10 bit dip devices following instructions on this sites (German only):
 
 **https://wiki.fhem.de/wiki/Intertechno_Code_Berechnung#Original_Intertechno_System**
 **https://isn-systems.com/tools/it2elro/**
 
 
-##### Optional: Determining `decimalcode` for unknown 433MHz devices by sniffing the remote control code
+##### Optional: Dertermining `decimalcode` for unknown 433MHz devices by sniffing the remote control code
 **NOTE:** before you can start sniffing, you have to make sure, the receiver is connected to the GPIO of the Raspberry.
 
 Start the sniffing:
 ```bash
 sudo /opt/433Utils/RPi_utils/RFSniffer
 ```
-Press the required button on the 433MHz remote control.
+Press the requiered button on the 433MHz remote control.
 
 You will recieve a `decimalcode` while you keep the button pressed and one ohter `decimalcode` when you release the button.
 
@@ -1094,7 +1094,7 @@ You will recieve a `decimalcode` while you keep the button pressed and one ohter
 
 You will have to use the `decimalcode` while you keep the button pressed, in this example `1394001`
 
-Repeat the process for all buttons you want to sniff:
+Repeate the process for all buttons you want to sniff:
 
 ![image](images/433MHzsniffer2.jpg)
 
