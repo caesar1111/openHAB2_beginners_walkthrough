@@ -80,11 +80,14 @@ Since I am doing a German based home automation project you may find that some Z
 |Z-Wave NodOn Smart Plug (not available e.g. in the US)|![image](images/z-wave_smartplug_by_nodon.jpg)|
 
 **NOTE:** If you want to by other Z-Wave devices always make your they are listed in the Z-Wave device list of the openHAB2 Z-Wave binding to make sure they are supported correctly in the context of openHAB2:
-http://www.cd-jackson.com/index.php/zwave/zwave-device-database/zwave-device-list
+
+**http://www.cd-jackson.com/index.php/zwave/zwave-device-database/zwave-device-list**
 
 ### LAN devices (cable or WiFi)
 A lot of things you are using at home are already connected to your LAN and can be integrated into your openHAB2 home automation project if the right binding is available for that device.
-You can find an overview on http://docs.openhab.org/addons/bindings.html
+You can find an overview on
+
+**http://docs.openhab.org/addons/bindings.html**
 
 **NOTE:** Be aware that not all the bindings to include devices are already included in the stable version of openHAB2 and may require a manual installation of a so called snapshot version of the binding (how to install snapshot bindings is explained later in this tutorial since we will need it for the WiFi LED controller)
 
@@ -102,8 +105,8 @@ You can find an overview on http://docs.openhab.org/addons/bindings.html
 |---|---|
 |433MHz Transmitter / Receiver bundel|![image](images/433mhztransmitterreceiver.jpg)|
 |433MHz Antenna (purchase)|![image](images/433mhzantenna.jpg)|
-|*Optional:* 433MHz Antenna (DIY) 173 mm (6,81 in) wire (I used a insulated tie wire). Coil the antenna wire around a pen/chopstick|![image](images/433mhzantennadiy.jpg)|
-|Jumper calbes|![image](images/jumpercablefemalefemale.jpg)|
+|*Optional:* 433MHz Antenna (DIY) 173 mm (6,81 in) wire (I used an insulated tie wire). Coil the antenna wire around a pen/chopstick|![image](images/433mhzantennadiy.jpg)|
+|Jumper cables (Female-Female)|![image](images/jumpercablefemalefemale.jpg)|
 |433MHz Plug sets like *Brennenstuhl RCS 1000 N Comfort* or *Elro AB440S* (In my case I was able to use existing devices of other brands as well)|![image](images/433mhzplug.jpg)|
 |*Optional:* 433MHz Plug sets supporting the code selection by 10 bit dip switches |![image](images/433MHzcodedip.jpg)|
 |*Optional:* 433MHz Plug sets with other code selection or predefined codes|![image](images/433MHzplugothers.jpg)|
