@@ -32,7 +32,8 @@ So the best thing is always to go to the official webpage of openHAB2 and start 
 Shopping list:
 As mentioned before, I am basing this tutorial on the graphical GUI of Raspbian named PIXEL so the shopping list is also containing parts for this optional setup:
 
-## Minimal hardware setup of the controller with external display:
+## Hardware list:
+### Minimal hardware setup of the controller with external display:
 
 |Description|Image|
 |---|---|
@@ -46,7 +47,7 @@ As mentioned before, I am basing this tutorial on the graphical GUI of Raspbian 
 |*Optional:* Raspberry case (Obsolete, if you going for the 7” Raspberry display setup)|![image](images/raspberrycase.jpg)|
 |*Optional:* Ethernet cable (Obsolete, if you not want to use WiFi to connect the Raspberry to your gateway)|![image](images/ethernetcable.jpg)|
 
-## Additional hardware for optional setup of the controller with 7” Raspberry display:
+### Additional hardware for optional setup of the controller with 7” Raspberry display:
 (I found it very useful to have one permanent GUI interface mounted on your controller, you can also use this touchscreen interface directly to interact with your home automation):
 
 |Description|Image|
@@ -56,7 +57,7 @@ As mentioned before, I am basing this tutorial on the graphical GUI of Raspbian 
 |*Alternative:* Cases for Raspberry Pi 7" Touch-Display. You will find a wide range of other cases. The open versions might give you a better access to the Pi GPIO pins or for changing SD card. Please consider: since you can rotate the image of the GUI on the display you can also choose to switch from landscape to portrait orientation.|![image](images/alternativeraspberrydisplaycase.jpg)|
 |Bluetooth keyboard (optional, since the optional on screen touch keyboard for Raspbian PIXEL was not working without errors, I decided to go for a Bluetooth keyboard which makes the typing much easier)|![image](images/bluetoothkeyboard.jpg)|
 
-## Z-Wave Controller hardware
+### Z-Wave Controller hardware
 If you want to use the Z-Wave technology for your home automation project you have to have one Z-Wave controller connected to your Raspberry
 **NOTE:** Be aware that the details serial numbers or item names may vary since you have to always make sure to use the hardware which is allowed in your country!
 
@@ -66,7 +67,7 @@ If you want to use the Z-Wave technology for your home automation project you ha
 |*Alternative:* Aeotec by Aeon Labs Z-Stick Gen5 *Pros:* Allows offline inclusion of Z-Wave devices which makes it very easy since you only have to take the stick to the mounted device, not the entire Raspberry. *Cons:* Including battery powered devices into openHAB2 requires a special process and might cause errors(see tutorial]|![image](images/z-wave_aeon_labs_z-stick_gen5.jpg)|
 |*NOT REALLY an Alternative:* Z-Wave Z-Wave.Me Razberry 2 Daughter Card for Raspberry Pi Home Automation (not plug and play compatible with optional setup of the controller with 7” Raspberry display!)*Pros:*	will be mounted directly on the Raspberry so it is not using a USB port *Cons:*	will be mounted directly on the Raspberry which is blocking the GPIO pins for e.g. the Display power supply or additional cooling fans, so you have to manually solder the power wires at the back of the razberry. Is using the i/o port of the Raspberry Pi 3 on board Bluetooth, so a lot of additional configuration is needed to get the razberry and the Bluetooth running in parallel. Most expensive controller.|![image](images/z-wave_razberry_2_daughterboard_by_z-wave.me.jpg)|
 
-## Z-Wave sensors, switches and actuators
+### Z-Wave sensors, switches and actuators
 
 **NOTE:** Be aware that the details serial numbers or item names may vary since you have to always make sure to use the hardware which is allowed in your country!
 Since I am doing a German based home automation project you may find that some Z-Wave devices are not sold in your required country configuration ( e.g. Z-Wave NodOn Smart Plug not available e.g. in the US)
@@ -81,7 +82,7 @@ Since I am doing a German based home automation project you may find that some Z
 **NOTE:** If you want to by other Z-Wave devices always make your they are listed in the Z-Wave device list of the openHAB2 Z-Wave binding to make sure they are supported correctly in the context of openHAB2:
 http://www.cd-jackson.com/index.php/zwave/zwave-device-database/zwave-device-list
 
-**LAN devices (cable or WiFi)**
+### LAN devices (cable or WiFi)
 A lot of things you are using at home are already connected to your LAN and can be integrated into your openHAB2 home automation project if the right binding is available for that device.
 You can find an overview on http://docs.openhab.org/addons/bindings.html
 
@@ -93,7 +94,17 @@ You can find an overview on http://docs.openhab.org/addons/bindings.html
 |RGB LED stripe incl. power supply 12V DC bundle. While you can buy the stripe and the power supply bundle separately, most of the times the bundle will come at the same price or even cheaper. The included power supply plug should directly fit into the power inlet socket of the WiFi controller. *REMARK:* It also allows you to attach the stripe without soldering since you can just cut the cable of the RGB bundle controller and use it to connect the LED stripe to the WiFi controller.|![image](images/rgbledstripe.jpg)|
 |*Optional:* White LED stripe. Since the WiFi LED-Controller is allowing you to at additionally control plain colour LED stripe (or in case of controller type LD686 even two) you might want to get an additional strip in e.g. plain white to create ab clear white illumination. *NOTE:* You might be fine with just the stripe if you already got the power supply with the RGB stripe|![image](images/whiteledstripe.jpg)|
 |*Optional(in my case it was already there and I just included it into my project):* Yamaha Receiver RX-V581|![image](images/rx-v581.jpg)|
-|*Optional(in my case it was already there and I just included it into my project):* **Samsung TV Details MISSING** *NOTE:* Even when the binding is not officially supporting your TV you might be lucky|![image](images/samsungtv.jpg)|
+
+### 433MHz devices
+**NOTE:** Be aware that the details serial numbers or item names may vary since you have to always make sure to use the hardware which is allowed in your country!
+
+|Description|Image|
+|---|---|
+|433MHz Transmitter / Receiver bundel|![image](images/433mhztransmitterreceiver.jpg)|
+|433MHz Antenna (purchase)|![image](images/433mhzantenna.jpg)|
+|*Optional:* 433MHz Antenna (DIY) 173 mm (6,81 in) wire (I used a insulated tie wire). Coil the antenna wire around a pen/chopstick|![image](images/433mhzantennadiy.jpg)|
+|Jumper calbes|![image](images/jumpercablefemalefemale.jpg)|
+|433MHz Plugs (In my case I was using different brands since I already had them installed) NOTE: Please check the section |![image](images/433mhzplug.jpg)|
 
 ## Software list:
 
@@ -116,6 +127,9 @@ My tutorial is using a MS-Windows windows machine for the PC part (You should be
 How to download software will be explained in the tutorial, but as a reference you will use:
 - **openHAB2** Package repository based installation or manual installation (be aware that the file locations on the Raspberry will be different based on which kind of installation you choose)
 - **Samba** server(for access of Raspberry files from Windows machine; needed for Eclipse Smart HomeDesigner)
+- **git-core** to get code from the git repository (needed for the 433MHz controller)
+- **wiringPi** to send commands using via GPIO (needed for the 433MHz controller)
+- **433Utils** to communicate with the 433MHZ controller (needed for the 433MHz controller)
 - **xscreensaver** (optional if you are using the display setup, to easy control screen blackening or screen savers)
 
 ---
@@ -139,11 +153,48 @@ How to download software will be explained in the tutorial, but as a reference y
 #### Basic hardware setup:
 |Description|Image|
 |---|---|
-|Connect keyboard and mouse to the USB ports|![image](images/usbconnect.jpg)|
+|Connect keyboard, mouse and Z-Wave controller to the USB ports|![image](images/usbconnect.jpg)|
 |Insert the MicroSD card (pins facing the circuit board)|![image](images/microsdcardconnect.jpg)|
 |Connect Raspberry with display using HDMI (Obsolete, if you going for the 7” Raspberry display setup)|![image](images/externaldisplayconnect.jpg)|
 |Connect the Raspberry with Ethernet cable to your gateway (optional)|![image](images/lanconnect.jpg)|
 |Connect the power supply to the micro USB power input **Make sure that you have everything plugged in and the Raspberry is clear of any metal items since this step is already powering up your Raspberry.**|![image](images/powersupplyconnect.jpg)|
+
+#### 433MHz devices preparation and setup:
+
+|Description|Image|
+|---|---|
+|Solder the 433MHz antennas to the circuit boards of the transmitter and receiver|![image](images/433solderantenna.jpg)|
+|Connect the transmitter and receiver according to the wiring table below|![image](images/433mhzwiring.jpg)|
+
+##### 433MHz Transmitter
+|Transmitter Pin|Raspberry pin number|Raspberry pin name|
+|---|---|---|
+|GND|9|GND|
+|VCC|4|5V PWR|
+|DATA|11|GPIO 17|
+
+##### 433MHz Receiver (permanently)
+**NOTE:** If you are running the 7” Raspberry display setup, you will not be able to connect the receiver permanently since the display is using the same power supply pins. You will have to build (solder) yourself a Y- patchcable to fit into the display cover (A breadbord might not fit into the case). But be aware that a temporarily installation of the receiver will work as well for this setup. See section *433MHz Receiver (temporarily)*.
+
+|Receiver Pin|Raspberry pin number|Raspberry pin name|
+|---|---|---|
+|GND|6|GND|
+|VCC|2|5V PWR|
+|DATA|13|GPIO 27|
+
+##### 433MHz Receiver (temporarily)
+**NOTE:** Sice we do need the receiver only in the setup process for reading the code of unknown 433MHz remote controls you might **not** need the reciever installed permanently.
+
+If you have to read codes from a unknown 433MHz remote control you can temporarily use the power sockets of the transmitter. How to read the codes will be explained later in the section *Adding 433MHz things*. 
+
+|Receiver Pin|Raspberry pin number|Raspberry pin name|
+|---|---|---|
+|GND|9|GND|
+|VCC|4|5V PWR|
+|DATA|13|GPIO 27|
+
+After reading the codes you can remove the receiver completely from your raspberry and reconnect the transmitter to the power supply pins.
+
 
 ### Optional: Installation of 7” Raspberry display and display case:
 The full tutorial will be found on:
@@ -223,8 +274,8 @@ The full list can be found on:
 |`cd ..`|Working directory is changed to directory one level above|
 |`cd *directory*`|Working directory is changed to the named directory inside the current directory|
 |`cd */directory/directory*`|Working directory is changed to the directory defined by the full path /directory/directory|
-|`nano *filename*`|Is stating a basic editor in the terminal to open or create a simple text or configuration file. Closing the editor is done by ctrl+x and then choosing whether you want to save your changes or not|
-|`sudo nano *filename*`|Is stating a basic editor with write access in the terminal to open or create a simple text or configuration file with root user rights. Closing the editor is done by ctrl+x and then choosing whether you want to save your changes or not|
+|`nano *filename*`|Is stating a basic editor in the terminal to open or create a simple text or configuration file. Closing the editor is done by Ctrl+x and then choosing whether you want to save your changes or not|
+|`sudo nano *filename*`|Is stating a basic editor with write access in the terminal to open or create a simple text or configuration file with root user rights. Closing the editor is done by Ctrl+x and then choosing whether you want to save your changes or not|
 
 ## Initial configuration of Raspbian
 The following steps make sure, that basic Raspbian configuration is done.
@@ -311,7 +362,7 @@ If you are working with the 7” Raspberry display setup you might need to flip/
 |270 degrees rotation|`display_rotate=3`|
 |horizontal flip|`display_rotate=0x10000`|
 |vertical flip|`display_rotate=0x20000`|
-|Exit and save the file|[ctrl+x] > `y` > [Enter]|
+|Exit and save the file|[Ctrl+x] > `y` > [Enter]|
 |Reboot the Raspberry for the changes to take effect|`sudo reboot`|
 
 ### Check partition size on MicroSD card:
@@ -423,7 +474,7 @@ I am showing an example configuration which is first switching on a screensaver 
 |For full screen mode. NOTE: to exit full screen mode you have to press “Alt+F4” on the keyboard of the Raspberry, so you have to have a keyboard installed to exit this mode!|`--kiosk `|
 |For incognito mode of the browser|`--incognito`|
 |For selecting the URL directly in the configuration file. NOTE: selecting the URL via Chromium settings might be easier|`http://yoururl.com`|
-|Exit and save the file|[ctrl+x] > `y` > [Enter]|
+|Exit and save the file|[Ctrl+x] > `y` > [Enter]|
 |Reboot the Raspberry for the changes to take effect|`sudo reboot`|
 
 ### Select the start URL for Chromium web browser:
@@ -484,7 +535,7 @@ To have access to the Raspberry file system using the PC file explorer you have 
 |Optional: Change the workgroup name if needed, otherwise uncomment and enable WINS support in the section|`# Windows Internet Name Serving Support Section`|
 ||`# WINS Support - Tells the NMBD component of Samba to enable its WINS Server`|
 ||`wins support = yes`|
-|Exit and save the file|[ctrl+x] > `y` > [Enter]|
+|Exit and save the file|[Ctrl+x] > `y` > [Enter]|
 |Now you have to activate a user, e.g. “pi” as a Samba user|`sudo smbpasswd -a pi`
 |Now enter the password for the external access of the network share|`sharepwd` `sharepwd`|
 |NOTE: The access to the selected folders (share) on your Raspberry will be limited to the user rights of the Raspbian user you activated as a Samba user.||
@@ -644,7 +695,7 @@ To (something between the “”
 ```bash
 EXTRA_JAVA_OPTS="-Dgnu.io.rxtx.SerialPorts=/dev/ttyUSB0:/dev/ttyS0:/dev/ttyS2:/dev/ttyACM0:/dev/ttyAMA0"
 ```
-Exit and save the file [ctrl+x] > `y` > [Enter]
+Exit and save the file [Ctrl+x] > `y` > [Enter]
 
 Reboot the Raspberry for the changes to take effect
 ```bash
@@ -927,6 +978,100 @@ In this case we choose Berlin WOEID: `638242`
 Add the thing by clicking on the ***[checkmark]*** (the blue checkmark icon)
 
 ![image](images/paperui17.jpg)
+
+### Adding 433MHz things
+#### Install additional code and configure Raspbian
+Open the terminal:
+
+![image](images/openterminal.jpg)
+
+##### Install git-core
+```bash
+sudo apt-get update
+sudo apt-get install git-core
+
+##### Install WiringPi
+Change to home directory and download wiringPi
+```bash
+cd
+sudo git clone git://git.drogon.net/wiringPi
+```
+Change to `wiringPi` directory execute build wiringPi
+```bash
+cd wiringPi
+sudo ./build
+```
+##### Install 433Utils
+Change to home directory and download 433Utils
+```bash
+cd
+git clone https://github.com/ninjablocks/433Utils.git --recursive
+```
+Change to `433Utils/RPi_utils` directory and execute make
+```bash
+cd 433Utils/RPi_utils
+make all
+```
+Change to home directory and move the 433Utils to the `/opt/433Utils` directory to make the command line works for every user
+```bash
+cd
+sudo mv 433Utils /opt/433Utils
+```
+
+##### Optional: Start the sniffing of unknown 433MHz remote code
+```bash
+sudo /opt/433Utils/RPi_utils/RFSniffer
+```
+Press [Ctrl+c] to stop the sniffing process
+
+##### Sending code
+Send the code which was detected by the sniffer
+```bash
+sudo /opt/433Utils/RPi_utils/codesend 1234
+sudo /opt/433Utils/RPi_utils/send 12345 1 1
+```
+
+##### Allowing openHAB2 to send commands to the 433MHz transmitter
+Since the 433Utils send tool is using sudo (root) rights you have to allow the openhab user to execute the sent tool with those sudo (root).
+
+Open the sudoers config file:
+```bash
+sudo nano /etc/sudoers
+```
+Search for the chapter:
+```bash
+# User privilege specification
+ root ALL=(ALL:ALL) ALL
+```
+Add the line:
+```bash
+openhab ALL=NOPASSWD: /opt/433Utils/RPi_utils/codesend*
+openhab ALL=NOPASSWD: /opt/433Utils/RPi_utils/send*
+```
+Exit and save the file [Ctrl+x] > `y` > [Enter]
+
+#### Adding 433 MHz Things using Exec Binding:
+
+Go to PaperUI and select ***>[Inbox]*** and click on the  ***>>[+]*** (the blue plus icon) to start adding things.
+
+![image](images/paperui6.jpg)
+
+**Result:** This will now show you all the installed Bindings which can be used to add things.
+
+![image](images/paperui7.jpg)
+
+Select ***[>]*** (arrow to right) next to the Exec Binding.
+
+Exec Binding > Command
+Command > `sudo /opt/433Utils/RPi_utils/codesend 1234`
+Command > `sudo /opt/433Utils/RPi_utils/send 12345 1 1`
+Interval > `0`
+
+### Adding things connected via Z-Wave controller:
+
+**NOTE:** First you have to connect the Z-Wave controller as a thing. After this you will use HABmin to further include things into the Z-Wave network. These things should show up automatically in the inbox of PAPER UI.
+
+#### Adding Z-Wave controller:
 
 
 ```bash
