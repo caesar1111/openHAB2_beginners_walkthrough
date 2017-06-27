@@ -611,11 +611,11 @@ Download the Windows 64 bit version
 **http://eclipse.org/downloads/download.php?file=/smarthome/releases/0.8.0/eclipsesmarthome-incubation-0.8.0-designer-win64.zip**
 
 *Optional:* Download the 32 bit version since there are reports about the “stable” 64 bit version running not stable
-** http://eclipse.org/downloads/download.php?file=/smarthome/releases/0.8.0/eclipsesmarthome-incubation-0.8.0-designer-win.zip **
+**http://eclipse.org/downloads/download.php?file=/smarthome/releases/0.8.0/eclipsesmarthome-incubation-0.8.0-designer-win.zip**
 
 
 *Optional, but not recommended for beginner:* Download a snapshot version
-** https://github.com/eclipse/smarthome/blob/master/docs/documentation/community/downloads.md#designer-builds **
+**https://github.com/eclipse/smarthome/blob/master/docs/documentation/community/downloads.md#designer-builds**
 
 Unzip the downloaded file to a destination of your choice	
 ```bash
@@ -623,15 +623,15 @@ yourpcdrive:\yourdestionation\eclipsesmarthome
 ```
 
 ### Optional: Download the offline Java Runtime Environment.
-** NOTE: ** If you do not have a jave envrionment installed, you have to additionally install Java Runtime Environment to be able to run Eclipse Smart Home Designer. In this case we will install the Java files directly into the Eclipse Smart Home Designer folder whick will create a “portable” version of the Eclipse Smart Home Designer. (The folder can be copied/moved to different locations or machines without the need of reinstalling).
+**NOTE:** If you do not have a jave envrionment installed, you have to additionally install Java Runtime Environment to be able to run Eclipse Smart Home Designer. In this case we will install the Java files directly into the Eclipse Smart Home Designer folder whick will create a “portable” version of the Eclipse Smart Home Designer. (The folder can be copied/moved to different locations or machines without the need of reinstalling).
 
 Go to the java homepage download section
-** https://java.com/en/download/ **
+**https://java.com/en/download/**
 ![image](images/java1.jpg)
 
 
 *Optional:* Go directly to:
-** https://java.com/en/download/manual.jsp **
+**https://java.com/en/download/manual.jsp**
 ![image](images/java2.jpg)
 
 Download the 64bit version (something like *jre-8u131-windows-x64.exe* ) or the 32bit depending on your system
@@ -639,15 +639,15 @@ Download the 64bit version (something like *jre-8u131-windows-x64.exe* ) or the 
 Install the Java Runtime Environment to the Eclipse Smart Home Designer folder
 Start the Java installer. Select on the first screen “Change destination folder”
 ![image](images/java3.jpg)
-*** [Change destination folder] & [Install] ***
+***[Change destination folder] & [Install]***
 
 Change the folder to \jre inside your Eclipse Smart Home Designer folder yourpcdrive:\yourdestionation\eclipseSmart Homesince this is the loaction your Eclipse Smart Home Designer is expecting the JRE.
 ![image](images/java4.jpg)
-*** [Change] ***
+***[Change]***
 ```bash
 yourpcdrive:\yourdestionation\eclipsesmarthome\jre
 ```
-*** [Next] ***
+***[Next]***
 
 ### Launching Eclipse Smart Home Designer first time:
 Execute the SmartHome-Designer.exe
@@ -657,7 +657,7 @@ yourpcdrive:\yourdestionation\eclipsesmarthome\SmartHome-Designer.exe
 ![image](images/smarthomedesigner1.jpg)
 
 Link the Eclipse Smart Home Designer to the configuration folder on your Raspberry
-** NOTE: ** Make sure that you have mapped the samba drive before (see openHAB2 setup for the samba server)
+**NOTE:** Make sure that you have mapped the samba drive before (see openHAB2 setup for the samba server)
 ![image](images/smarthomedesigner2.jpg)
 Example: If you have chosen Z:\ as drive letter the path would be:
 ```bash
@@ -670,7 +670,7 @@ Eclipse Smart Home Designer should now recognize the file structure inside the c
 # Chapter 8: Initializing openHAB2 (finally: first startup)
 To open the openHAB2 you have to access the web GUI with a browser on your PC or directly from your Raspberry, depending on your setup.
 The URL will be:
-** http://xxx.xxx.xxx.xxx:8080/start/index **
+**http://xxx.xxx.xxx.xxx:8080/start/index**
 Just replace the *xxx.xxx.xxx.xxx* with the IP of your Raspberry.
 
 
