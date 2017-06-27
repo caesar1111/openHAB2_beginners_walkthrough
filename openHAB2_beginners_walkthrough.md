@@ -97,18 +97,20 @@ You can find an overview on http://docs.openhab.org/addons/bindings.html
 
 ## Software list:
 
-My tutorial is using a MS-Windows windows machine for the PC part (You should be able to get it done with Mac or Linux PCs as well, but you have to go online to look up the differences and do some adaptions on the tutorial e.g. mounting the Raspberry file system to PC)
+**NOTE:** This list ist just an overview. The details in how to download and install the software are included later in the document so **dont start downloading now**.
 
 ### Windows Download list:
 
+My tutorial is using a MS-Windows windows machine for the PC part (You should be able to get it done with Mac or Linux PCs as well, but you have to go online to look up the differences and do some adaptions on the tutorial e.g. mounting the Raspberry file system to PC)
+
 |Description|URL|
 |---|---|
-|The latest **Raspbian** (Raspberry OS) image. You have to download the “Raspbian Jessie with PIXEL - Image with PIXEL desktop based on Debian Jessie” since this tutorial is using PIXEL|https://www.Raspberrypi.org/downloads/Raspbian/|
-|**Etcher** (to write the Raspbian image to the SD-Card)|https://etcher.io/|
-|**Eclipse Smart HomeDesigner** (optional but strongly recommended for easy editing of OpenHAB2 configuration files; incl. syntax highlighting) You have to choose the right version for your PC|https://www.openhab.org/downloads.html|
-|To use Eclipse Smart HomeDesigner you need **Java Runtime Environment JRE** (if not already installed on your PC)|https://java.com/|
-|**PuTTY** or **KiTTY** portable to access the Raspberry console from your PC|http://www.putty.org/ or https://portableapps.com/apps/internet/kitty-portable|
-|**WinSCP** portable to access Raspberry file System directly from your PC (might become obsolete if you use a SAMBA server on your Raspberry, see tutorial)|https://winscp.net/eng/download.php|
+|The latest **Raspbian** (Raspberry OS) image. You have to download the “Raspbian Jessie with PIXEL - Image with PIXEL desktop based on Debian Jessie” since this tutorial is using PIXEL|**https://www.Raspberrypi.org/downloads/Raspbian/**|
+|**Etcher** (to write the Raspbian image to the SD-Card)|**https://etcher.io/**|
+|**Eclipse Smart HomeDesigner** (optional but strongly recommended for easy editing of OpenHAB2 configuration files; incl. syntax highlighting) You have to choose the right version for your PC|**https://www.openhab.org/downloads.html**|
+|To use Eclipse Smart HomeDesigner you need **Java Runtime Environment JRE** (if not already installed on your PC)|**https://java.com/**|
+|**PuTTY** or **KiTTY** portable to access the Raspberry console from your PC|**http://www.putty.org/** or **https://portableapps.com/apps/internet/kitty-portable**|
+|**WinSCP** portable to access Raspberry file System directly from your PC (might become obsolete if you use a SAMBA server on your Raspberry, see tutorial)|**https://winscp.net/eng/download.php**|
 
 ### Raspberry downloads:
 How to download software will be explained in the tutorial, but as a reference you will use:
