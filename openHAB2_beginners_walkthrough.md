@@ -233,6 +233,7 @@ Step 4:
 ![image](images/displaysetup4.jpg)
 
 Step 5:
+
 ![image](images/displaysetup5.jpg)
 
 Step 6:
@@ -588,7 +589,11 @@ To have access to the Raspberry file system using the PC file explorer you have 
 
 # Chapter 6: Installation of openHAB2 on Raspberry
 This tutorial is only focussing on the package repository installation of the stable version and only on the add-ons for the listed hardware.
-All other installations are described on the openhab.org site installation for Linux: *http://docs.openhab.org/installation/linux.html#package-repository-installation* For the Raspbian you have to go for the “Apt Based Systems” part of it.
+All other installations are described on the openhab.org site installation for Linux: 
+
+**http://docs.openhab.org/installation/linux.html#package-repository-installation**
+
+For the Raspbian you have to go for the “Apt Based Systems” part of it.
 
 **NOTE:** All the commands in this chapter are terminal commands, so you have to open the terminal:
 
@@ -710,7 +715,9 @@ sudo reboot
 # Chapter 7: Installation of Eclipse Smart Home Designer
 (Optional but strongly recommended for easy editing of openHAB2 configuration files; incl. syntax highlighting)
 
-The complete installation guide can be found on: *http://docs.openhab.org/installation/designer.html#setup*
+The complete installation guide can be found on:
+
+**http://docs.openhab.org/installation/designer.html#setup**
 
 ## Installation guide for windows (Eclipse Smart Home Designer and Java Runtime Environment):
 ### Download Smart Home Designer
