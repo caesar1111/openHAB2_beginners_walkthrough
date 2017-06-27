@@ -632,17 +632,22 @@ Go to the java homepage download section
 
 *Optional:* Go directly to:
 **https://java.com/en/download/manual.jsp**
+
 ![image](images/java2.jpg)
 
 Download the 64bit version (something like *jre-8u131-windows-x64.exe* ) or the 32bit depending on your system
 
 Install the Java Runtime Environment to the Eclipse Smart Home Designer folder
 Start the Java installer. Select on the first screen “Change destination folder”
+
 ![image](images/java3.jpg)
+
 ***[Change destination folder] & [Install]***
 
 Change the folder to \jre inside your Eclipse Smart Home Designer folder yourpcdrive:\yourdestionation\eclipseSmart Homesince this is the loaction your Eclipse Smart Home Designer is expecting the JRE.
+
 ![image](images/java4.jpg)
+
 ***[Change]***
 ```bash
 yourpcdrive:\yourdestionation\eclipsesmarthome\jre
@@ -654,17 +659,21 @@ Execute the SmartHome-Designer.exe
 ```bash
 yourpcdrive:\yourdestionation\eclipsesmarthome\SmartHome-Designer.exe
 ```
+
 ![image](images/smarthomedesigner1.jpg)
 
 Link the Eclipse Smart Home Designer to the configuration folder on your Raspberry
 **NOTE:** Make sure that you have mapped the samba drive before (see openHAB2 setup for the samba server)
+
 ![image](images/smarthomedesigner2.jpg)
+
 Example: If you have chosen Z:\ as drive letter the path would be:
 ```bash
 Z:\etc\openhab2
 ```
 
 Eclipse Smart Home Designer should now recognize the file structure inside the configuration folder and augment the different folders with different icons.
+
 ![image](images/smarthomedesigner3.jpg)
 
 # Chapter 8: Initializing openHAB2 (finally: first startup)
