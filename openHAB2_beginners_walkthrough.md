@@ -679,7 +679,9 @@ Eclipse Smart Home Designer should now recognize the file structure inside the c
 # Chapter 8: Initializing openHAB2 (finally: first startup)
 To open the openHAB2 you have to access the web GUI with a browser on your PC or directly from your Raspberry, depending on your setup.
 The URL will be:
+
 **http://xxx.xxx.xxx.xxx:8080/start/index**
+
 Just replace the *xxx.xxx.xxx.xxx* with the IP of your Raspberry.
 
 
