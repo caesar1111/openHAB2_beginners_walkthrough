@@ -146,27 +146,41 @@ How to download software will be explained in the tutorial, but as a reference y
 ### Optional: Installation of 7” Raspberry display and display case:
 The full tutorial will be found on:
 
-https://www.element14.com/community/docs/DOC-78156/l/Raspberry-pi-7-touchscreen-display
+**https://www.element14.com/community/docs/DOC-78156/l/Raspberry-pi-7-touchscreen-display**
 
 and a clip on YouTube:
 
-https://www.youtube.com/watch?v=tK-w-wDvRTg
+**https://www.youtube.com/watch?v=tK-w-wDvRTg**
 
-*Remark:* I had an issue with plugging in the power supply to the micro USB power input on the circuit board of the display (like shown in the video). The Raspberry was still showing me the low power symbol (lightening symbol on the upper right corner) SOLUTION:  I had to plug in the power supply to the micro USB power input on the Raspberry itself. The display is now powered via the jumper cables. The standard display case is also allowing for both micro USB power inputs to be used.
+**Remark:** I had an issue with plugging in the power supply to the micro USB power input on the circuit board of the display (like shown in the video). The Raspberry was still showing me the low power symbol (lightening symbol on the upper right corner) SOLUTION:  I had to plug in the power supply to the micro USB power input on the Raspberry itself. The display is now powered via the jumper cables. The standard display case is also allowing for both micro USB power inputs to be used.
 
 **NOTE:** If the image on the display is having the wrong orientation, you can rotate the image by changing the configuration of Raspbian (see tutorial section Initial configuration of Raspbian)
+
 #### Display installation pictures:
 
-|Description|Image|
-|---|---|
-|Step 1|![image](images/displaysetup1.jpg)|
-|Step 2|![image](images/displaysetup2.jpg)|
-|Step 3|![image](images/displaysetup3.jpg)|
-|Step 4|![image](images/displaysetup4.jpg)|
-|Step 5|![image](images/displaysetup5.jpg)|
-|Step 6|![image](images/displaysetup6.jpg)|
-|Step 7|![image](images/displaysetup7.jpg)|
-|Step 8|Assembly of the standard display. (Make sure you have inserted the MicroSD card since you won’t have access to the slot as soon as you mounted the case!)Just pull the back plate off the case, insert the display including the mounted Raspberry (make sure that the path cables and the display cables are not crushed between case and board), tighten it with the 4 screws and put the back plate into place. Here is a good clip on YouTube: https://www.youtube.com/watch?v=wpSxibZOmoo|
+Step 1:
+![image](images/displaysetup1.jpg)
+
+Step 2:
+![image](images/displaysetup2.jpg)
+
+Step 3:
+![image](images/displaysetup3.jpg)
+
+Step 4:
+![image](images/displaysetup4.jpg)
+
+Step 5:
+![image](images/displaysetup5.jpg)
+
+Step 6:
+
+![image](images/displaysetup6.jpg)
+
+Step 7:
+![image](images/displaysetup7.jpg)
+
+Step 8: Assembly of the standard display. (Make sure you have inserted the MicroSD card since you won’t have access to the slot as soon as you mounted the case!)Just pull the back plate off the case, insert the display including the mounted Raspberry (make sure that the path cables and the display cables are not crushed between case and board), tighten it with the 4 screws and put the back plate into place. Here is a good clip on YouTube: **https://www.youtube.com/watch?v=wpSxibZOmoo**
 
 ---
 
@@ -507,6 +521,9 @@ To have access to the Raspberry file system using the PC file explorer you have 
 This tutorial is only focussing on the package repository installation of the stable version and only on the add-ons for the listed hardware.
 All other installations are described on the openhab.org site installation for Linux: *http://docs.openhab.org/installation/linux.html#package-repository-installation* For the Raspbian you have to go for the “Apt Based Systems” part of it.
 
+**NOTE:** All the commands in this chapter are terminal commands, so you have to open the terminal:
+
+![image](images/openterminal.jpg)
 
 First, add the openHAB2 bintray repository key to your package manager and allow Apt to use the HTTPS Protocol
 ``` bash
@@ -564,41 +581,70 @@ sudo systemctl enable openhab2.service
 This is required to grant the PC based Eclipse Smart Home Designer access to the requested configuration folder on your Raspbian.
 **NOTE:** This is for using samba for openHAB2 ONLY. If you already have set up a samba with a different user and a full access to raspberry, this might be obolete.
 
-|Description|Image/Command|
-|---|---|
-|Open Terminal|![image](images/openterminal.jpg)|
-|The shares are configured to be not open for guests nor to the public. Let’s activate the “openhab” user as a samba user|`sudo smbpasswd -a openhab`|
-|Enter the password *openhabpassword* which will be used to map the share on your PC|`New SMB password:`|
-||`Retype new SMB password:`|
-||`Added user openhab.`|
-|Be aware, that creating and later using a specific user will ensure that permissions are honoured. Make sure, the “openhab” user has ownership and/or write access to the openHAB2 configuration files. This can be accomplished by executing:|`sudo chown -hR openhab:openhab /etc/openhab2`|
-|Restart the samba service to allow the changes to be utilized|`sudo systemctl restart smbd.service`|
-|Map the Raspberry folder to a windows drive (in this case Z) enter in the CMD Prompt (just put CMD in the search of Windows 10 to open the command prompt)|`net use Z: \\xxx.xxx.xxx.xxx\RaspberryPiDirectories /user:openhab openhabpassword /persistent:no`|
-
+The shares are configured to be not open for guests nor to the public. Let’s activate the “openhab” user as a samba user
+```bash
+sudo smbpasswd -a openhab
+```
+Enter the password *openhabpassword* which will be used to map the share on your PC
+```bash
+New SMB password:
+Retype new SMB password:
+Added user openhab.
+```
+Be aware, that creating and later using a specific user will ensure that permissions are honoured. Make sure, the “openhab” user has ownership and/or write access to the openHAB2 configuration files. This can be accomplished by executing:
+```bash
+sudo chown -hR openhab:openhab /etc/openhab2
+```
+Restart the samba service to allow the changes to be utilized
+```bash
+sudo systemctl restart smbd.service
+```
+Map the Raspberry folder to a windows drive (in this case Z) enter in the CMD Prompt (just put CMD in the search of Windows 10 to open the command prompt)
+```bash
+net use Z: \\xxx.xxx.xxx.xxx\RaspberryPiDirectories /user:openhab openhabpassword /persistent:no`
+```
 
 ## openHAB2 Privileges for Common Peripherals
 An openHAB2 setup will often rely on hardware like a modem, transceiver or adapter to interface with home automation hardware. Examples are a Z-Wave, Enocean or RXFcom USB Stick or a Raspberry Pi add-on board connected to the serial port on its GPIOs. In order to allow openHAB2 to communicate with additional peripherals, it has to be added to corresponding Linux groups. The following example shows how to add Linux user openHAB2 to the often needed groups dialout and tty. Additional groups may be needed, depending on your hardware and software setup.
 
 ### Adding openhab user to groupds dialout an tty
+Enter command (This is adding the openhab user to the group dialout)
+```bash
+sudo adduser openhab dialout
+```
+Enter command (This is adding the openhab user to the group tty)
+```bash
+sudo adduser openhab tty
+```
+*Optional:* Enter command (If you are looking to enable sound privileges for openHAB2, it will also be necessary to add openHAB2 to the “audio” group.)
+```bash
+sudo adduser openhab audio
+```
 
-|Description|Image/Command|
-|---|---|
-|Open Terminal|![image](images/openterminal.jpg)|
-|Enter command (This is adding the openhab user to the group dialout)|`sudo adduser openhab dialout`|
-|Enter command (This is adding the openhab user to the group tty)|`sudo adduser openhab tty`|
-|Optional: Enter command (If you are looking to enable sound privileges for openHAB2, it will also be necessary to add openHAB2 to the “audio” group.)|`sudo adduser openhab audio`|
 
 ### Granting java environment access to serial ports
+Change to directory
+```bash
+cd /etc/default/
+```
+Open openhab2 file in nano editor
+```bash
+sudo nano openhab2
+```
+Change the text from (nothing between the “”)
+```bash
+EXTRA_JAVA_OPTS=""
+```
+To (something between the “”
+```bash
+EXTRA_JAVA_OPTS="-Dgnu.io.rxtx.SerialPorts=/dev/ttyUSB0:/dev/ttyS0:/dev/ttyS2:/dev/ttyACM0:/dev/ttyAMA0"
+```
+Exit and save the file [ctrl+x] > `y` > [Enter]
 
-|Description|Image/Command|
-|---|---|
-|Open Terminal|![image](images/openterminal.jpg)|
-|Change to directory|`cd /etc/default/`|
-|Open openhab2 file in nano editor|`sudo nano openhab2`|
-|Change the text from (nothing between the “”)|`EXTRA_JAVA_OPTS=""`|
-|To (something between the “”)|`EXTRA_JAVA_OPTS="-Dgnu.io.rxtx.SerialPorts=/dev/ttyUSB0:/dev/ttyS0:/dev/ttyS2:/dev/ttyACM0:/dev/ttyAMA0"`|
-|Exit and save the file|[ctrl+x] > `y` > [Enter]|
-|Reboot the Raspberry for the changes to take effect|`sudo reboot`|
+Reboot the Raspberry for the changes to take effect
+```bash
+sudo reboot
+```
 
 # Chapter 7: Installation of Eclipse Smart Home Designer
 (Optional but strongly recommended for easy editing of openHAB2 configuration files; incl. syntax highlighting)
@@ -608,21 +654,23 @@ The complete installation guide can be found on : *http://docs.openhab.org/insta
 ## Installation guide for windows (Eclipse Smart Home Designer and Java Runtime Environment):
 ### Download Smart Home Designer
 Download the Windows 64 bit version
+
 **http://eclipse.org/downloads/download.php?file=/smarthome/releases/0.8.0/eclipsesmarthome-incubation-0.8.0-designer-win64.zip**
 
 *Optional:* Download the 32 bit version since there are reports about the “stable” 64 bit version running not stable
+
 **http://eclipse.org/downloads/download.php?file=/smarthome/releases/0.8.0/eclipsesmarthome-incubation-0.8.0-designer-win.zip**
 
 
 *Optional, but not recommended for beginner:* Download a snapshot version
+
 **https://github.com/eclipse/smarthome/blob/master/docs/documentation/community/downloads.md#designer-builds**
 
 Unzip the downloaded file to a destination of your choice	
-```bash
-yourpcdrive:\yourdestionation\eclipsesmarthome
-```
+`yourpcdrive:\yourdestionation\eclipsesmarthome`
 
 ### Optional: Download the offline Java Runtime Environment.
+
 **NOTE:** If you do not have a jave envrionment installed, you have to additionally install Java Runtime Environment to be able to run Eclipse Smart Home Designer. In this case we will install the Java files directly into the Eclipse Smart Home Designer folder whick will create a “portable” version of the Eclipse Smart Home Designer. (The folder can be copied/moved to different locations or machines without the need of reinstalling).
 
 Go to the java homepage download section
@@ -649,16 +697,12 @@ Change the folder to \jre inside your Eclipse Smart Home Designer folder yourpcd
 ![image](images/java4.jpg)
 
 ***[Change]***
-```bash
-yourpcdrive:\yourdestionation\eclipsesmarthome\jre
-```
+`yourpcdrive:\yourdestionation\eclipsesmarthome\jre`
 ***[Next]***
 
 ### Launching Eclipse Smart Home Designer first time:
 Execute the SmartHome-Designer.exe
-```bash
-yourpcdrive:\yourdestionation\eclipsesmarthome\SmartHome-Designer.exe
-```
+`yourpcdrive:\yourdestionation\eclipsesmarthome\SmartHome-Designer.exe`
 
 ![image](images/smarthomedesigner1.jpg)
 
@@ -668,9 +712,7 @@ Link the Eclipse Smart Home Designer to the configuration folder on your Raspber
 ![image](images/smarthomedesigner2.jpg)
 
 Example: If you have chosen Z:\ as drive letter the path would be:
-```bash
-Z:\etc\openhab2
-```
+`Z:\etc\openhab2`
 
 Eclipse Smart Home Designer should now recognize the file structure inside the configuration folder and augment the different folders with different icons.
 
@@ -733,7 +775,7 @@ Select ***>[Add-ons]***  ***>>[BINDINGS]***
 ![image](images/paperui2.jpg)
 
 Install the Bindings:
-***[Exec Binding]***, ***[YahooWeather Binding]***, ***[YamahaReceiver Binding]*** and ***[Z-Wave Binding]***
+***[Exec Binding]*** , ***[YahooWeather Binding]*** , ***[YamahaReceiver Binding]*** and ***[Z-Wave Binding]***
 
 **Result:** The icons of the bindings should change to blue
 The install option should change to uninstall
@@ -778,15 +820,23 @@ Select ***>[Inbox]*** and click on the  ***>>[+]*** (the blue plus icon) to star
 
 Select ***[>]*** (arrow to right) next to the required binding and go through the bidining specific adding process for new things.
 
+### Checking the added things
+
+Select ***>[Configuration]*** ***>>[Things]***
+
+**Result:** You should see now all the installed things.
+
+![image](images/paperui11.jpg)
+
 ### Adding local things connected via network (IP):
 
 **NOTE:** Make sure that the device is connected to the Raspberry network via IP.
-**Result:** The connected devices should come up automatically in the inbox.
 
+**Result:** The connected devices should come up automatically in the inbox.
 
 #### Adding Things using YamahaReceiver Binding:
 
-Select the Yamaha Receiver ***[checkmark]*** (the blue checkmark icon) in the inbox.
+Select ***>[Inbox]*** and click on the Yamaha Receiver ***[checkmark]*** (the blue checkmark icon).
 
 ![image](images/paperui9.jpg)
 
@@ -795,6 +845,54 @@ Select the Yamaha Receiver ***[checkmark]*** (the blue checkmark icon) in the in
 ![image](images/paperui10.jpg)
 
 Confirm the adding by clicking on the ***[ADD AS THING]*** button
+
+#### Adding Things using WiFi LED Binding:
+
+Select ***>[Inbox]*** and click on the WiFi LED ***[checkmark]*** (the blue checkmark icon).
+
+![image](images/paperui12.jpg)
+
+**Result:** The  WiFi LED Binding dialouge will open, allowing you to enter/edit the name.
+
+![image](images/paperui13.jpg)
+
+Confirm the adding by clicking on the ***[ADD AS THING]*** button
+
+### Adding online things connected via network (IP)
+
+**NOTE:** Make sure the Raspberry is online.
+
+#### Adding Things using YahooWeather Binding:
+
+Select ***>[Inbox]*** and click on the  ***>>[+]*** (the blue plus icon) to start adding things.
+
+![image](images/paperui6.jpg)
+
+**Result:** This will now show you all the installed Bindings which can be used to add things.
+
+![image](images/paperui7.jpg)
+
+Select ***[>]*** (arrow to right) next to the YahooWeather Binding.
+
+![image](images/paperui14.jpg)
+
+Select ***[>]*** (arrow to right) next to the Weather Information.
+
+![image](images/paperui15.jpg)
+
+Now you have to configure the thing. In this case you have to enter the WOEID which is a 32-bit reference identifier of the weather information location. You can look up the WOEID on e.g. **http://www.woeidlookup.com/** 
+
+**Remark:** More information on WOEID on: **https://en.wikipedia.org/wiki/WOEID**
+
+![image](images/paperui16.jpg)
+
+
+In this case we choose Berlin WOEID: `638242`
+
+Add the thing by clicking on the ***[checkmark]*** (the blue checkmark icon)
+
+![image](images/paperui17.jpg)
+
 
 ```bash
 
