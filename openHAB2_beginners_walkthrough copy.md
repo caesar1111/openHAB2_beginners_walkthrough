@@ -104,7 +104,9 @@ You can find an overview on http://docs.openhab.org/addons/bindings.html
 |433MHz Antenna (purchase)|![image](images/433mhzantenna.jpg)|
 |*Optional:* 433MHz Antenna (DIY) 173 mm (6,81 in) wire (I used a insulated tie wire). Coil the antenna wire around a pen/chopstick|![image](images/433mhzantennadiy.jpg)|
 |Jumper calbes|![image](images/jumpercablefemalefemale.jpg)|
-|433MHz Plugs (In my case I was using different brands since I already had them installed) NOTE: Please check the section |![image](images/433mhzplug.jpg)|
+|433MHz Plug sets like *Brennenstuhl RCS 1000 N Comfort* or *Elro AB440S* (In my case I was able to use existing devices of other brands as well)|![image](images/433mhzplug.jpg)|
+|*Optional:* 433MHz Plug sets supporting the code selection by 10 bit dip switches |![image](images/433MHzcodedip.jpg)|
+|*Optional:* 433MHz Plug sets with other code selection or predefined codes|![image](images/433MHzplugothers.jpg)|
 
 ## Software list:
 
@@ -1040,32 +1042,98 @@ Exit and save the file [Ctrl+x] > `y` > [Enter]
 #### Dertermining the device code and testing the setup
 
 The 433Utils tool is able to process two different kind of codes:
-- A unaltered code `systemCode unitCode command` which can directly taken from some 433MHz devices.
-- A single Ninja Blocks compatible `decimalcode` which can be sniffed using the 433MHz remote controll and the 433MHz receiver with the `sniff` command.
+- `send` comand is processing an unaltered code `systemCode unitCode command` which can directly taken from some 433MHz devices. The `command` will determin to switch the device ON `1` or OFF `0`
+- `codesend` comand is processing a single Ninja Blocks compatible `decimalcode` which can be sniffed using the 433MHz remote controll and the 433MHz receiver with the `sniff` command.
+
+##### Dertermining the `systemCode` and `unitCode` directly form the 433MHz devices
+Since I am running a German setup I only can use devieces witch a German certification. I can confirm the *Brennenstuhl RCS 1000 N Comfort* or *Elro AB440S* will have the code setting with 10 bit dip switches like shown in the picture.
+
+![image](images/433mhzplug10bitdip.jpg)
+
+From this 10 bit dip switches you can directly read the unaltered code from the device.
+
+Dip switch **1-5** is defining the `systemCode`, the same code you will have to set at the 5 bit dip switch of the genue 433MHz remote controller of the set.
+Dip switch **A-E** is defining the `unitCode`. **NOTE:** As specified in the genue 433MHz remote controller manual, only one dip switch is allowed up to define the unit number. 
+
+|bit|1|2|3|4|5|6|7|8|9|10|
+|---|---|---|---|---|---|---|---|---|---|---|
+|dip name on device|1|2|3|4|5|A|B|C|D|E|
+|`systemCode` dips|x|x|x|x|x||||||
+|`unitCode` dips||||||x|x|x|x|x|
+|`unitCode` decimals||||||1|2|3|4|5|
+
+**Example:** Refering to the picture above, the dip setting is:
+
+|bit|1|2|3|4|5|6|7|8|9|10|
+|---|---|---|---|---|---|---|---|---|---|---|
+|dip name on device|UP|DOWN|DOWN|DOWN|DOWN|UP|DOWN|DOWN|DOWN|DOWN|
+
+This represents the `systemCode` `10000` and the `unitCode` `1`
+
+**Remark:** You might be able to determin manuall the `systemCode` and `unitCode` for non 10 bit dip devices following instructions on this sites (German only):
+
+**https://wiki.fhem.de/wiki/Intertechno_Code_Berechnung#Original_Intertechno_System**
+**https://isn-systems.com/tools/it2elro/**
 
 
-##### Dertermining the code directly form the 433MHz devices
+##### Optional: Dertermining `decimalcode` for unknown 433MHz devices by sniffing the remote control code
+**NOTE:** before you can start sniffing, you have to make sure, the receiver is connected to the GPIO of the Raspberry.
 
-![image](images/433MHzcodedip.jpg)
-
-
-##### Optional: Start the sniffing of unknown 433MHz remote decimalcode
+Start the sniffing:
 ```bash
 sudo /opt/433Utils/RPi_utils/RFSniffer
 ```
-Press [Ctrl+c] to stop the sniffing process
+Press the requiered button on the 433MHz remote control.
 
-##### Sending code
-Send the code which was detected by the sniffer
+You will recieve a `decimalcode` while you keep the button pressed and one ohter `decimalcode` when you release the button.
+
+![image](images/433MHzsniffer.jpg)
+
+You will have to use the `decimalcode` while you keep the button pressed, in this example `1394001`
+
+Repeate the process for all buttons you want to sniff:
+
+![image](images/433MHzsniffer2.jpg)
+
+Stop the sniffing process by pressing [Ctrl+c]
+
+##### Test sending the codes by terminal command line
+###### Unaltered code `systemCode unitCode command`
+Sending an unaltered code `systemCode unitCode command` 
 ```bash
-sudo /opt/433Utils/RPi_utils/codesend 1234
-sudo /opt/433Utils/RPi_utils/send 12345 1 1
+sudo /opt/433Utils/RPi_utils/send systemCode unitCode command
+```
+**Example:** If you want to switch a device with the dip setting.
+
+|bit|1|2|3|4|5|6|7|8|9|10|
+|---|---|---|---|---|---|---|---|---|---|---|
+|dip name on device|UP|DOWN|DOWN|DOWN|DOWN|UP|DOWN|DOWN|DOWN|DOWN|
+
+To switch the device ON:
+
+```bash
+sudo /opt/433Utils/RPi_utils/send 10000 1 1
+```
+To switch the device OFF:
+
+```bash
+sudo /opt/433Utils/RPi_utils/send 10000 1 0
 ```
 
+###### Single Ninja Blocks compatible `decimalcode`
+Sending a single Ninja Blocks `decimalcode` 
+```bash
+sudo /opt/433Utils/RPi_utils/codesend decimalcode
+```
+**Example:** If you want to switch a device with the sniffed code `1394001`.
+
+```bash
+sudo /opt/433Utils/RPi_utils/codesend 1394001
+```
 
 #### Adding 433 MHz Things using Exec Binding:
 
-Go to PaperUI and select ***>[Inbox]*** and click on the  ***>>[+]*** (the blue plus icon) to start adding things.
+Open the PaperUI and select ***>[Inbox]*** and click on the  ***>>[+]*** (the blue plus icon) to start adding things.
 
 ![image](images/paperui6.jpg)
 
@@ -1075,27 +1143,26 @@ Go to PaperUI and select ***>[Inbox]*** and click on the  ***>>[+]*** (the blue 
 
 Select ***[>]*** (arrow to right) next to the Exec Binding.
 
-Exec Binding > Command
-Command > `sudo /opt/433Utils/RPi_utils/codesend 1234`
-Command > `sudo /opt/433Utils/RPi_utils/send 12345 1 1`
-Interval > `0`
+![image](images/execbinding1.jpg)
 
-### Adding things connected via Z-Wave controller:
+Select ***[>]*** (arrow to right) next to Command.
 
-**NOTE:** First you have to connect the Z-Wave controller as a thing. After this you will use HABmin to further include things into the Z-Wave network. These things should show up automatically in the inbox of PAPER UI.
+![image](images/execbinding2.jpg)
 
-#### Adding Z-Wave controller:
+Enter the [Command] `sudo /opt/433Utils/RPi_utils/send 10000 1 1` (The same command line you used in the terminal to test the 433MHz setup).
 
+Set the [Interval] to `0` so the command is not repeated.
 
-```bash
+Add the thing by clicking on the ***[checkmark]*** (the blue checkmark icon)
 
-```
+![image](images/execbinding3.jpg)
 
--
--
 
 ---
+End of walkthrough
+---
 
+---
 
 # Markdown syntax examples start from here:
 
