@@ -1167,6 +1167,119 @@ Add the thing by clicking on the ***[checkmark]*** (the blue checkmark icon)
 
 ![image](images/execbinding3.jpg)
 
+### Adding things connected via Z-Wave controller
+**NOTE:** first you have to use the Z-Wave binding to add the Z-Wave controller as a thing. After this you will use HABmin to further include things into the Z-Wave network. These things should show up automatically in the inbox of PAPER UI.
+
+#### Adding Z-Wave controller
+Open the PaperUI and select ***>[Inbox]*** and click on the  ***>>[+]*** (the blue plus icon) to start adding things.
+
+![image](images/paperui6.jpg)
+
+**Result:** This will now show you all the installed Bindings which can be used to add things.
+
+![image](images/paperui7.jpg)
+
+Select ***[>]*** (arrow to right) next to the Exec Binding.
+
+![image](images/paperui18.jpg)
+
+Select ***[>]*** (arrow to right) next to Z-Wave Serial Controller.
+
+![image](images/paperui19.jpg)
+
+Now you have to configure the thing
+In this case you have to enter the serial Port of the Z-Wave controller
+The standard port where the UBS-Z-Wave controller should come up is:
+`/dev/ttyACM0`
+
+
+![image](images/paperui20.jpg)
+
+Add the thing by clicking on the ***[checkmark]*** (the blue checkmark icon)
+
+![image](images/paperui21.jpg)
+
+#### Adding Z-Wave things to the Z-Wave Network using HABmin UI
+To include further devices to your Z-Wave network and make them available as openHAB2 things you have to use the HABmin inclusion functionality.
+Please also consult the online documentation for general information about Z-Wave :
+
+** https://github.com/openhab/org.openhab.ui.habmin/wiki/ZWave-Device-Installation**
+
+##### Using a standard Z-Wave controller like UZB *Z-Wave PLUS USB stick by Z-Wave.Me*
+
+Start HABmin 
+
+Direct URL: **http://xxx.xxx.xxx.xxx:8080/habmin/index.html#/home**
+
+Select ***>[Configuration]*** and ***>>[Things]***
+
+HABmin will show you all the things which are available in PAPER UI as well 
+
+![image](images/habmin1.jpg)
+
+To start the inclusion mode of your Z-Wave controller in HABmin you have to select the add thing icon of HABmin ***[magnifying glass]***
+
+![image](images/habmin2.jpg)
+
+Select the ***[Z-Wave Binding]***
+
+![image](images/habmin3.jpg)
+
+This now is triggering the inclusion mode of your Z-Wave controller 
+
+![image](images/habmin4.jpg)
+![image](images/habmin5.jpg)
+
+Put the Z-Wave devices in inclusion mode to be detected by the Z-Wave controller. *Please refer to the Z-Wave devices manual how to put them in inclusion mode.*
+
+When the device is included in the Z-Wave network, the ***[plug icon]*** will show a green box with the number of the included devices.
+
+![image](images/habmin6.jpg)
+
+Click on the icon to show the details of the included devices. 
+
+![image](images/habmin7.jpg)
+
+Just select the green ***[Add]*** button to include this device as a thing for openHAB2
+
+**NOTE:** some devices may come up as “unknown device” at first. The normal reason for this is that the device was not able to finish the communication with HABmin during the inclusion process. This might be very likely for battery powered devices since the will go to sleep mode after a certain amount of time. You can still add the device because there is a way to *cure* this device by manually waking up the device (see device manual) multiple times (up to 10 times) so the communication can be completed and the device is recognized as a proper thing in HABmin.
+
+The newly added thing should now be visible in the HABmin GUI things tab
+Now you can switch to the PAPER UI and find the new things in the inbox or check the new things in the things tab.
+
+##### Using the Aeotec by Aeon Labs Z-Stick Gen5 Z-Wave controller
+
+The special feature of the Aeotec by Aeon Labs Z-Stick Gen5 which is the *offline inclusion*.
+This means that the battery powered stick *must* not be plugged in for the Z-Wave network inclusion process. You have to unplug the stick and press the inclusion button on the stick to start the inclusion mode of this Z-Wave controller. *(Please refer to the Aeotec by Aeon Labs Z-Stick Gen5 documentation for further details.)*
+
+To start the adding ot the included things to openHAB2 you have to again plug in the stick and make sure the stick is not offline but online.
+
+Open the PaperUI GUI and select ***>Configuration*** ***>>Things***
+
+The Z-Wave Serial Controller **must** be ***[ONLINE]***
+
+![image](images/paperuithingonline.jpg)
+
+**NOTE:** If the Z-Wave Serial Controller shows up as ***[OFFLINE]***
+
+![image](images/paperuithingoffline.jpg)
+
+Restart the openHAB2 service with the terminal command `sudo systemctl restart openhab2.service`. After a few minutes when the service is restarted the controller should show up as ***[ONLINE]***.
+
+Now start the standard inclusion process in HABmin.
+
+**NOTE:** Since the Aeotec by Aeon Labs Z-Stick Gen5 is using *offline inclusion* almost every battery powered item will come up as “unknown device” because the timespan between including the battery device to the stick and starting the inclusion process in HABmin inclusion after you plugged the stick back in will be too long and most of the devices will have gone back to sleep. You might prevent this by manually waking up the device again just seconds before you start the inclusion on HABmin. If this does not work you can always *cure* this device by manually waking up the device (see device manual) multiple times (up to 10 times) so the communication can be completed and the device is recognized as a proper thing in HABmin.
+
+The newly added thing should now be visible in the HABmin GUI things tab
+Now you can switch to the PAPER UI and find the new things in the inbox or check the new things in the things tab.
+
+##### For details documentation on the Z-Wave Binding usage in HABmin consult:
+**http://www.cd-jackson.com/index.php/openhab/habmin/10-habmin-zwave-binding-initialisation**
+
+## Creating items form things
+### The concept of Things, Channels, Items and Links
+
+
 
 ---
 End of walkthrough
