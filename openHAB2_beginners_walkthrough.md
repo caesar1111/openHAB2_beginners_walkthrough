@@ -166,10 +166,13 @@ How to download software will be explained in the tutorial, but as a reference y
 
 #### 433MHz devices preparation and setup:
 
-|Description|Image|
-|---|---|
-|Solder the 433MHz antennas to the circuit boards of the transmitter and receiver|![image](images/433solderantenna.jpg)|
-|Connect the transmitter and receiver according to the wiring table below|![image](images/433mhzwiring.jpg)|
+Solder the 433MHz antennas to the circuit boards of the transmitter and receiver:
+
+![image](images/433solderantenna.jpg)
+
+Connect the transmitter and receiver according to the wiring table below:
+
+![image](images/433mhzwiring.jpg)
 
 ##### 433MHz Transmitter
 |Transmitter Pin|Raspberry pin number|Raspberry pin name|
