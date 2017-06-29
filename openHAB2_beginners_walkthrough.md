@@ -1254,7 +1254,7 @@ This means that the battery powered stick *must* not be plugged in for the Z-Wav
 
 To start the adding ot the included things to openHAB2 you have to again plug in the stick and make sure the stick is not offline but online.
 
-Open the PaperUI GUI and select ***>Configuration*** ***>>Things***
+Open the PaperUI GUI and select ***>[Configuration]*** ***>>[Things]***
 
 The Z-Wave Serial Controller **must** be ***[ONLINE]***
 
@@ -1277,7 +1277,82 @@ Now you can switch to the PAPER UI and find the new things in the inbox or check
 **http://www.cd-jackson.com/index.php/openhab/habmin/10-habmin-zwave-binding-initialisation**
 
 ## Creating items form things
-### The concept of Things, Channels, Items and Links
+### The concept of Things, Channels, Items and Links:
+
+Before we start please read first the concept of Things, Channels, Items and Links which is directly tanken from the openHAB2 User Manual page
+
+**http://docs.openhab.org/concepts/index.html#things-channels-items-and-links**
+
+Things are the entities that can be physically added to a system and which can potentially provide many functionalities at once. It is important to note that things do not have to be devices, but they can also represent a web service or any other manageable source of information and functionality. Things provide their functionality through a set of Channels. Channels are “passive” and can be regarded as a declaration of a Thing, what it can offer. It is up to the individual setup, which of the Channels are actively used through Items (see below).
+Items represent (fine-grained) functionality that is used by applications - as user interfaces or automation logic. Items have a state and they can receive commands.
+The glue between Things and Items are Links. Links are associations between exactly one Thing Channel and one Item. If a Channel is linked to an Item, it is “enabled”, which means that the functionality that the Item represents is handled through the given Channel. Channels can be linked to multiple Items and Items can be linked to multiple Channels.
+To illustrate these concepts, take a two-channel actuator that controls two lights:
+
+![image](images/itemthingconcept.jpg)
+
+The actuator is the Thing. This might be installed in the electrical cabinet, it has a physical address and needs to be setup and configured in order to be used. The user is instead interested in the two lights, which are located at different locations in his home. These lights are the desired functionality, thus the Items and they are linked to the Channels of the actuator. A Link can be regarded like a physical wire in this example.
+ 
+### The basic process of creating Items in PAPER UI:
+
+**http://docs.openhab.org/tutorials/beginner/configuration.html**
+
+This beginner tutorial is showing a general quick overview of the complete configuration process. 
+
+#### Creating the required items for this project
+For a walkthrough level of detail you can find one complete example for an item creation and a mapping table *thing* to *item*. 
+
+Open the PaperUI GUI and select ***>[Configuration]*** ***>>[Things]*** and select the KeyFob_Gen5 thing:
+
+![image](images/paperuiitem1.jpg)
+
+A list of all the available channels of the thing will be shown:
+
+![image](images/paperuiitem2.jpg)
+
+Now click on the blue icon in front of the channel number to link this channel to an item:
+
+![image](images/paperuiitem3.jpg)
+
+A link channel window will come up. Select the pull down option for the item:
+
+![image](images/paperuiitem4.jpg)
+
+The next window coming up will allow you to select already existing items or: In our case ***[+ Create new item…]***
+
+![image](images/paperuiitem5.jpg)
+
+The next window will allow you to configure the item you want to link to the thing channel. You can also change the name of the item if you are planning to run with your own naming convention. Select ***[LINK]*** button to create your new item:
+
+![image](images/paperuiitem6.jpg)
+
+Now the blue icon to the left of the name will change ***[white dot in the center]***. By clicking on this icon the channel will expand and show you the linked items to this cannel:
+
+![image](images/paperuiitem7.jpg)
+
+Select ***>[Configuration]*** ***>>[Items]*** to check the new created item:
+
+![image](images/paperuiitem8.jpg)
+
+##### Now go on creating the items according to the list below:
+
+|Thing|Channel|Item|
+|---|---|---|
+|KeyFob_Gen5|zwave:device:39e18a8c:node9:scene_number|KeyFob_Gen5_SceneNumber|
+|Weather Information|yahooweather:weather:c5d26906:temperature|Yahoo_Temperature|
+|Weather Information|yahooweather:weather:c5d26906:humidity|Yahoo_Humidity|
+|Yamaha Receiver RX-V581|yamahareceiver:yamahaAV:9ab0c000_f668_11de_9976_00a0dedc57ff:power|YamahaReceiverRXV581_Power|
+|Yamaha Receiver RX-V581|yamahareceiver:yamahaAV:9ab0c000_f668_11de_9976_00a0dedc57ff:volume|YamahaReceiverRXV581_Volume|
+|Yamaha Receiver RX-V581|yamahareceiver:yamahaAV:9ab0c000_f668_11de_9976_00a0dedc57ff:mute|YamahaReceiverRXV581_Mute|
+|Z-Wave Node 2: FGS223 Double Switch 2|zwave:device:39e18a8c:node2:meter_watts|DoubbleSwitch01_LeistungGesamt|
+|Z-Wave Node 2: FGS223 Double Switch 2|zwave:device:39e18a8c:node2:switch_binary1|DoubbleSwitch01_Relais1|
+|Z-Wave Node 3: MSP-3-1-X1 Z-Wave Plus Micro Smart Plug ON/OFF|zwave:device:39e18a8c:node3:switch_binary|SchuKo01|
+|Z-Wave Node 3: MSP-3-1-X1 Z-Wave Plus Micro Smart Plug ON/OFF|zwave:device:39e18a8c:node3:meter_watts|SchuKo01_Leistung|
+|Z-Wave Node 6: ZW100 MultiSensor 6|zwave:device:39e18a8c:node6:sensor_relhumidity|MultiSens_Luftfeuchte|
+|Z-Wave Node 6: ZW100 MultiSensor 6|zwave:device:39e18a8c:node6:sensor_temperature|MultiSens_Temperatur|
+|Z-Wave Node 6: ZW100 MultiSensor 6|zwave:device:39e18a8c:node6:sensor_luminance|MultiSens_Helligkeit|
+|HF-LPB100-ZJ200|wifiled:wifiled:F0FE6B314910:power|HFLPB100ZJ200_Power|
+|HF-LPB100-ZJ200|wifiled:wifiled:F0FE6B314910:color|HFLPB100ZJ200_Color|
+|HF-LPB100-ZJ200|wifiled:wifiled:F0FE6B314910:white|HFLPB100ZJ200_White|
 
 
 
