@@ -1357,6 +1357,166 @@ Select ***>[Configuration]*** ***>>[Items]*** to check the new created item:
 |HF-LPB100-ZJ200|wifiled:wifiled:F0FE6B314910:color|HFLPB100ZJ200_Color|
 |HF-LPB100-ZJ200|wifiled:wifiled:F0FE6B314910:white|HFLPB100ZJ200_White|
 
+# Chapter 12: Creating a dashboard for your home automation project
+Every user interface on openHAB2 is providing its own style of dashboards to control your home automation project, display current item states and attribute values or even include online information like web pages. The complete overview of all available user interfaces can be found on:
+
+***http://docs.openhab.org/addons/uis.html***
+
+The walkthrough configuration is focusing on only 4 different user interfaces.  
+
+Open openHAB 2 start page
+```bash
+http://xxx.xxx.xxx.xxx:8080
+```
+
+In this configuration you will see the 4 different UIs:
+
+|User-Interface|Description|
+|---|---|
+|***[BASIC UI]***|The Basic UI is an HTML5 web application in Material Design, designed for operating openHAB.|
+|***[HABMIN]***|HABmin is a modern, professional and portable user interface for openHAB, providing both user and administrative functions.|
+|***[PAPER UI]***|The Paper UI is an AngularJS-based HTML5 web application in Material Design, designed for setup and administration purposes.|
+|***[HABPANEL]***|HABPanel is a lightweight dashboard interface for openHAB.|
+
+## Creating a dashboard in ***[BASIC UI]***
+
+The pre-set of the dashboard is showing all the things you have already added which have items created for them. 
+
+![image](images/basicui1.jpg)
+
+Clicking on the thing will show you all the different items which are created for the thing. Depending on the item type you can interact accordingly with the thing (e.g. switch ON/OFF the WiFi LED or control the colour of the WiFi LED)
+
+![image](images/basicui2.jpg)
+
+To create your own configuration of the dashboard you have to work with text based *sitemap* files. Since this is a beginner’s tutorial trying to get things done using as less textual coding as possible, it will not go into the details of creating a dashboard for the BASIC UI. 
+
+You can find more information in how to customise a BASIC UI dashboard on:
+
+**http://docs.openhab.org/configuration/sitemaps.html**
+
+## Creating a dashboard in HABMIN dashboard
+
+HABmin will allow to create a dashboards based on widgets. 
+
+![image](images/habmin9.jpg)
+
+Since this is a beginner’s tutorial it will not go into the possibilities of how to create a dashboard with HABmin. But be aware the HABMIN is providing a powerful graphical way of creating dashboards you might want to have a look at. You can find the standard documentation on:
+
+**http://docs.openhab.org/addons/uis/habmin/readme.html**
+
+## Creating a dashboard in PAPER UI
+
+**NOTE:** Paper UI currently only supports limited use cases for dashboards. It is mainly meant for setup and administration purposes, not for operation.
+
+The ***[Control]*** tab will show you a dashboard which is showing all the things you have already added which have items created for them. 
+
+![image](images/paperui22.jpg)
+
+You can also easily create different tabs of things by adding ***[Location]*** information to the thing configuration:
+**NOTE:** I had issues in updating a few things, so it will be good to it while creating the things.
+
+![image](images/paperui23.jpg)
+
+Now you will have  ***[Control]*** tab giving you various tabs with items grouped by their things.
+The ***[OUTSIDE]*** tab:
+
+![image](images/paperui24.jpg)
+
+The ***[OTHER]*** tab (all the items with no location information):
+
+![image](images/paperui25.jpg)
+
+## Creating a dashboard in HABPanel
+The HABPANEL UI is all about creation a dashboard for your home automation project being controlled by a touch screen. Especially in the 7” Raspberry display setup, this UI will be a nice UI for controlling your home automation project. It is still undergoing a lot of construction, so with every release you will enjoy new features. Therefore this walkthrough is detailing the creation of a dashboard in HABPanel.
+
+Open HABPAnel start page
+```bash
+http://xxx.xxx.xxx.xxx:8080/HABPANEL/index.html#/
+```
+A complete blank panel will come up asking you to start configuration. Click on the ***[gear icon]***:
+
+![image](images/habpanel1.jpg)
+
+Select ***[+ Add new dashboard]***: 
+
+![image](images/habpanel2.jpg)
+
+Enter the name *Your Dashboard* and click ***[OK]***:
+
+![image](images/habpanel3.jpg)
+
+You will see the created *Your Dashboard*. *Optional:* You can further configure the *Dashboard settings* by clicking on the ***[gear icon]*** at *Your Dashboard*:
+
+![image](images/habpanel4.jpg)
+
+Click on the *Your Dashboard* itself to start configuring the dashboard:
+
+![image](images/habpanel5.jpg)
+
+You will see now the *Your Dashboard* in configuration mode with the icons ***[Save]***, ***[Run]*** and ***[Add Widget]***. Using the ***>[Add Widget]*** ***[>> Switch]*** create switch widget:
+
+![image](images/habpanel6.jpg)
+
+Click on the ***[3 dots icon]*** and select Edit to start configuring the switch widget:
+
+![image](images/habpanel7.jpg)
+
+Enter the widget **Name** *WiFi LED Switch*, select the **openHAB Item** *HF-LPB100-ZJ200_Power* in the pull down list, select a **Backdrop Item**, check **Center backdrop horizontally** and click on ***[Save]*** to close the configuration.
+
+![image](images/habpanel8.jpg)
+
+Back in the *Your Dashboard* in configuration click on ***[Run]*** to test the dashboard:
+
+![image](images/habpanel9.jpg)
+
+You will now see the control layout of *Your Dashboard*. Clicking on the widget will now switch ON/OFF your WiFi LED:
+
+![image](images/habpanel10.jpg)
+
+Clicking on the ***[2 bars icon]*** will trigger the HABPanel menu where you can select between different dashboards (if created). Clicking again will close the HABPanel menu again.:
+
+![image](images/habpanel11.jpg)
+
+**NOTE:** Since HABPanels is designed for touchscreens you can also open and close the HABPanel menu by swiping left/right.
+
+To *Toggle full screen* click on the ***[diagonal arrows icon]***:
+
+![image](images/habpanel15.jpg)
+
+This will now show you the seamless control dashboard for your touchscreen:
+
+![image](images/habpanel16.jpg)
+
+To go *Edit Your Dashboard* again you have to hover over the dashboard name and then select the ***[pen icon]***:
+
+![image](images/habpanel12.jpg)
+
+To reposition the widget you have to click and hold on the widget ***[crossed arrows icon]*** and drag the widget to a new location. Since the widget have to snap on a pre-set grid you will see a grey shadow indication the new grid location:
+
+![image](images/habpanel13.jpg)
+
+To resize the widget you have to click and hold on the ***[triangle icon]*** in lower right corner of the widget and drag the frame into the new size. Since the widget have to snap on a pre-set grid you will see a grey shadow indication the new size:
+
+![image](images/habpanel14.jpg)
+
+Now go on and create the missing widgets for the WiFi LED items:
+
+|Widget|Item|
+|---|---|
+|Color Picker|HF-LPB100-ZJ200_Color|
+|Slider|HF-LPB100-ZJ200_Color|
+
+Position them accordingly on *Your Dashboard*:
+
+![image](images/habpanel17.jpg)
+
+**NOTE:** If you are configuring the dashboard on your PC it might not fit perfectly onto the 7” Raspberry display full screen due to the different aspect ratio.
+
+Now go on and create the dashboards for all the other items you want to controll driectly.
+
+**NOTE:** If you just want to alphanumerically display some values on your dashboard you should use the ***[Dummy]*** widget.
+
+# Chapter 13: Creating rules
 
 
 ---
