@@ -846,7 +846,7 @@ Select ***>[Add-ons]***  ***>>[BINDINGS]***
 ![image](images/paperui2.jpg)
 
 Install the Bindings:
-***[Exec Binding]*** , ***[YahooWeather Binding]*** , ***[YamahaReceiver Binding]*** and ***[Z-Wave Binding]***
+***[Exec Binding]***, ***[WiFi LED Binding]***, ***[YahooWeather Binding]***, ***[YamahaReceiver Binding]*** and ***[Z-Wave Binding]***
 
 **Result:** The icons of the bindings should change to blue
 The install option should change to uninstall. 
@@ -855,36 +855,6 @@ The install option should change to uninstall.
 ![image](images/paperui3.jpg)
 
 **NOTE:** If you already have connected devices to the same LAN as the Raspberry, a message in the inbox will show up, telling you a new thing was found (e.g. Yamaha Receiver) How to add this thing will be explained later.
-
-### Install Bindings manually (snapshot bindings):
-**NOTE:** Since we have installed the stable version, we have to manually install the WiFi LED Binding for openHAB2.
-
-Open the terminal:
-
-![image](images/openterminal.jpg)
-
-Change to the openHAB2 add-ons directory:
-```bash
-cd /usr/share/openhab2/addons
-```
-Download the addon to the add-ons directory:
-```bash
-sudo wget https://openhab.ci.cloudbees.com/job/openHAB2-Bundles/lastSuccessfulBuild/org.openhab.binding%24org.openhab.binding.wifiled/artifact/org.openhab.binding/org.openhab.binding.wifiled/2.1.0-SNAPSHOT/org.openhab.binding.wifiled-2.1.0-SNAPSHOT.jar
-```
-Restart the openHAB2 service:
-```bash
-sudo systemctl restart openhab2.service
-```
-**NOTE:** The restart of the service can take several minutes. You will not be able to access the PaperUI GUI during the restart.
-
-Check the openHAB2 service status:
-```bash
-sudo systemctl start openhab2.service
-```
-
-**Remark:** This binding will not show up in the ***>[Add-ons]***  ***>>[BINDINGS]*** tab but will show in the  ***>[Configuration]***  ***>>[Bindings]*** 
-
-![image](images/ledwifi_install.jpg)
 
 ### Check the installed bindings:
 
@@ -1004,6 +974,7 @@ Open the terminal:
 ```bash
 sudo apt-get update
 sudo apt-get install git-core
+```
 
 ##### Install WiringPi
 Change to home directory and download wiringPi
@@ -1011,6 +982,7 @@ Change to home directory and download wiringPi
 cd
 sudo git clone git://git.drogon.net/wiringPi
 ```
+
 Change to `wiringPi` directory execute build wiringPi
 ```bash
 cd wiringPi
