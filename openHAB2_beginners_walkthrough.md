@@ -72,12 +72,19 @@ If you want to use the Z-Wave technology for your home automation project you ha
 **NOTE:** Be aware that the details serial numbers or item names may vary since you have to always make sure to use the hardware which is allowed in your country!
 Since I am doing a German based home automation project you may find that some Z-Wave devices are not sold in your required country configuration ( e.g. Z-Wave NodOn Smart Plug not available e.g. in the US)
 
+*** This list is showing you all the devices I was testing. Your shopping list hast to be adopted to the desired setup of your project. You might have to alter some parts in this walkthrough (things, items, rules etc.) accordingly to your hardware list.***
+
 |Description|Image|
 |---|---|
-|Z-Wave Fibaro Double Switch 2, Z-Wave Plus Smart Switch (comes at almost the same costs than the single switch and gives you 2 channels. Only reason to go for single switch is you need the full power range of the single switch since the double switch has slightly lower range) *NOTE:* This switch is designed to be installed in the electrical power wiring of your home (inside a distributor case). In some countries this may only be allowed to be done by special trained staff (insurance and/or law). |![image](images/z-wave_fibaro_double_switch_2.jpg)|
+|Z-Wave Fibaro Double Switch 2 FIBEFGS-223, Z-Wave Plus Smart Switch (comes at almost the same costs than the single switch and gives you 2 channels. (2x1500W) Only reason to go for single switch is you need the full power range of the single switch since the double switch has slightly lower range) *NOTE:* This switch is designed to be installed in the electrical power wiring of your home (inside a distributor case). In some countries this may only be allowed to be done by special trained staff (insurance and/or law).|![image](images/z-wave_fibaro_double_switch_2.jpg)|
+|Z-Wave Fibaro Single Switch 2 FIBEFGS-213 (1x 2500W)|![image](images/fibarosingleswitch.jpg)|
 |Aeotec Multi-Sensor 6 ZW100-C - Z-Wave Plus|![image](images/z-wave_plus_aeotec_multi-sensor_6_zw100-c.jpg)|
+|Aeon Multi Sensor Gen5|![image](images/aeonmultisensorgen5.jpg)|
+|devolo Home Control door sensor (it also provides you with raw temperature and lumincance readings)|![image](images/devolodoorsensor.jpg)|
+|ZME_WALLC-S multi swith by Z-Wave.me|![image](images/wallc-s.jpg)|
 |Z-Wave Aeon Labs ZW088 Z-Wave Key Fob, Gen5|![image](images/z-wave_keyfob_zw088_by_aeotec.jpg)|
 |Z-Wave NodOn Smart Plug (not available e.g. in the US)|![image](images/z-wave_smartplug_by_nodon.jpg)|
+|*Alternative:* Fibaro wall plug FIBEFGWPF-102 (allows you to switch up to 2500W)|![image](images/fibarowallplug.jpg)|
 
 **NOTE:** If you want to by other Z-Wave devices always make your they are listed in the Z-Wave device list of the openHAB2 Z-Wave binding to make sure they are supported correctly in the context of openHAB2:
 
@@ -418,7 +425,7 @@ Terminal=false
 
 ### Enabling root user:
 Since by default the “root” disabled it can’t be used. You might want to enable it for certain purposes like e.g. enabling the root user for samba file server to get full access to the directories from a PC (see chapter setup samba server) 
-**NOTE:** There is a reason for the “root” being disabled! Enabling the user is allowing full access to the Raspbian and therefore creating a ***security risk***. Please always consider whether you really want to enable this user!
+**NOTE:** There is a reason for the “root” being disabled! Enabling the user is allowing full access to the Raspbian and therefore creating a ***security risk*** . Please always consider whether you really want to enable this user!
 
 |Description|Image/Command|
 |---|---|
@@ -797,12 +804,14 @@ The URL will be:
 
 Just replace the *xxx.xxx.xxx.xxx* with the IP of your Raspberry.
 First the GUI will ask you to select the initial setup configuration.
+The walksthrough is based on the ***[Standard]*** so click on it.
 This will install a standard set of GUIs in openHAB2.
 
 ![image](images/openhab2firstlaunch1.jpg)
 
 After a few minutes of installation the standard openHAB2 start GUI will come up, showing you the icons for the pre-installed GUIs:
-***[BASIC UI]***, ***[PAPER UI]*** and ***[HABPANEL]***
+
+***[BASIC UI]*** , ***[PAPER UI]*** and ***[HABPANEL]*** 
 
 **NOTE:** Now you are ready for the configuration of your home automation project in openHAB2!
 
@@ -846,7 +855,7 @@ Select ***>[Add-ons]***  ***>>[BINDINGS]***
 ![image](images/paperui2.jpg)
 
 Install the Bindings:
-***[Exec Binding]***, ***[WiFi LED Binding]***, ***[YahooWeather Binding]***, ***[YamahaReceiver Binding]*** and ***[Z-Wave Binding]***
+***[Exec Binding]*** , ***[WiFi LED Binding]*** , ***[YahooWeather Binding]*** , ***[YamahaReceiver Binding]*** and ***[Z-Wave Binding]***
 
 **Result:** The icons of the bindings should change to blue
 The install option should change to uninstall. 
@@ -1239,7 +1248,7 @@ The Z-Wave Serial Controller **must** be ***[ONLINE]***
 
 ![image](images/paperuithingoffline.jpg)
 
-Restart the openHAB2 service with the terminal command `sudo systemctl restart openhab2.service`. After a few minutes when the service is restarted the controller should show up as ***[ONLINE]***.
+Restart the openHAB2 service with the terminal command `sudo systemctl restart openhab2.service`. After a few minutes when the service is restarted the controller should show up as ***[ONLINE]*** .
 
 Now start the standard inclusion process in HABmin.
 
@@ -1273,8 +1282,7 @@ The actuator is the Thing. This might be installed in the electrical cabinet, it
 
 This beginner tutorial is showing a general quick overview of the complete configuration process. 
 
-#### Creating the required items for this project
-For a walkthrough level of detail you can find one complete example for an item creation and a mapping table *thing* to *item*. 
+#### Creating a Item walkthrough (KeyFob_Gen5 Scene Number)
 
 Open the PaperUI GUI and select ***>[Configuration]*** ***>>[Things]*** and select the KeyFob_Gen5 thing:
 
@@ -1300,7 +1308,7 @@ The next window will allow you to configure the item you want to link to the thi
 
 ![image](images/paperuiitem6.jpg)
 
-Now the blue icon to the left of the name will change ***[white dot in the center]***. By clicking on this icon the channel will expand and show you the linked items to this cannel:
+Now the blue icon to the left of the name will change ***[white dot in the center]*** . By clicking on this icon the channel will expand and show you the linked items to this cannel:
 
 ![image](images/paperuiitem7.jpg)
 
@@ -1308,33 +1316,12 @@ Select ***>[Configuration]*** ***>>[Items]*** to check the new created item:
 
 ![image](images/paperuiitem8.jpg)
 
-##### Now go on creating the items according to the list below:
-
-|Thing|Channel|Item|
-|---|---|---|
-|KeyFob_Gen5|zwave:device:39e18a8c:node9:scene_number|KeyFob_Gen5_SceneNumber|
-|Weather Information|yahooweather:weather:c5d26906:temperature|Yahoo_Temperature|
-|Weather Information|yahooweather:weather:c5d26906:humidity|Yahoo_Humidity|
-|Yamaha Receiver RX-V581|yamahareceiver:yamahaAV:9ab0c000_f668_11de_9976_00a0dedc57ff:power|YamahaReceiverRXV581_Power|
-|Yamaha Receiver RX-V581|yamahareceiver:yamahaAV:9ab0c000_f668_11de_9976_00a0dedc57ff:volume|YamahaReceiverRXV581_Volume|
-|Yamaha Receiver RX-V581|yamahareceiver:yamahaAV:9ab0c000_f668_11de_9976_00a0dedc57ff:mute|YamahaReceiverRXV581_Mute|
-|Z-Wave Node 2: FGS223 Double Switch 2|zwave:device:39e18a8c:node2:meter_watts|DoubbleSwitch01_LeistungGesamt|
-|Z-Wave Node 2: FGS223 Double Switch 2|zwave:device:39e18a8c:node2:switch_binary1|DoubbleSwitch01_Relais1|
-|Z-Wave Node 3: MSP-3-1-X1 Z-Wave Plus Micro Smart Plug ON/OFF|zwave:device:39e18a8c:node3:switch_binary|SchuKo01|
-|Z-Wave Node 3: MSP-3-1-X1 Z-Wave Plus Micro Smart Plug ON/OFF|zwave:device:39e18a8c:node3:meter_watts|SchuKo01_Leistung|
-|Z-Wave Node 6: ZW100 MultiSensor 6|zwave:device:39e18a8c:node6:sensor_relhumidity|MultiSens_Luftfeuchte|
-|Z-Wave Node 6: ZW100 MultiSensor 6|zwave:device:39e18a8c:node6:sensor_temperature|MultiSens_Temperatur|
-|Z-Wave Node 6: ZW100 MultiSensor 6|zwave:device:39e18a8c:node6:sensor_luminance|MultiSens_Helligkeit|
-|HF-LPB100-ZJ200|wifiled:wifiled:F0FE6B314910:power|HFLPB100ZJ200_Power|
-|HF-LPB100-ZJ200|wifiled:wifiled:F0FE6B314910:color|HFLPB100ZJ200_Color|
-|HF-LPB100-ZJ200|wifiled:wifiled:F0FE6B314910:white|HFLPB100ZJ200_White|
-
 # Chapter 12: Creating a dashboard for your home automation project
 Every user interface on openHAB2 is providing its own style of dashboards to control your home automation project, display current item states and attribute values or even include online information like web pages. The complete overview of all available user interfaces can be found on:
 
 ***http://docs.openhab.org/addons/uis.html***
 
-The walkthrough configuration is focusing on only 4 different user interfaces.  
+In the walkthrough configuration there are 4 different user interfaces available.  
 
 Open openHAB 2 start page
 ```bash
@@ -1345,20 +1332,16 @@ In this configuration you will see the 4 different UIs:
 
 |User-Interface|Description|
 |---|---|
-|***[BASIC UI]***|The Basic UI is an HTML5 web application in Material Design, designed for operating openHAB.|
-|***[HABMIN]***|HABmin is a modern, professional and portable user interface for openHAB, providing both user and administrative functions.|
-|***[PAPER UI]***|The Paper UI is an AngularJS-based HTML5 web application in Material Design, designed for setup and administration purposes.|
-|***[HABPANEL]***|HABPanel is a lightweight dashboard interface for openHAB.|
+| ***[BASIC UI]*** |The Basic UI is an HTML5 web application in Material Design, designed for operating openHAB.|
+| ***[HABMIN]*** |HABmin is a modern, professional and portable user interface for openHAB, providing both user and administrative functions.|
+| ***[PAPER UI]*** |The Paper UI is an AngularJS-based HTML5 web application in Material Design, designed for setup and administration purposes.|
+| ***[HABPANEL]*** |HABPanel is a lightweight dashboard interface for openHAB.|
 
 ## Creating a dashboard in ***[BASIC UI]***
 
-The pre-set of the dashboard is showing all the things you have already added which have items created for them. 
+In the Standard setup of openHAB2 which is used in the walktrhough, there is no pre-set sitemap, so you will only get the a Welcome! message.
 
-![image](images/basicui1.jpg)
-
-Clicking on the thing will show you all the different items which are created for the thing. Depending on the item type you can interact accordingly with the thing (e.g. switch ON/OFF the WiFi LED or control the colour of the WiFi LED)
-
-![image](images/basicui2.jpg)
+![image](images/basicui3.jpg)
 
 To create your own configuration of the dashboard you have to work with text based *sitemap* files. Since this is a beginner’s tutorial trying to get things done using as less textual coding as possible, it will not go into the details of creating a dashboard for the BASIC UI. 
 
@@ -1405,15 +1388,15 @@ Open HABPAnel start page
 ```bash
 http://xxx.xxx.xxx.xxx:8080/HABPANEL/index.html#/
 ```
-A complete blank panel will come up asking you to start configuration. Click on the ***[gear icon]***:
+A complete blank panel will come up asking you to start configuration. Click on the ***[gear icon]*** :
 
 ![image](images/habpanel1.jpg)
 
-Select ***[+ Add new dashboard]***: 
+Select ***[+ Add new dashboard]*** : 
 
 ![image](images/habpanel2.jpg)
 
-Enter the name *Your Dashboard* and click ***[OK]***:
+Enter the name *Your Dashboard* and click ***[OK]*** :
 
 ![image](images/habpanel3.jpg)
 
@@ -1425,7 +1408,7 @@ Click on the *Your Dashboard* itself to start configuring the dashboard:
 
 ![image](images/habpanel5.jpg)
 
-You will see now the *Your Dashboard* in configuration mode with the icons ***[Save]***, ***[Run]*** and ***[Add Widget]***. Using the ***>[Add Widget]*** ***[>> Switch]*** create switch widget:
+You will see now the *Your Dashboard* in configuration mode with the icons ***[Save]*** , ***[Run]*** and ***[Add Widget]*** . Using the ***>[Add Widget]*** ***[>> Switch]*** create switch widget:
 
 ![image](images/habpanel6.jpg)
 
@@ -1451,7 +1434,7 @@ Clicking on the ***[2 bars icon]*** will trigger the HABPanel menu where you can
 
 **NOTE:** Since HABPanels is designed for touchscreens you can also open and close the HABPanel menu by swiping left/right.
 
-To *Toggle full screen* click on the ***[diagonal arrows icon]***:
+To *Toggle full screen* click on the ***[diagonal arrows icon]*** :
 
 ![image](images/habpanel15.jpg)
 
@@ -1459,7 +1442,7 @@ This will now show you the seamless control dashboard for your touchscreen:
 
 ![image](images/habpanel16.jpg)
 
-To go *Edit Your Dashboard* again you have to hover over the dashboard name and then select the ***[pen icon]***:
+To go *Edit Your Dashboard* again you have to hover over the dashboard name and then select the ***[pen icon]*** :
 
 ![image](images/habpanel12.jpg)
 
@@ -1490,6 +1473,174 @@ Now go on and create the dashboards for all the other items you want to controll
 
 # Chapter 13: Creating rules
 
+I will try to give some basic rule examples to start with but you have to be aware:
+
+***DISCLAIMER:
+I am no coding expert at all and writing rules is still the most difficult part in my home automation project (finding the right commands, the right syntax and so on), so you might be better off using to other tutorials.***
+
+For the standard rules documentation incl. the rule syntax please refer to the online documentation:
+
+**http://docs.openhab.org/configuration/rules-dsl.html**
+
+You can also find some rules samples on:
+
+**https://github.com/openhab/openhab1-addons/wiki/Samples-Rules**
+
+And maybe some coding experts in the community will find the time to create a kind of an openHAB2 compendium to make it easier the non-experts to do rules.
+**REMARK:** Yes, I know there are plenty of online documentation sites available, but the problem for me was the “plenty” part of it since I always had to go through plenty different websites to finally get the syntax right and make the rule do, what I wanted it to do.
+
+# Chapter 13: Creating rules
+Since rules can’t be configured using the PAPER UI (stable version) you now have to go to the text files for now. For this part we will now use the Eclipse Smart Home Designer since it creates at least some syntax highlighting.
+
+**REMARK:** You might find already some functionality about configuration of rules in the PAPER UI snapshot versions so there will be some changes in the way of doing rules more easily in the future. Also HABmin is providing some kind of graphical rule engine.
+
+## Creating the *myfirstrule.rules* file
+
+Start Eclipse Smart Home Designer on your PC
+Make sure you have mapped the Raspbian samba drive to your PC and Start Eclipse Smart Home Designer is set to the right folder in this samba drive (see Chapter 7: Installation of Eclipse Smart Home Designer -: part launching first time)
+You should now the augmented icons for the different folders. If you check the Rules folder you will only find a readme.txt file:
+
+![image](images/eclipse1.jpg)
+
+You need to create a file with the ending .rules to store your rules there. The fastest way of doing it is using the basic file management functionality of Eclipse Smart Home Designer. Right click on the readme.txt file and select copy:
+
+![image](images/eclipse2.jpg)
+
+Then right click again and select Paste:
+
+![image](images/eclipse3.jpg)
+
+A new window will ask you to enter a new file name. Change the file name to *myfirstrule.rules* an press ***[OK]*** :
+
+![image](images/eclipse4.jpg)
+
+A new file will appear in the Rules folder showing the rule icon. Now double click on the file to open it and select all the text [Ctrl+a], delete the old content [Del] to have a plain rule rile. Finally save the rule file again [Ctrl+s]:
+
+![image](images/eclipse5.jpg)
+
+Now you can start to use *myfirstrule.rules* file to store rules.
+
+## Example Rule: Switch on light when door is opend and it is dark
+
+The aim is to use the devolo door sensor, which also gives you a luminance reading, to detect when it is getting dark and when the door is opend. Than 2 switches (wallmouted and plug) will switch on the ligt in the hallway.
+
+### Devices, Things and Items
+
+**NOTE:** If you are using different hardware you might have to adopt this changes in the list.
+
+|Device|Thing|Channel|Item|
+|---|---|---|---|
+|devolo Home Control door sensor|Door_01|zwave:device:e442b469:node4:sensor_door|Door_01_DoorWindowStatus|
+|devolo Home Control door sensor|Door_01|zwave:device:e442b469:node4:sensor_luminance|Door_01_SensorLuminance|
+|Z-Wave Fibaro Double Switch 2|Doubleswitch_01|zwave:device:e442b469:node11:switch_binary2|Doubleswitch_01_Switch2|
+|Fibaro wall plug FIBEFGWPF-102|Plug_02|zwave:device:e442b469:node2:switch_binary|Plug_02_Switch|
+
+The rules for switching ON and OFF the ligth will be:
+```bash
+// this is the rules file
+
+rule "Door_open"
+
+when
+	Item Door_01_DoorWindowStatus changed from CLOSED to OPEN
+then
+	if (Door_01_SensorLuminance.state < 4) {
+		sendCommand (Doubleswitch_01_Switch2, ON)
+		sendCommand (Plug_02_Switch, ON)
+}
+end
+
+
+rule "Door_close"
+
+when
+	Item Door_01_DoorWindowStatus changed from OPEN to CLOSED
+then
+		sendCommand (Doubleswitch_01_Switch2, OFF)
+		sendCommand (Plug_02_Switch, OFF)
+end
+```
+Since the door sensor is only providing very raw luminance reading you might have to adpot the value `4`in the line `Door_01_SensorLuminance.state < 4` accordingly
+
+## Further Rule examples based on this home automation project:
+Switching ON/OFF switches based on luminance reading of the multisensory
+The rule is designed to switch ON/OFF the Singleswitch_01_Switch based on the illumination measured by the MultisensG5_01_SensorLuminance
+The trigger value is set to 10 LUX 
+To prevent von switching on/off if the illumination is around 10 lumen and e.g. just a cloud is casting a temporarily shadow, there is a counter included which is measuring multiple times the illumination and only allows to triggering the switch if there reading is consistently (10 times) above or below the trigger value.
+**NOTE:** Make sure you have create the item Counter_Item since it’s used in the rule (see: part “Creating an item the see the value of a variable of a rule online” in this chapter). 
+**REMARK:** This was done as some kind of coding and configuring HABPANEL exercise. You might get the same result in just checking the reading in a less frequent period, forget about the counter and just trigger the switch when the illumination reading is above or below the trigger value.
+You can also use this Counter_Item to display some tendency whether your light is about to switch ON/OFF depending on the value of the Counter_Item on your dashboard. So if you play a little with the “knob” widget in HABPANEL it might look like this:
+
+![image](images/tendency.jpg)
+
+Then you add some other readings of your multissor, the wattage reading and trigger of your switch, a clock widget and you have a complete dashboard of your real weather and let it trigger your outside ligth.
+
+![image](images/outside.jpg)
+
+You can just add these lines at the bottom of your existing rule file or create a new file in the same folder:
+
+```bash
+// this is the rules file
+
+var Number loop_counter = 0
+
+rule "check_illumination"
+// using the loop_counter to ensure that it is
+// 10 times in a row darker/lighter before triggering switch
+
+when
+// every x seconds "0/x" the value is checked
+// 0/30 means every 30 sec the value is checked 
+	Time cron "0/30 * * ? * * *"
+then
+// reset loop_counter if required (counter outside -5 +5 range)
+if (loop_counter >= -5 && loop_counter <= 5){
+// <= 10 is defining the LUX value when ligth is swiched on/off
+	if (MultisensG5_01_SensorLuminance.state <= 10) {
+		if (loop_counter > -5) {
+			loop_counter = loop_counter -1
+			postUpdate(Counter_Item, loop_counter)
+		}
+		else {
+			if (Singleswitch_01_Switch.state == OFF)
+			sendCommand (Singleswitch_01_Switch, ON)
+		}
+	}
+	else
+		if (loop_counter < 5) {
+			loop_counter =loop_counter +1
+			postUpdate(Counter_Item, loop_counter)
+		}
+		else {
+			if (Singleswitch_01_Switch.state == ON)
+			sendCommand (Singleswitch_01_Switch, OFF)
+		}
+		}
+else {
+ 		loop_counter = 0
+		}
+end 
+
+//--------------------------------------------------------------------------	
+```
+Since this rule is using a manual Number Item please read the Tips and tricks section for how to creat a single item without a thing. 
+
+# Chapter 14: Tips and tricks
+
+## Basic tips for debugging rules
+
+### Creating an item the see the value of a variable of a rule online
+The standard way of debugging a rule would be to use a logfile.
+For simple problems you might also be able to visualize the variables online by creation item with the same type and posting the value of the variable inside the rule. So follow the steps:
+1. Set the variable *loop_counter* in your rule file: `var Number loop_counter = 0`
+2. Create a new item *Counter_Item* as type *Number*
+3. Post the *loop_counter* variable value to the *Counter_Item* `postUpdate(Counter_Item, loop_counter)`
+4. Use a HABPanel *Dummy* widget to visualize the *Counter_Item* value. 
+
+### Creating a dummy switch item to trigger ON/OFF rules
+If you are dependend on switches changing their stat and you can not physically do this, you can also use a dummy switch item to trigger the rule.
+1. Create a new item *Dummy_Swich*
+2. Use a HABPanel *Switch* widget to create an interactive dummy switch
 
 ---
 End of walkthrough
