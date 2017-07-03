@@ -58,7 +58,8 @@ As mentioned before, I am basing this tutorial on the graphical GUI of Raspbian 
 |Bluetooth keyboard (optional, since the optional on screen touch keyboard for Raspbian PIXEL was not working without errors, I decided to go for a Bluetooth keyboard which makes the typing much easier)|![image](images/bluetoothkeyboard.jpg)|
 
 ### Z-Wave Controller hardware
-If you want to use the Z-Wave technology for your home automation project you have to have one Z-Wave controller connected to your Raspberry
+If you want to use the Z-Wave technology for your home automation project you have to have one Z-Wave controller connected to your Raspberry.
+
 **NOTE:** Be aware that the details serial numbers or item names may vary since you have to always make sure to use the hardware which is allowed in your country!
 
 |Description|Image|
@@ -72,7 +73,7 @@ If you want to use the Z-Wave technology for your home automation project you ha
 **NOTE:** Be aware that the details serial numbers or item names may vary since you have to always make sure to use the hardware which is allowed in your country!
 Since I am doing a German based home automation project you may find that some Z-Wave devices are not sold in your required country configuration ( e.g. Z-Wave NodOn Smart Plug not available e.g. in the US)
 
-*** This list is showing you all the devices I was testing. Your shopping list hast to be adopted to the desired setup of your project. You might have to alter some parts in this walkthrough (things, items, rules etc.) accordingly to your hardware list.***
+*** This list is showing you all the devices I was testing. Your shopping list hast to be adopted to the desired setup of your project. You might have to alter some parts in this walkthrough (things, items, rules etc.) accordingly to your hardware list. ***
 
 |Description|Image|
 |---|---|
@@ -220,7 +221,7 @@ and a clip on YouTube:
 
 **https://www.youtube.com/watch?v=tK-w-wDvRTg**
 
-**Remark:** I had an issue with plugging in the power supply to the micro USB power input on the circuit board of the display (like shown in the video). The Raspberry was still showing me the low power symbol (lightening symbol on the upper right corner) SOLUTION:  I had to plug in the power supply to the micro USB power input on the Raspberry itself. The display is now powered via the jumper cables. The standard display case is also allowing for both micro USB power inputs to be used.
+**REMARK:** I had an issue with plugging in the power supply to the micro USB power input on the circuit board of the display (like shown in the video). The Raspberry was still showing me the low power symbol (lightening symbol on the upper right corner) SOLUTION:  I had to plug in the power supply to the micro USB power input on the Raspberry itself. The display is now powered via the jumper cables. The standard display case is also allowing for both micro USB power inputs to be used.
 
 **NOTE:** If the image on the display is having the wrong orientation, you can rotate the image by changing the configuration of Raspbian (see tutorial section Initial configuration of Raspbian > *Change display orientation*)
 
@@ -254,7 +255,9 @@ Step 7:
 
 ![image](images/displaysetup7.jpg)
 
-Step 8: Assembly of the standard display. (Make sure you have inserted the MicroSD card since you won’t have access to the slot as soon as you mounted the case!)Just pull the back plate off the case, insert the display including the mounted Raspberry (make sure that the path cables and the display cables are not crushed between case and board), tighten it with the 4 screws and put the back plate into place. Here is a good clip on YouTube: **https://www.youtube.com/watch?v=wpSxibZOmoo**
+Step 8: Assembly of the standard display. (Make sure you have inserted the MicroSD card since you won’t have access to the slot as soon as you mounted the case!)Just pull the back plate off the case, insert the display including the mounted Raspberry (make sure that the path cables and the display cables are not crushed between case and board), tighten it with the 4 screws and put the back plate into place. Here is a good clip on YouTube:
+
+**https://www.youtube.com/watch?v=wpSxibZOmoo**
 
 ---
 
@@ -324,12 +327,12 @@ This is important to secure your standard Raspberry user “pi” before you con
 |Change the password *>System >>Change Password*|![image](images/piconfig6.jpg)|
 |Enter initial (for standard user “pi” it is “*raspberry*” and your *new password*|`raspberry` > *`yourpassword`* > *`yourpassword`*|
 ### Enabling interfaces:
-This is required for the communication to the PC (SSH) and to the Z-Wave stick (Serial)
+This is required for the communication to the PC (SSH) and to the Z-Wave stick (Serial).
 
 |Description|Image/Command|
 |---|---|
 |Open Raspberry Pi Configuration *>Application menu >>Preferences >>>Raspberry Pi configuration*|![image](images/piconfig1.jpg)|
-|Enable SSH (to access the Raspberry via Network) Enable Serial (to enable Serial Port for Z-Wave controllers) *>Interfaces >>SSH >> Serial*|![image](images/piconfig7.jpg) [SSH: Enable] & [Serial: Enable]|
+|[SSH: Enable] to access the Raspberry via Network and [Serial: Enable] to enable Serial Port for Z-Wave controllers - *>Interfaces >>SSH >> Serial*|![image](images/piconfig7.jpg)|
 
 ### Connect Raspberry to network: 
 Either by plugging in a Ethernet cable or by connecting to a WiFi network:
@@ -359,7 +362,7 @@ Raspbian is proving online updates so make sure that you have the latest install
 |Open Terminal|![image](images/openterminal.jpg)|
 |use the command (be aware that the upgrade function will take several minutes to complete if you run it for the first time) and confirm prompts with *Yes*|`sudo apt-get update` & `sudo apt-get upgrade`>`y`|
 
-##Optional Raspberry settings and configuration:
+## Optional Raspberry settings and configuration:
 
 The following settings and configuration is just for additional information and might not be needed to setup openHAB2. Some of the settings and configuration might still be useful.
 
@@ -424,7 +427,8 @@ Terminal=false
 ```
 
 ### Enabling root user:
-Since by default the “root” disabled it can’t be used. You might want to enable it for certain purposes like e.g. enabling the root user for samba file server to get full access to the directories from a PC (see chapter setup samba server) 
+Since by default the “root” disabled it can’t be used. You might want to enable it for certain purposes like e.g. enabling the root user for samba file server to get full access to the directories from a PC (see chapter setup samba server)
+
 **NOTE:** There is a reason for the “root” being disabled! Enabling the user is allowing full access to the Raspbian and therefore creating a ***security risk*** . Please always consider whether you really want to enable this user!
 
 |Description|Image/Command|
@@ -494,7 +498,7 @@ I am showing an example configuration which is first switching on a screensaver 
 |Reboot the Raspberry for the changes to take effect|`sudo reboot`|
 
 ### Select the start URL for Chromium web browser:
-**NOTE:** You can also select the URL in the autostart file, but using the browser functionality is giving you a simpler access (no terminal) and you can check the result without rebooting
+**NOTE:** You can also select the URL in the autostart file, but using the browser functionality is giving you a simpler access (no terminal) and you can check the result without rebooting.
 
 |Description|Image/Command|
 |---|---|
@@ -536,6 +540,7 @@ I am showing an example configuration which is first switching on a screensaver 
 
 ## Optional: Generic setup of Samba server on Raspbian
 To have access to the Raspberry file system using the PC file explorer you have to install a Samba server on Raspbian. With the server installed you can map the selected folders (share) on your Raspberry as a network drive.
+
 **NOTE:** Skip this section *to the end of this chapter*, if you only want to use the Samba server for openHAB2 purpose. You will find an openHAB2 centric installation guide later in this document. 
 
 |Description|Image/Command|
@@ -655,6 +660,7 @@ sudo systemctl enable openhab2.service
 
 ## openHAB2 configuration for the samba server:
 This is required to grant the PC based Eclipse Smart Home Designer access to the requested configuration folder on your Raspbian.
+
 **NOTE:** This is for using samba for openHAB2 ONLY. If you already have set up a samba with a different user and a full access to raspberry, this might be obsolete.
 
 The shares are configured to be not open for guests nor to the public. Let’s activate the “openhab” user as a samba user
@@ -1064,7 +1070,7 @@ Dip switch **A-E** is defining the `unitCode`. **NOTE:** As specified in the gen
 
 This represents the `systemCode` `10000` and the `unitCode` `1`
 
-**Remark:** You might be able to determine manually the `systemCode` and `unitCode` for non 10 bit dip devices following instructions on this sites (German only):
+**REMARK:** You might be able to determine manually the `systemCode` and `unitCode` for non 10 bit dip devices following instructions on this sites (German only):
 
 **https://wiki.fhem.de/wiki/Intertechno_Code_Berechnung#Original_Intertechno_System**
 **https://isn-systems.com/tools/it2elro/**
@@ -1187,7 +1193,7 @@ Add the thing by clicking on the ***[checkmark]*** (the blue checkmark icon)
 To include further devices to your Z-Wave network and make them available as openHAB2 things you have to use the HABmin inclusion functionality.
 Please also consult the online documentation for general information about Z-Wave :
 
-** https://github.com/openhab/org.openhab.ui.habmin/wiki/ZWave-Device-Installation**
+** https://github.com/openhab/org.openhab.ui.habmin/wiki/ZWave-Device-Installation **
 
 ##### Using a standard Z-Wave controller like UZB *Z-Wave PLUS USB stick by Z-Wave.Me*
 
@@ -1487,12 +1493,13 @@ You can also find some rules samples on:
 **https://github.com/openhab/openhab1-addons/wiki/Samples-Rules**
 
 And maybe some coding experts in the community will find the time to create a kind of an openHAB2 compendium to make it easier the non-experts to do rules.
+
 **REMARK:** Yes, I know there are plenty of online documentation sites available, but the problem for me was the “plenty” part of it since I always had to go through plenty different websites to finally get the syntax right and make the rule do, what I wanted it to do.
 
 # Chapter 13: Creating rules
 Since rules can’t be configured using the PAPER UI (stable version) you now have to go to the text files for now. For this part we will now use the Eclipse Smart Home Designer since it creates at least some syntax highlighting.
 
-**REMARK:** You might find already some functionality about configuration of rules in the PAPER UI snapshot versions so there will be some changes in the way of doing rules more easily in the future. Also HABmin is providing some kind of graphical rule engine.
+** REMARK: ** You might find already some functionality about configuration of rules in the PAPER UI snapshot versions so there will be some changes in the way of doing rules more easily in the future. Also HABmin is providing some kind of graphical rule engine.
 
 ## Creating the *myfirstrule.rules* file
 
@@ -1567,7 +1574,9 @@ Switching ON/OFF switches based on luminance reading of the multisensory
 The rule is designed to switch ON/OFF the Singleswitch_01_Switch based on the illumination measured by the MultisensG5_01_SensorLuminance
 The trigger value is set to 10 LUX 
 To prevent von switching on/off if the illumination is around 10 lumen and e.g. just a cloud is casting a temporarily shadow, there is a counter included which is measuring multiple times the illumination and only allows to triggering the switch if there reading is consistently (10 times) above or below the trigger value.
+
 **NOTE:** Make sure you have create the item Counter_Item since it’s used in the rule (see: part “Creating an item the see the value of a variable of a rule online” in this chapter). 
+
 **REMARK:** This was done as some kind of coding and configuring HABPANEL exercise. You might get the same result in just checking the reading in a less frequent period, forget about the counter and just trigger the switch when the illumination reading is above or below the trigger value.
 You can also use this Counter_Item to display some tendency whether your light is about to switch ON/OFF depending on the value of the Counter_Item on your dashboard. So if you play a little with the “knob” widget in HABPANEL it might look like this:
 
@@ -1645,86 +1654,3 @@ If you are dependend on switches changing their stat and you can not physically 
 ---
 End of walkthrough
 ---
-
----
-
-# Markdown syntax examples start from here:
-
----
-General header
----
-
-
-Github specific syntax
-```
-Fenced Code
-```
-
-```bash
-Fenced code bash highlighting
-
-```
-
-~~Strikethrogh~~
-
-- [ ] Tasklist
-- [ ] Tasklist
-
-
-# Header 1
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
-###### Header 6
-
-**Strong-Bold**
-
-*Emphasize*
-
-`inline code`
-
-![image](https://community.openhab.org/uploads/default/original/1X/ada4f9ed6657f88f1e3e8e99f44343666f6ccc17.png)
-
-[link](https://community.openhab.org/)
-
-> Blockquote
->> Blockquote
->>> Blockquote
-
-1. Ordered List
-2. Ordered List
-
-- Unordered List
-- Unordered List
-
-Page Break before
-* * *
-Page Break after
-
-Section Break before
-- - -
-Section Break before
-
-Sentence Break before
-_ _ _
-Sentence Break before
-
-<!--This is a comment-->
-
-
-| column     | column     | column     |
-|:---|:---:|---:|
-|            |            |
-|left       |centered   |right|
-|  -  |     -    | - |
-
-
-
-
-
-|text|picture|
-|---|---|
-|blabla|![image](https://community.openhab.org/uploads/default/original/1X/ada4f9ed6657f88f1e3e8e99f44343666f6ccc17.png)|
-
-
