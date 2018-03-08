@@ -81,11 +81,14 @@ Since I am doing a German based home automation project you may find that some Z
 |Z-Wave Fibaro Single Switch 2 FIBEFGS-213 (1x 2500W)|![image](images/fibarosingleswitch.jpg)|
 |Aeotec Multi-Sensor 6 ZW100-C - Z-Wave Plus|![image](images/z-wave_plus_aeotec_multi-sensor_6_zw100-c.jpg)|
 |Aeon Multi Sensor Gen5|![image](images/aeonmultisensorgen5.jpg)|
+|Fibaro Universal Sensor FIB_FGBS-001|![image](images/FIB_FGBS-001.jpg)|
+|*Additionally for Fibaro Universal Sensor FIB_FGBS-001:* Demiawaking temperature sensor DS18b20|![image](images/temperature_sensor.jpg)|
 |devolo Home Control door sensor (it also provides you with raw temperature and lumincance readings)|![image](images/devolodoorsensor.jpg)|
 |ZME_WALLC-S multi swith by Z-Wave.me|![image](images/wallc-s.jpg)|
 |Z-Wave Aeon Labs ZW088 Z-Wave Key Fob, Gen5|![image](images/z-wave_keyfob_zw088_by_aeotec.jpg)|
 |Z-Wave NodOn Smart Plug (not available e.g. in the US)|![image](images/z-wave_smartplug_by_nodon.jpg)|
 |*Alternative:* Fibaro wall plug FIBEFGWPF-102 (allows you to switch up to 2500W)|![image](images/fibarowallplug.jpg)|
+|*Alternative:* Cyrus Smart Home ZUB-CYR10118|![image](images/CyrusZUB-CYR10118.jpg)|
 
 **NOTE:** If you want to by other Z-Wave devices always make your they are listed in the Z-Wave device list of the openHAB2 Z-Wave binding to make sure they are supported correctly in the context of openHAB2:
 
@@ -102,8 +105,11 @@ You can find an overview on
 |Description|Image|
 |---|---|
 |WiFi XCSOURCE Magic UFO-WiFi LED-Controller Type LD382 (other brand names might work as well, but you have to make sure it is Type LD382, LD382A or LD686) *REMARK:* I was using a WiFi controller on purpose since: It is only about half the price of a Z-Wave WiFi controller. You can control the device as well via smart phone (like light to music feature of the app). But some things you have to be aware of using WiFi LED instead of Z-Wave LED: You have to have a WiFi network to which your Raspberry and your WiFi LED controller is connected. You have to manually install a beta / snapshot version of openHAB2 or manually install the WiFi LED Binding on top of the package based installation of openHAB2 (see tutorial).|![image](images/ledwifi.jpg)|
+|Mini Wireless Wifi RGB Led Controller 5V-28V For 3528 5050 RGB LED Strip Light *REMARK:* In comparison to the WiFi XCSOURCE this controller is about half the price, much smaller, has a fixed 4pin connector to the LED stripe (+/G/R/B), no separate channel for single color stripe and a separate IR remote controller which comes in handy for some for manual override. |![image](images/MiniRGBLEDController.jpg)|
 |RGB LED stripe incl. power supply 12V DC bundle. While you can buy the stripe and the power supply bundle separately, most of the times the bundle will come at the same price or even cheaper. The included power supply plug should directly fit into the power inlet socket of the WiFi controller. *REMARK:* It also allows you to attach the stripe without soldering since you can just cut the cable of the RGB bundle controller and use it to connect the LED stripe to the WiFi controller.|![image](images/rgbledstripe.jpg)|
 |*Optional:* White LED stripe. Since the WiFi LED-Controller is allowing you to at additionally control plain colour LED stripe (or in case of controller type LD686 even two) you might want to get an additional strip in e.g. plain white to create ab clear white illumination. *NOTE:* You might be fine with just the stripe if you already got the power supply with the RGB stripe|![image](images/whiteledstripe.jpg)|
+|Logitech Harmony Hub|![image](images/LogitechHarmonyHub.jpg)|
+|Amazon Echo Dot 2nd Generation|![image](images/AmazonEchoDot2ndGeneration.jpg)|
 |*Optional(in my case it was already there and I just included it into my project):* Yamaha Receiver RX-V581|![image](images/rx-v581.jpg)|
 
 ### 433MHz devices
@@ -861,7 +867,7 @@ Select ***>[Add-ons]***  ***>>[BINDINGS]***
 ![image](images/paperui2.jpg)
 
 Install the Bindings:
-***[Exec Binding]*** , ***[WiFi LED Binding]*** , ***[YahooWeather Binding]*** , ***[YamahaReceiver Binding]*** and ***[Z-Wave Binding]***
+***[Exec Binding]*** , ***[HarmonyHub Binding]*** , ***[WiFi LED Binding]*** , ***[YahooWeather Binding]*** , ***[YamahaReceiver Binding]*** and ***[Z-Wave Binding]***
 
 **Result:** The icons of the bindings should change to blue
 The install option should change to uninstall. 
@@ -938,11 +944,18 @@ Select ***>[Inbox]*** and click on the WiFi LED ***[checkmark]*** (the blue chec
 
 ![image](images/paperui12.jpg)
 
-**Result:** The  WiFi LED Binding dialogue will open, allowing you to enter/edit the name.
+**Result:** The WiFi LED Binding dialogue will open, allowing you to enter/edit the name.
 
 ![image](images/paperui13.jpg)
 
 Confirm the adding by clicking on the ***[ADD AS THING]*** button
+
+#### Adding Things using Harmony Hub Binding:
+
+Select ***>[Inbox]*** and click on the Harmony Hub Binding ***[checkmark]*** (the blue checkmark icon).
+
+**Result:** The Harmony Hub Binding dialogue will open, allowing you to enter/edit the name.
+
 
 ### Adding online things connected via network (IP)
 
@@ -1634,7 +1647,25 @@ end
 ```
 Since this rule is using a manual Number Item please read the Tips and tricks section for how to creat a single item without a thing. 
 
-# Chapter 14: Tips and tricks
+# Chapter 14: Logitech Harmony Hub Voice Control with Amazon Echo Dot 
+
+A German Example can be found on:
+http://onesmarthome.de/smart-home-openhab-2-harmony-hub-integration/
+http://onesmarthome.de/smart-home-openhab-2-harmony-sprachsteuerung/
+
+The HUE Items 
+´´´bash
+// this is the items file
+Switch  Fernsehlicht   "Fernsehlicht"   [ "Switchable" ]   
+Switch  Wohnzimmerlicht   "Wohnzimmerlicht"   [ "Switchable" ]  
+Switch  Sofalicht   "Sofalicht"   [ "Switchable" ]
+Switch  Steckdose   "Steckdose"   [ "Switchable" ]
+Switch  Fernseher   "Fernseher"   [ "Switchable" ]
+Switch	Silence    "Silence"   [ "Switchable" ]
+Switch  TV   "TV"   [ "Switchable" ] 
+Switch  SAT   "SAT"   [ "Switchable" ] 
+
+# Chapter 15: Tips and tricks
 
 ## Basic tips for debugging rules
 
@@ -1647,9 +1678,61 @@ For simple problems you might also be able to visualize the variables online by 
 4. Use a HABPanel *Dummy* widget to visualize the *Counter_Item* value. 
 
 ### Creating a dummy switch item to trigger ON/OFF rules
-If you are dependend on switches changing their stat and you can not physically do this, you can also use a dummy switch item to trigger the rule.
+If you are dependend on switches changing their stat and you can not physically do this, you can also use a dummy switch item to trigger is using a manual Number Item please read the Tips and tricks section for how to creat a single item without a thing. 
+
+# Chapter 14: Logitech Harmony Hub Voice Control with Amazon Echo Dot using it's built in skill to control HUE devices (no Internet based Alexa skill required)
+
+*Alexa => HUE Bride emulation => Rule uses HUE item status change to send command to Logitech Harmony Hub Item => Logitech Harmony Hub is controlling all connected devices (e.g. TV)*
+
+The benefit of using the HUE bride emulation is that there is no need for any internet based Alexa skill (not even the openHAB Skill is required) which is creating a minimal online footprint of things you control with Alexa. You only need the internet connection for Alexa to do the voice recognition. So Amazon will only think you are simply switching a local HUE device.
+
+*REMARK:* For detailed information in how to configure the Harmony Hub or the Amazon Dot, please refere to the designated manuals of this devices
+## How to install
+First you have to install the HarmonyHub Binding and configure the different devices in the Harmony Hub. 
+Then add this devices as *Send Button Press* items (e.g. Logitech_Item_1_SendButtonPress)
+
+*A German tutorial can be found on:
+http://onesmarthome.de/smart-home-openhab-2-harmony-hub-integration/ *
+
+Now you have to add the HUE Service:
+Select ***>[Add-ons]*** and click on the ***[MISC]*** tab, select the ***[Hue Emulation]*** service and click ***[INSTALL]***.
+This will no let openHAB act as a HUE Bridge which can be directly addressed by the Amazon Echo Dot.
+
+Then you have to create the items which will be discovered by Alexa as HUE devices manually in the item file.
+*Examnple:*
+```bash
+// this is the items file
+Switch  Item_1   "Name_Item_1"   [ "Switchable" ]   
+Switch  Item_2   "Name_Item_2"   [ "Switchable" ] 
+Switch  Item_3   "Name_Item_3"   [ "Switchable" ] 
+```
+*REMARK:* Name_Item_x will be the voice command for Alex: "Alexa, switch on Name_Item_1 will then trigger Item_1 to change its status from OFF to ON
+
+## Rules Example
+```bash
+//--------------------------------------------------------------------------
+rule "Fernseher_Ein"
+
+when
+	Item Item_1 changed to ON
+then
+		sendCommand (Logitech_Item_1_SendButtonPress, "PowerToggle")
+end
+```
+This will send teh Power Toggle command via the Logitech Harmoy Hub for Logitech_Item_1
+
+
+# Chapter 15: Tips and tricks
+
+## Basic tips for debugging rules
+
+### Creating an item the see the value of a variable of a rule online
+The standard way of debugging a rule would be to use a logfile.
+For simple problems you might also be able to visualize the variables online by creation item with the same type and posting the value of the variable inside the rule. So follow the steps:
+1. Set the variabthe rule.
 1. Create a new item *Dummy_Swich*
 2. Use a HABPanel *Switch* widget to create an interactive dummy switch
+
 
 ---
 End of walkthrough
